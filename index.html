@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Last Message Human — What Would You Leave Behind?</title>
+
+  <meta name="description"
+        content="One human leaves a message. Another human finds it. No followers. No algorithm. Just a message passed from one stranger to another.">
+
+  <meta name="keywords"
+        content="last message human, message for the next person, anonymous message, message to a stranger, leave a message, human connection, internet project">
+
+  <meta name="author"
+        content="Last Message Human">
+
+  <meta name="robots"
+        content="index, follow, max-image-preview:large">
+
+  <meta name="theme-color"
+        content="#080808">
+
+  <!--
+    IMPORTANT:
+    Replace example.com with your real Cloudflare Pages domain
+    after the website is live.
+  -->
+
+  <link rel="canonical"
+        href="https://example.com/">
+
+  <!-- OPEN GRAPH -->
+
+  <meta property="og:type"
+        content="website">
+
+  <meta property="og:title"
+        content="Last Message Human">
+
+  <meta property="og:description"
+        content="What would you say if you knew a stranger would read it next?">
+
+  <meta property="og:url"
+        content="https://example.com/">
+
+  <meta property="og:site_name"
+        content="Last Message Human">
+
+  <!-- TWITTER -->
+
+  <meta name="twitter:card"
+        content="summary_large_image">
+
+  <meta name="twitter:title"
+        content="Last Message Human">
+
+  <meta name="twitter:description"
+        content="One message. One stranger. One human moment.">
+
+  <!-- PERFORMANCE -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+
+  <!-- STRUCTURED DATA -->
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Last Message Human",
+    "url":"https://example.com/",
+    "description":"A human-to-human message project connecting strangers through a simple message."
+  }
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is Last Message Human?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Last Message Human is a simple project where one person can leave a message for another person who discovers it later."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Who will read the message?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A stranger who arrives after you may become the next person to read it."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Why does this exist?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"The project exists to create a small human connection between strangers on the internet."
+        }
+      }
+    ]
+  }
+  </script>
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: #f4f1ea;
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+  --bg: #080808;
+
+  --surface: #101010;
+
+  --surface-2: #151515;
+
+  --text: #f4f1ea;
+
+  --muted: #858585;
+
+  --line: rgba(255,255,255,.10);
+
+  --red: #d71920;
+
+  --red-bright: #ff3038;
+
+  --gold: #c6a15b;
+
+  --max: 1180px;
+}
+
+
+/* =========================================================
+   GRAIN
+========================================================= */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: .035;
+
+  z-index: 9999;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+  width: min(
+    calc(100% - 40px),
+    var(--max)
+  );
+
+  margin: auto;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(255,255,255,.06);
+
+  background: rgba(8,8,8,.78);
+
+  backdrop-filter: blur(18px);
+
+}
+
+.nav-inner {
+
+  height: 78px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+.logo {
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: -.5px;
+
+}
+
+.logo-mark {
+
+  color: var(--red-bright);
+
+}
+
+.nav-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+}
+
+.nav-link {
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  color: #8a8a8a;
+
+  transition: .25s;
+
+}
+
+.nav-link:hover {
+
+  color: white;
+
+}
+
+.nav-status {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #777;
+
+  letter-spacing: 1px;
+
+}
+
+.nav-status::before {
+
+  content: "";
+
+  display: inline-block;
+
+  width: 6px;
+
+  height: 6px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #48c774;
+
+  box-shadow: 0 0 10px #48c774;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  top: -280px;
+
+  right: -250px;
+
+  background: radial-gradient(
+    circle,
+    rgba(215,25,32,.16),
+    transparent 68%
+  );
+
+  pointer-events: none;
+
+}
+
+.hero-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .13;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 80%
+    );
+
+}
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  padding-top: 80px;
+
+}
+
+.hero-kicker {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #777;
+
+}
+
+.hero-kicker-line {
+
+  width: 42px;
+
+  height: 1px;
+
+  background: var(--red);
+
+}
+
+.hero h1 {
+
+  max-width: 1100px;
+
+  font-size: clamp(
+    55px,
+    10.2vw,
+    140px
+  );
+
+  line-height: .88;
+
+  letter-spacing: -.075em;
+
+  font-weight: 800;
+
+}
+
+.hero h1 .serif {
+
+  font-family: "Playfair Display", serif;
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  color: #e9e4da;
+
+}
+
+.hero h1 .red {
+
+  color: var(--red-bright);
+
+}
+
+.hero-sub {
+
+  max-width: 560px;
+
+  margin-top: 40px;
+
+  color: #8d8d8d;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+}
+
+.hero-bottom {
+
+  margin-top: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 54px;
+
+  padding: 0 25px;
+
+  border-radius: 2px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.4px;
+
+  transition:
+    transform .25s,
+    background .25s,
+    box-shadow .25s;
+
+}
+
+.btn-red {
+
+  color: white;
+
+  background: var(--red);
+
+  box-shadow:
+    0 15px 45px rgba(215,25,32,.22);
+
+}
+
+.btn-red:hover {
+
+  transform: translateY(-3px);
+
+  background: var(--red-bright);
+
+  box-shadow:
+    0 20px 60px rgba(215,25,32,.32);
+
+}
+
+.btn-outline {
+
+  border: 1px solid var(--line);
+
+  color: #aaa;
+
+}
+
+.btn-outline:hover {
+
+  border-color: #555;
+
+  color: white;
+
+}
+
+
+/* =========================================================
+   LIVE BAR
+========================================================= */
+
+.live-bar {
+
+  border-top: 1px solid var(--line);
+
+  border-bottom: 1px solid var(--line);
+
+  background: #0c0c0c;
+
+}
+
+.live-inner {
+
+  min-height: 74px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+.live-left {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #777;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+}
+
+.live-dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--red-bright);
+
+  box-shadow: 0 0 14px var(--red);
+
+}
+
+.counter {
+
+  color: #eee;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story {
+
+  padding: 160px 0;
+
+}
+
+.story-layout {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.4fr;
+
+  gap: 100px;
+
+}
+
+.label {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  color: var(--red-bright);
+
+}
+
+.story-title {
+
+  margin-top: 20px;
+
+  font-size: clamp(40px, 5vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -.055em;
+
+}
+
+.story-copy {
+
+  max-width: 650px;
+
+}
+
+.story-copy p {
+
+  color: #929292;
+
+  font-size: 18px;
+
+  margin-bottom: 25px;
+
+}
+
+.story-copy strong {
+
+  color: #eae7e0;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   MESSAGE CARD
+========================================================= */
+
+.message-wrap {
+
+  padding: 20px 0 170px;
+
+}
+
+.message {
+
+  position: relative;
+
+  padding: clamp(35px, 7vw, 85px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #151515,
+      #0c0c0c
+    );
+
+  border: 1px solid var(--line);
+
+  overflow: hidden;
+
+}
+
+.message::before {
+
+  content: "“";
+
+  position: absolute;
+
+  top: -90px;
+
+  right: 20px;
+
+  font-family: Georgia, serif;
+
+  font-size: 420px;
+
+  color: rgba(255,255,255,.025);
+
+}
+
+.message-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 60px;
+
+  position: relative;
+
+}
+
+.message-tag {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #777;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+}
+
+.message-number {
+
+  font-family: "DM Mono", monospace;
+
+  color: var(--red-bright);
+
+  font-size: 11px;
+
+}
+
+.message-text {
+
+  position: relative;
+
+  max-width: 900px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(
+    36px,
+    5vw,
+    68px
+  );
+
+  line-height: 1.12;
+
+  letter-spacing: -.035em;
+
+}
+
+.message-author {
+
+  position: relative;
+
+  margin-top: 50px;
+
+  color: #666;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================================
+   NUMBERS
+========================================================= */
+
+.numbers {
+
+  padding: 100px 0;
+
+  border-top: 1px solid var(--line);
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+.numbers-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+}
+
+.number-item {
+
+  padding: 20px 35px;
+
+  border-right: 1px solid var(--line);
+
+}
+
+.number-item:last-child {
+
+  border-right: none;
+
+}
+
+.big-number {
+
+  font-size: clamp(45px, 6vw, 80px);
+
+  font-weight: 800;
+
+  letter-spacing: -.07em;
+
+}
+
+.number-label {
+
+  color: #777;
+
+  font-size: 12px;
+
+  margin-top: 5px;
+
+}
+
+
+/* =========================================================
+   HOW
+========================================================= */
+
+.how {
+
+  padding: 160px 0;
+
+}
+
+.how-head {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  align-items: flex-end;
+
+  margin-bottom: 70px;
+
+}
+
+.how-title {
+
+  font-size: clamp(45px, 7vw, 90px);
+
+  line-height: .95;
+
+  letter-spacing: -.065em;
+
+}
+
+.how-intro {
+
+  max-width: 350px;
+
+  color: #777;
+
+  font-size: 14px;
+
+}
+
+.steps {
+
+  border-top: 1px solid var(--line);
+
+}
+
+.step {
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr 1fr;
+
+  gap: 30px;
+
+  padding: 35px 0;
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+.step-num {
+
+  font-family: "DM Mono", monospace;
+
+  color: var(--red-bright);
+
+  font-size: 11px;
+
+}
+
+.step-title {
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+}
+
+.step-text {
+
+  color: #777;
+
+  max-width: 430px;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.final {
+
+  padding: 130px 0 170px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.final::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+
+  height: 650px;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%,-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(215,25,32,.15),
+      transparent 65%
+    );
+
+}
+
+.final-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.final-small {
+
+  color: var(--red-bright);
+
+  font-family: "DM Mono", monospace;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 10px;
+
+}
+
+.final h2 {
+
+  max-width: 850px;
+
+  margin: 25px auto;
+
+  font-size: clamp(
+    55px,
+    9vw,
+    120px
+  );
+
+  line-height: .9;
+
+  letter-spacing: -.075em;
+
+}
+
+.final h2 em {
+
+  font-family: "Playfair Display", serif;
+
+  font-weight: 500;
+
+}
+
+.final p {
+
+  max-width: 530px;
+
+  margin: auto auto 35px;
+
+  color: #777;
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq {
+
+  padding: 100px 0;
+
+  border-top: 1px solid var(--line);
+
+}
+
+.faq-title {
+
+  margin-bottom: 45px;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  color: #777;
+
+}
+
+details {
+
+  border-top: 1px solid var(--line);
+
+  padding: 25px 0;
+
+}
+
+details:last-child {
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+summary {
+
+  cursor: pointer;
+
+  list-style: none;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+}
+
+summary::-webkit-details-marker {
+
+  display: none;
+
+}
+
+details p {
+
+  max-width: 700px;
+
+  margin-top: 15px;
+
+  color: #777;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  padding: 35px 0;
+
+  color: #555;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+}
+
+.footer-inner {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+.reveal.visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .container {
+
+    width: min(
+      calc(100% - 30px),
+      var(--max)
+    );
+
+  }
+
+  .nav-inner {
+
+    height: 65px;
+
+  }
+
+  .nav-link {
+
+    display: none;
+
+  }
+
+  .hero {
+
+    min-height: 92vh;
+
+  }
+
+  .hero h1 {
+
+    font-size: clamp(
+      54px,
+      16vw,
+      90px
+    );
+
+  }
+
+  .hero-sub {
+
+    font-size: 15px;
+
+  }
+
+  .story {
+
+    padding: 100px 0;
+
+  }
+
+  .story-layout {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+  }
+
+  .numbers-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .number-item {
+
+    border-right: none;
+
+    border-bottom: 1px solid var(--line);
+
+    padding: 30px 0;
+
+  }
+
+  .number-item:last-child {
+
+    border-bottom: none;
+
+  }
+
+  .how {
+
+    padding: 100px 0;
+
+  }
+
+  .how-head {
+
+    display: block;
+
+  }
+
+  .how-intro {
+
+    margin-top: 25px;
+
+  }
+
+  .step {
+
+    grid-template-columns: 45px 1fr;
+
+  }
+
+  .step-text {
+
+    grid-column: 2;
+
+  }
+
+  .final {
+
+    padding: 100px 0 130px;
+
+  }
+
+  .footer-inner {
+
+    flex-direction: column;
+
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+
+  }
+
+  .reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+
+  }
+
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+
+  background: var(--red);
+
+  color: white;
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAV
+====================================================== -->
+
+<header class="nav">
+
+  <div class="container nav-inner">
+
+    <a href="#" class="logo">
+      Last<span class="logo-mark">Message</span>Human
+    </a>
+
+    <div class="nav-right">
+
+      <span class="nav-status">
+        Live
+      </span>
+
+      <a href="#about" class="nav-link">
+        About
+      </a>
+
+      <a href="#how" class="nav-link">
+        How it works
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+  <div class="hero-grid"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-kicker reveal">
+
+      <span class="hero-kicker-line"></span>
+
+      A message from one human to another
+
+    </div>
+
+
+    <h1 class="reveal">
+
+      Leave something
+
+      <span class="serif">worth</span>
+
+      <span class="red">
+        finding.
+      </span>
+
+    </h1>
+
+
+    <p class="hero-sub reveal">
+
+      The internet has billions of voices.
+      This is different.
+
+      One person leaves a message.
+      Someone else finds it later.
+
+      No followers.
+      No algorithm.
+      No audience.
+
+      Just two humans who may never meet.
+
+    </p>
+
+
+    <div class="hero-bottom reveal">
+
+      <a href="#message"
+         class="btn btn-red">
+
+        Read the message
+
+      </a>
+
+      <a href="#how"
+         class="btn btn-outline">
+
+        Discover the idea
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     LIVE BAR
+====================================================== -->
+
+<section class="live-bar">
+
+  <div class="container live-inner">
+
+    <div class="live-left">
+
+      <span class="live-dot"></span>
+
+      The chain is alive
+
+    </div>
+
+    <div class="counter">
+
+      <span id="visitorCount">
+        12,847
+      </span>
+
+      humans have arrived
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     STORY
+====================================================== -->
+
+<section class="story" id="about">
+
+  <div class="container">
+
+    <div class="story-layout">
+
+      <div class="reveal">
+
+        <div class="label">
+          001 / The idea
+        </div>
+
+        <h2 class="story-title">
+
+          What if the internet remembered
+          <span class="serif">you?</span>
+
+        </h2>
+
+      </div>
+
+
+      <div class="story-copy reveal">
+
+        <p>
+
+          Most things on the internet disappear.
+
+          Posts get buried.
+          Stories expire.
+          Messages get forgotten.
+
+        </p>
+
+        <p>
+
+          But imagine one sentence surviving long enough
+          to reach someone you will never know.
+
+        </p>
+
+        <p>
+
+          <strong>
+            That's the entire idea.
+          </strong>
+
+        </p>
+
+        <p>
+
+          No complicated platform.
+          No social hierarchy.
+
+          Just a tiny piece of humanity,
+          waiting for the next person.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     MESSAGE
+====================================================== -->
+
+<section class="message-wrap" id="message">
+
+  <div class="container">
+
+    <article class="message reveal">
+
+      <div class="message-top">
+
+        <span class="message-tag">
+          Message / 00001
+        </span>
+
+        <span class="message-number">
+          FOUND
+        </span>
+
+      </div>
+
+
+      <div class="message-text">
+
+        If you are reading this,
+
+        <br><br>
+
+        you made it through every version of yourself
+        that thought you wouldn't.
+
+        <br><br>
+
+        Keep going.
+
+      </div>
+
+
+      <div class="message-author">
+
+        — Someone who was here before you
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     NUMBERS
+====================================================== -->
+
+<section class="numbers">
+
+  <div class="container">
+
+    <div class="numbers-grid">
+
+      <div class="number-item reveal">
+
+        <div class="big-number">
+          01
+        </div>
+
+        <div class="number-label">
+          message
+        </div>
+
+      </div>
+
+
+      <div class="number-item reveal">
+
+        <div class="big-number">
+          ∞
+        </div>
+
+        <div class="number-label">
+          possible strangers
+        </div>
+
+      </div>
+
+
+      <div class="number-item reveal">
+
+        <div class="big-number">
+          0
+        </div>
+
+        <div class="number-label">
+          followers required
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     HOW IT WORKS
+====================================================== -->
+
+<section class="how" id="how">
+
+  <div class="container">
+
+    <div class="how-head">
+
+      <h2 class="how-title reveal">
+
+        Simple by<br>
+        <span class="serif">design.</span>
+
+      </h2>
+
+      <p class="how-intro reveal">
+
+        We removed almost everything.
+
+        Because sometimes the smallest
+        idea creates the biggest curiosity.
+
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step reveal">
+
+        <div class="step-num">
+          01
+        </div>
+
+        <div class="step-title">
+          Someone arrives.
+        </div>
+
+        <div class="step-text">
+          You find this page somewhere
+          in the enormous internet.
+        </div>
+
+      </div>
+
+
+      <div class="step reveal">
+
+        <div class="step-num">
+          02
+        </div>
+
+        <div class="step-title">
+          Someone speaks.
+        </div>
+
+        <div class="step-text">
+          A message is left behind —
+          honest, strange, funny,
+          beautiful or completely random.
+        </div>
+
+      </div>
+
+
+      <div class="step reveal">
+
+        <div class="step-num">
+          03
+        </div>
+
+        <div class="step-title">
+          Someone finds it.
+        </div>
+
+        <div class="step-text">
+          Maybe tomorrow.
+          Maybe next year.
+          Maybe much later.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="final">
+
+  <div class="container final-content">
+
+    <div class="final-small reveal">
+
+      Before you leave
+
+    </div>
+
+
+    <h2 class="reveal">
+
+      What would you say
+
+      <em>
+        to a stranger?
+      </em>
+
+    </h2>
+
+
+    <p class="reveal">
+
+      Someone may arrive here after you.
+
+      Leave them something better
+      than you found.
+
+    </p>
+
+
+    <a href="#message"
+       class="btn btn-red reveal">
+
+      Leave something behind
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+
+<section class="faq">
+
+  <div class="container">
+
+    <div class="faq-title">
+      Questions
+    </div>
+
+
+    <details class="reveal">
+
+      <summary>
+        What is Last Message Human?
+      </summary>
+
+      <p>
+        A simple human-to-human project.
+        One person leaves a message and another
+        person may discover it later.
+      </p>
+
+    </details>
+
+
+    <details class="reveal">
+
+      <summary>
+        Who is this for?
+      </summary>
+
+      <p>
+        Anyone who has something small to say,
+        even if they don't know who will hear it.
+      </p>
+
+    </details>
+
+
+    <details class="reveal">
+
+      <summary>
+        Why make something this simple?
+      </summary>
+
+      <p>
+        Because the internet is enormous,
+        but human connection doesn't have to be complicated.
+      </p>
+
+    </details>
+
+
+    <details class="reveal">
+
+      <summary>
+        Is there an algorithm?
+      </summary>
+
+      <p>
+        No follower count.
+        No popularity ranking.
+        No algorithm deciding whose words matter.
+      </p>
+
+    </details>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © 2026 Last Message Human
+    </span>
+
+    <span>
+      Made for strangers.
+    </span>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("visible");
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+    {
+      threshold: .12
+    }
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(element => {
+
+    observer.observe(element);
+
+  });
+
+
+
+/* =========================================================
+   LIVE VISITOR NUMBER
+   DEMO DISPLAY ONLY
+========================================================= */
+
+const counter =
+  document.getElementById("visitorCount");
+
+let current =
+  12847;
+
+
+/*
+  This is intentionally a visual demo.
+
+  It does NOT pretend to be a real server-side
+  visitor counter.
+
+  Later we can connect this to Cloudflare Worker
+  / KV / D1 if you want a genuine live number.
+*/
+
+setInterval(() => {
+
+  if (Math.random() > .72) {
+
+    current += 1;
+
+    counter.textContent =
+      current.toLocaleString();
+
+  }
+
+}, 7000);
+
+
+/* =========================================================
+   SMOOTH ANCHOR OFFSET
+========================================================= */
+
+document
+  .querySelectorAll('a[href^="#"]')
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      function(event) {
+
+        const target =
+          document.querySelector(
+            this.getAttribute("href")
+          );
+
+        if (!target) return;
+
+        event.preventDefault();
+
+        const offset =
+          target.getBoundingClientRect().top
+          + window.scrollY
+          - 85;
+
+        window.scrollTo({
+
+          top: offset,
+
+          behavior: "smooth"
+
+        });
+
+      }
+    );
+
+  });
+
+</script>
+
+
+</body>
+</html>
