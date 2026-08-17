@@ -3,339 +3,937 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Write Your Message — Last Human Message</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="description"
-content="Leave a message for the next human who arrives after you.">
+<title>
+Write a Message for the Next Human — Last Human Message
+</title>
 
-<meta name="robots" content="noindex,nofollow">
+<meta
+name="description"
+content="Leave a message for the next human who arrives after you. Your words become part of a chain passed from one stranger to another."
+>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta
+name="robots"
+content="noindex,nofollow,noarchive,nosnippet"
+>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<meta
+name="author"
+content="Last Human Message"
+>
+
+<meta
+name="application-name"
+content="Last Human Message"
+>
+
+<meta
+name="theme-color"
+content="#070707"
+>
+
+<meta
+name="color-scheme"
+content="dark"
+>
+
+
+<!-- =====================================================
+     OPEN GRAPH
+===================================================== -->
+
+<meta
+property="og:type"
+content="website"
+>
+
+<meta
+property="og:url"
+content="https://last-human-mesage.pages.dev/write-message.html"
+>
+
+<meta
+property="og:title"
+content="Leave a Message for the Next Human"
+>
+
+<meta
+property="og:description"
+content="Someone left a message for you. Now it's your turn to leave something behind for the stranger who comes next."
+>
+
+<meta
+property="og:site_name"
+content="Last Human Message"
+>
+
+<meta
+property="og:locale"
+content="en_US"
+>
+
+
+<!-- =====================================================
+     X / TWITTER
+===================================================== -->
+
+<meta
+name="twitter:card"
+content="summary"
+>
+
+<meta
+name="twitter:title"
+content="Leave a Message for the Next Human"
+>
+
+<meta
+name="twitter:description"
+content="Someone left a message for you. Now it's your turn to leave something behind."
+>
+
+
+<!-- =====================================================
+     PERFORMANCE
+===================================================== -->
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500&display=swap"
+rel="stylesheet"
+>
+
+
+<!-- =====================================================
+     STRUCTURED DATA
+===================================================== -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://last-human-mesage.pages.dev/write-message.html#webpage",
+  "url":"https://last-human-mesage.pages.dev/write-message.html",
+  "name":"Write a Message for the Next Human",
+  "description":"Leave a message for the next human in the Last Human Message chain.",
+  "isPartOf":{
+    "@type":"WebSite",
+    "@id":"https://last-human-mesage.pages.dev/#website",
+    "name":"Last Human Message",
+    "url":"https://last-human-mesage.pages.dev/"
+  },
+  "inLanguage":"en"
+}
+</script>
+
 
 <style>
 
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-min-height:100vh;
-background:
-radial-gradient(circle at 50% 0%,rgba(215,25,32,.16),transparent 42%),
-#070707;
-color:#f4f1ea;
-font-family:Inter,Arial,sans-serif;
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(215,25,32,.16),
+            transparent 42%
+        ),
+        #070707;
+
+    color:#f4f1ea;
+
+    font-family:Inter,Arial,sans-serif;
+
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    opacity:.035;
+
+    background-image:url(
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+    );
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
-nav{
-height:72px;
-border-bottom:1px solid rgba(255,255,255,.07);
-display:flex;
-align-items:center;
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+
+/* =====================================================
+   NAV
+===================================================== */
+
+header{
+    height:72px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+    background:
+        rgba(7,7,7,.72);
+
+    backdrop-filter:blur(18px);
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:10;
 }
 
 .nav-inner{
-width:min(1100px,calc(100% - 30px));
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
+    width:min(1100px,calc(100% - 30px));
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
 }
 
 .logo{
-font-size:15px;
-font-weight:900;
+    font-size:15px;
+
+    font-weight:900;
+
+    letter-spacing:-.5px;
 }
 
 .logo span{
-color:#ef3038;
+    color:#ef3038;
 }
 
 .step{
-font-family:"DM Mono",monospace;
-font-size:10px;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:#666;
+    font-family:"DM Mono",monospace;
+
+    font-size:9px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:#666;
 }
 
+.step:before{
+    content:"";
+
+    display:inline-block;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#ef3038;
+
+    box-shadow:0 0 10px rgba(239,48,56,.6);
+
+    margin-right:8px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
 main{
-padding:65px 15px 100px;
+    padding:
+        75px
+        15px
+        120px;
 }
 
 .wrapper{
-width:min(760px,100%);
-margin:auto;
+    width:min(760px,100%);
+
+    margin:auto;
 }
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
 
 .eyebrow{
-font-family:"DM Mono",monospace;
-font-size:10px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#ef3038;
-margin-bottom:20px;
+    font-family:"DM Mono",monospace;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#ef3038;
+
+    margin-bottom:20px;
 }
 
+
+/* =====================================================
+   TITLE
+===================================================== */
+
 h1{
-font-size:clamp(48px,9vw,82px);
-line-height:.9;
-letter-spacing:-.07em;
-margin-bottom:24px;
+    font-size:clamp(48px,9vw,82px);
+
+    line-height:.9;
+
+    letter-spacing:-.07em;
+
+    margin-bottom:25px;
 }
 
 h1 em{
-font-family:"Playfair Display",serif;
-font-weight:500;
+    font-family:"Playfair Display",serif;
+
+    font-weight:500;
 }
+
+
+/* =====================================================
+   INTRO
+===================================================== */
 
 .intro{
-max-width:600px;
-color:#858585;
-font-size:15px;
-line-height:1.8;
-margin-bottom:45px;
+    max-width:600px;
+
+    color:#858585;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:48px;
 }
+
+.intro strong{
+    color:#c8c5be;
+
+    font-weight:600;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
 
 .card{
-background:linear-gradient(145deg,#151515,#0d0d0d);
-border:1px solid rgba(255,255,255,.10);
-padding:32px;
-box-shadow:0 30px 100px rgba(0,0,0,.45);
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0d0d0d
+        );
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    padding:clamp(24px,5vw,34px);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.45);
+
+    overflow:hidden;
 }
 
+.card:before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:2px;
+    height:100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #ef3038 30%,
+            #ef3038 70%,
+            transparent
+        );
+
+    opacity:.7;
+}
+
+
+/* =====================================================
+   TRANSACTION
+===================================================== */
+
 .transaction{
-margin-bottom:32px;
+    margin-bottom:35px;
 }
 
 .label{
-display:block;
-font-family:"DM Mono",monospace;
-font-size:10px;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:#666;
-margin-bottom:10px;
+    display:block;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:10px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:#666;
+
+    margin-bottom:10px;
 }
 
 .tx{
-background:#090909;
-border:1px solid rgba(255,255,255,.08);
-padding:15px;
-font-family:"DM Mono",monospace;
-font-size:11px;
-color:#aaa;
-word-break:break-all;
+    background:#090909;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    padding:15px;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:11px;
+
+    color:#aaa;
+
+    word-break:break-all;
+
+    line-height:1.7;
 }
+
+.tx.pending{
+    color:#555;
+}
+
+
+/* =====================================================
+   PRIVATE INFORMATION
+===================================================== */
 
 .private-title{
-font-family:"DM Mono",monospace;
-font-size:10px;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:#ef3038;
-padding-bottom:15px;
-border-bottom:1px solid rgba(255,255,255,.08);
-margin-bottom:22px;
+    font-family:"DM Mono",monospace;
+
+    font-size:10px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:#ef3038;
+
+    padding-bottom:15px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    margin-bottom:23px;
 }
 
+.private-title span{
+    color:#555;
+}
+
+
+/* =====================================================
+   FIELDS
+===================================================== */
+
 .fields{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:18px;
 }
 
 .field.full{
-grid-column:1 / -1;
+    grid-column:1 / -1;
+}
+
+.field label{
+    display:block;
 }
 
 input,
 textarea{
-width:100%;
-background:#090909;
-border:1px solid rgba(255,255,255,.09);
-color:#eee;
-outline:none;
-transition:.2s;
+    width:100%;
+
+    background:#090909;
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    color:#eee;
+
+    outline:none;
+
+    transition:
+        border-color .2s,
+        box-shadow .2s,
+        background .2s;
 }
 
 input{
-height:54px;
-padding:0 15px;
-font-size:13px;
+    height:54px;
+
+    padding:
+        0
+        15px;
+
+    font-size:13px;
 }
 
 textarea{
-height:320px;
-padding:18px;
-font-size:15px;
-line-height:1.8;
-resize:none;
+    height:320px;
+
+    padding:18px;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    resize:none;
 }
 
 input::placeholder,
 textarea::placeholder{
-color:#444;
+    color:#444;
+}
+
+input:hover,
+textarea:hover{
+    border-color:
+        rgba(255,255,255,.16);
 }
 
 input:focus,
 textarea:focus{
-border-color:#ef3038;
-box-shadow:0 0 0 3px rgba(239,48,56,.07);
+    border-color:#ef3038;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(239,48,56,.07);
+
+    background:#0b0b0b;
 }
 
+
+/* =====================================================
+   MESSAGE HEADER
+===================================================== */
+
 .message-head{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-top:30px;
-margin-bottom:10px;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:31px;
+
+    margin-bottom:10px;
 }
 
 .counter{
-font-family:"DM Mono",monospace;
-font-size:10px;
-color:#555;
+    font-family:"DM Mono",monospace;
+
+    font-size:10px;
+
+    color:#555;
+
+    white-space:nowrap;
 }
 
 .counter.warning{
-color:#ef3038;
+    color:#ef3038;
 }
+
+.counter.complete{
+    color:#42d27e;
+}
+
+
+/* =====================================================
+   MESSAGE NOTE
+===================================================== */
 
 .message-note{
-font-size:11px;
-line-height:1.7;
-color:#555;
-margin-top:12px;
+    font-size:11px;
+
+    line-height:1.7;
+
+    color:#555;
+
+    margin-top:12px;
 }
 
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
 .submit{
-width:100%;
-height:60px;
-margin-top:25px;
-border:0;
-background:#dc2028;
-color:#fff;
-cursor:pointer;
-font-size:11px;
-font-weight:900;
-letter-spacing:1.5px;
-text-transform:uppercase;
-transition:.25s;
+    width:100%;
+
+    min-height:60px;
+
+    margin-top:26px;
+
+    border:0;
+
+    background:#dc2028;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    transition:
+        background .25s,
+        transform .25s,
+        box-shadow .25s;
 }
 
 .submit:hover{
-background:#ff3038;
-transform:translateY(-2px);
-box-shadow:0 15px 45px rgba(220,32,40,.3);
+    background:#ff3038;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 15px 45px
+        rgba(220,32,40,.3);
 }
+
+.submit:focus-visible{
+    outline:2px solid #fff;
+
+    outline-offset:4px;
+}
+
+.submit:disabled{
+    opacity:.45;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+}
+
+
+/* =====================================================
+   PRIVACY
+===================================================== */
 
 .privacy{
-text-align:center;
-font-family:"DM Mono",monospace;
-font-size:9px;
-letter-spacing:1px;
-text-transform:uppercase;
-color:#444;
-margin-top:18px;
+    text-align:center;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    line-height:1.8;
+
+    text-transform:uppercase;
+
+    color:#444;
+
+    margin-top:18px;
 }
 
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 footer{
-padding:30px;
-text-align:center;
-font-family:"DM Mono",monospace;
-font-size:9px;
-letter-spacing:1px;
-text-transform:uppercase;
-color:#444;
+    padding:35px 15px;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+    text-align:center;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:#444;
 }
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.toast{
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:
+        translate(-50%,20px);
+
+    background:#f4f1ea;
+
+    color:#080808;
+
+    padding:13px 18px;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    z-index:1000;
+}
+
+.toast.show{
+    opacity:1;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
-main{
-padding-top:45px;
+    main{
+        padding-top:48px;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .fields{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    h1{
+        font-size:53px;
+    }
+
+    textarea{
+        height:300px;
+    }
+
+    .message-head{
+        align-items:flex-end;
+    }
+
+    .submit{
+        min-height:58px;
+    }
+
 }
 
-.card{
-padding:22px;
-}
 
-.fields{
-grid-template-columns:1fr;
-}
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
 
-.field.full{
-grid-column:auto;
-}
+@media(prefers-reduced-motion:reduce){
 
-h1{
-font-size:53px;
-}
+    html{
+        scroll-behavior:auto;
+    }
 
-textarea{
-height:300px;
-}
+    input,
+    textarea,
+    .submit{
+        transition:none;
+    }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<nav>
 
-<div class="nav-inner">
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-<a href="index.html" class="logo">
+<header>
+
+<nav
+class="nav-inner"
+aria-label="Main navigation"
+>
+
+<a
+href="/"
+class="logo"
+aria-label="Last Human Message home"
+>
+
 Last<span>Human</span>Message
+
 </a>
 
+
 <div class="step">
+
 Step 02 / Write
-</div>
 
 </div>
 
 </nav>
 
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
 <div class="wrapper">
 
+
 <div class="eyebrow">
+
 You are now part of it
+
 </div>
 
+
 <h1>
+
 Leave something
 <br>
+
 for the <em>next human.</em>
+
 </h1>
 
+
 <p class="intro">
+
 Someone left a message for you.
+
 Now it's your turn.
 
-Write anything you want the next stranger
+Write something you want the next stranger
 to discover when they arrive here.
+
+<strong>
+Your words become part of the chain.
+</strong>
+
 </p>
 
 
-<div class="card">
+<!-- =====================================================
+     FORM CARD
+===================================================== -->
 
+<form
+class="card"
+id="messageForm"
+novalidate
+>
+
+
+<!-- TRANSACTION -->
 
 <div class="transaction">
 
@@ -343,76 +941,128 @@ to discover when they arrive here.
 Transaction
 </label>
 
-<div class="tx">
+<div
+class="tx pending"
+id="transactionHash"
+aria-live="polite"
+>
+
 Transaction hash will appear here
-</div>
 
 </div>
 
+</div>
+
+
+<!-- PRIVATE DETAILS -->
 
 <div class="private-title">
-Your details — private
+
+Your details
+<span>— private</span>
+
 </div>
 
 
 <div class="fields">
 
 
+<!-- FULL NAME -->
+
 <div class="field">
 
-<label class="label">
+<label
+class="label"
+for="fullName"
+>
+
 Full name
+
 </label>
 
 <input
 type="text"
+id="fullName"
+name="fullName"
 placeholder="Your full name"
 maxlength="100"
+autocomplete="name"
 >
 
 </div>
 
 
+<!-- EMAIL -->
+
 <div class="field">
 
-<label class="label">
+<label
+class="label"
+for="email"
+>
+
 Email
+
 </label>
 
 <input
 type="email"
+id="email"
+name="email"
 placeholder="you@example.com"
 maxlength="150"
+autocomplete="email"
+inputmode="email"
 >
 
 </div>
 
 
+<!-- CITY -->
+
 <div class="field">
 
-<label class="label">
+<label
+class="label"
+for="city"
+>
+
 City
+
 </label>
 
 <input
 type="text"
+id="city"
+name="city"
 placeholder="Your city"
 maxlength="80"
+autocomplete="address-level2"
 >
 
 </div>
 
 
+<!-- COUNTRY -->
+
 <div class="field">
 
-<label class="label">
+<label
+class="label"
+for="country"
+>
+
 Country
+
 </label>
 
 <input
 type="text"
+id="country"
+name="country"
 placeholder="Your country"
 maxlength="80"
+autocomplete="country-name"
 >
 
 </div>
@@ -420,36 +1070,67 @@ maxlength="80"
 
 </div>
 
+
+<!-- MESSAGE HEADER -->
 
 <div class="message-head">
 
-<label class="label" style="margin:0;">
+<label
+class="label"
+for="message"
+style="margin:0;"
+>
+
 Your message
+
 </label>
 
-<div class="counter" id="counter">
+
+<div
+class="counter"
+id="counter"
+aria-live="polite"
+>
+
 0 / 4000
-</div>
 
 </div>
 
+</div>
+
+
+<!-- MESSAGE -->
 
 <textarea
 id="message"
+name="message"
 maxlength="4000"
-placeholder="Write something worth finding..."></textarea>
+placeholder="Write something worth finding..."
+aria-describedby="messageNote"
+required
+></textarea>
 
 
-<div class="message-note">
+<div
+class="message-note"
+id="messageNote"
+>
+
 Your personal information will not be shown
 to the person who discovers your message.
+
 Only your message will be visible.
+
 </div>
 
 
+<!-- SUBMIT -->
+
 <button
+type="submit"
 class="submit"
-onclick="submitMessage()">
+id="submitButton"
+>
 
 Leave My Message
 
@@ -457,23 +1138,49 @@ Leave My Message
 
 
 <div class="privacy">
+
 Your words will become part of the chain.
+
 </div>
 
 
-</div>
+</form>
 
 </div>
 
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
+
 © 2026 Last Human Message
+
 </footer>
 
 
+<!-- TOAST -->
+
+<div
+class="toast"
+id="toast"
+role="status"
+aria-live="polite"
+>
+
+Please write your message first.
+
+</div>
+
+
 <script>
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
 
 const message =
 document.getElementById("message");
@@ -481,47 +1188,153 @@ document.getElementById("message");
 const counter =
 document.getElementById("counter");
 
-message.addEventListener("input",function(){
+const form =
+document.getElementById("messageForm");
 
-const length=this.value.length;
+const submitButton =
+document.getElementById("submitButton");
 
-counter.textContent =
-length + " / 4000";
+const toast =
+document.getElementById("toast");
 
-if(length >= 3800){
 
-counter.classList.add("warning");
+/* =====================================================
+   CHARACTER COUNTER
+===================================================== */
 
-}else{
+message.addEventListener(
+    "input",
+    function(){
 
-counter.classList.remove("warning");
+        const length =
+            this.value.length;
+
+        counter.textContent =
+            length + " / 4000";
+
+
+        if(length >= 3800){
+
+            counter.classList.add("warning");
+
+        }else{
+
+            counter.classList.remove("warning");
+
+        }
+
+
+        if(length === 4000){
+
+            counter.classList.add("complete");
+
+        }else{
+
+            counter.classList.remove("complete");
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+let toastTimer;
+
+function showToast(text){
+
+    toast.textContent = text;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer =
+        setTimeout(
+            function(){
+
+                toast.classList.remove("show");
+
+            },
+            2200
+        );
 
 }
 
-});
+
+/* =====================================================
+   FORM
+===================================================== */
+
+form.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
 
 
-function submitMessage(){
-
-if(message.value.trim().length < 1){
-
-alert("Please write your message first.");
-
-return;
-
-}
+        const text =
+            message.value.trim();
 
 
-/*
-Temporary visual navigation.
-The real submission will be connected later.
-*/
+        if(!text){
 
-window.location.href="view-message.html";
+            showToast(
+                "Please write your message first."
+            );
 
-}
+            message.focus();
+
+            return;
+
+        }
+
+
+        if(text.length > 4000){
+
+            showToast(
+                "Your message is too long."
+            );
+
+            return;
+
+        }
+
+
+        /*
+         Temporary navigation only.
+
+         Payment verification,
+         transaction validation,
+         database storage and
+         real message assignment
+         will be connected later.
+        */
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Opening your message...";
+
+
+        setTimeout(
+            function(){
+
+                window.location.href =
+                    "/view-message.html";
+
+            },
+            450
+        );
+
+    }
+);
 
 </script>
+
 
 </body>
 </html>
