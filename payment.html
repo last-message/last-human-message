@@ -7,11 +7,11 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Unlock Your Message — Last Human Message</title>
+<title>Unlock Your Message — Pay $2 USDT</title>
 
 <meta
 name="description"
-content="Unlock a message from a stranger and leave something for the next human."
+content="Pay $2 USDT on TRON to unlock a message from another human."
 >
 
 <meta name="robots"
@@ -40,15 +40,19 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 
 min-height:100vh;
 
 background:
 radial-gradient(
-circle at 50% 0%,
+circle at 50% -10%,
 rgba(215,25,32,.18),
-transparent 40%
+transparent 42%
 ),
 #070707;
 
@@ -62,13 +66,40 @@ flex-direction:column;
 
 }
 
+body:before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:999;
+
+opacity:.035;
+
+background-image:url(
+"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+);
+
+}
+
 a{
 color:inherit;
 text-decoration:none;
 }
 
+button,
+input{
+font-family:inherit;
+}
 
-/* NAV */
+
+/* =====================================================
+NAV
+===================================================== */
 
 nav{
 
@@ -80,6 +111,10 @@ display:flex;
 
 align-items:center;
 
+background:rgba(7,7,7,.72);
+
+backdrop-filter:blur(18px);
+
 }
 
 .nav-inner{
@@ -90,17 +125,19 @@ margin:auto;
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
+
+justify-content:space-between;
 
 }
 
 .logo{
 
+font-size:15px;
+
 font-weight:900;
 
-font-size:15px;
+letter-spacing:-.5px;
 
 }
 
@@ -116,39 +153,39 @@ font-family:"DM Mono",monospace;
 
 font-size:10px;
 
-text-transform:uppercase;
-
 letter-spacing:1.5px;
+
+text-transform:uppercase;
 
 color:#777;
 
 }
 
 
-/* MAIN */
+/* =====================================================
+MAIN
+===================================================== */
 
 main{
 
 flex:1;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:70px 15px;
+padding:70px 15px 100px;
 
 }
 
-.payment{
+.wrapper{
 
-width:min(520px,100%);
+width:min(620px,100%);
+
+margin:auto;
 
 }
 
 
-/* HEADER */
+/* =====================================================
+HEADER
+===================================================== */
 
 .eyebrow{
 
@@ -168,13 +205,17 @@ margin-bottom:20px;
 
 h1{
 
-font-size:clamp(45px,9vw,72px);
+font-size:clamp(
+48px,
+9vw,
+78px
+);
 
-line-height:.94;
+line-height:.92;
 
-letter-spacing:-.065em;
+letter-spacing:-.07em;
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 }
 
@@ -186,32 +227,33 @@ font-weight:500;
 
 }
 
-
-/* INTRO */
-
 .intro{
 
-color:#888;
+color:#858585;
 
 font-size:15px;
 
 line-height:1.8;
+
+max-width:550px;
 
 margin-bottom:35px;
 
 }
 
 
-/* CARD */
+/* =====================================================
+PAYMENT CARD
+===================================================== */
 
-.card{
+.payment-card{
 
 background:
 
 linear-gradient(
 145deg,
 #151515,
-#0d0d0d
+#0c0c0c
 );
 
 border:1px solid rgba(255,255,255,.10);
@@ -219,20 +261,22 @@ border:1px solid rgba(255,255,255,.10);
 padding:30px;
 
 box-shadow:
-0 30px 100px rgba(0,0,0,.4);
+0 30px 100px rgba(0,0,0,.45);
 
 }
 
 
-/* PRICE */
+/* =====================================================
+AMOUNT
+===================================================== */
 
-.price-row{
+.amount{
 
 display:flex;
 
 justify-content:space-between;
 
-align-items:end;
+align-items:center;
 
 padding-bottom:25px;
 
@@ -240,7 +284,7 @@ border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
-.price-label{
+.amount-label{
 
 font-family:"DM Mono",monospace;
 
@@ -254,9 +298,9 @@ color:#666;
 
 }
 
-.price{
+.amount-value{
 
-font-size:44px;
+font-size:42px;
 
 font-weight:900;
 
@@ -264,30 +308,141 @@ letter-spacing:-.06em;
 
 }
 
-.price small{
+.amount-value span{
 
-font-size:14px;
+font-size:13px;
+
+font-weight:500;
 
 color:#777;
 
-font-weight:500;
+letter-spacing:0;
 
 }
 
 
-/* WHAT YOU GET */
+/* =====================================================
+NETWORK
+===================================================== */
 
-.get{
+.network{
 
-padding:25px 0;
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 0;
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
-.get-title{
+.network-label{
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+color:#666;
+
+}
+
+.network-value{
 
 font-size:12px;
+
+font-weight:800;
+
+color:#eee;
+
+}
+
+.network-value span{
+
+color:#ef3038;
+
+}
+
+
+/* =====================================================
+WALLET
+===================================================== */
+
+.wallet-section{
+
+padding:25px 0;
+
+}
+
+.wallet-label{
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+color:#666;
+
+margin-bottom:12px;
+
+}
+
+.wallet-box{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+background:#090909;
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:14px;
+
+}
+
+.wallet-address{
+
+flex:1;
+
+font-family:"DM Mono",monospace;
+
+font-size:11px;
+
+line-height:1.6;
+
+color:#ccc;
+
+word-break:break-all;
+
+}
+
+.copy-btn{
+
+flex-shrink:0;
+
+border:1px solid rgba(255,255,255,.12);
+
+background:#151515;
+
+color:#aaa;
+
+padding:10px 12px;
+
+cursor:pointer;
+
+font-size:9px;
 
 font-weight:800;
 
@@ -295,40 +450,158 @@ text-transform:uppercase;
 
 letter-spacing:1px;
 
-margin-bottom:15px;
-
 }
 
-ul{
+.copy-btn:hover{
 
-list-style:none;
+color:white;
 
-}
-
-li{
-
-color:#888;
-
-font-size:13px;
-
-margin:10px 0;
-
-}
-
-li:before{
-
-content:"✓";
-
-color:#ef3038;
-
-margin-right:10px;
+border-color:#555;
 
 }
 
 
-/* BUTTON */
+/* =====================================================
+QR
+===================================================== */
 
-.pay-button{
+.qr-area{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:22px 0;
+
+}
+
+.qr{
+
+width:155px;
+
+height:155px;
+
+background:white;
+
+padding:8px;
+
+border-radius:2px;
+
+}
+
+.qr img{
+
+display:block;
+
+width:100%;
+
+height:100%;
+
+}
+
+
+/* =====================================================
+WARNING
+===================================================== */
+
+.warning{
+
+padding:16px;
+
+border:1px solid rgba(215,25,32,.25);
+
+background:rgba(215,25,32,.055);
+
+font-size:11px;
+
+line-height:1.7;
+
+color:#999;
+
+}
+
+.warning strong{
+
+color:#eee;
+
+}
+
+
+/* =====================================================
+HASH
+===================================================== */
+
+.verify-section{
+
+padding-top:30px;
+
+}
+
+.verify-label{
+
+display:block;
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+color:#777;
+
+margin-bottom:10px;
+
+}
+
+.hash-input{
+
+width:100%;
+
+min-height:56px;
+
+border:1px solid rgba(255,255,255,.10);
+
+background:#090909;
+
+color:#eee;
+
+padding:0 16px;
+
+outline:none;
+
+font-family:"DM Mono",monospace;
+
+font-size:12px;
+
+transition:.2s;
+
+}
+
+.hash-input::placeholder{
+
+color:#444;
+
+}
+
+.hash-input:focus{
+
+border-color:#ef3038;
+
+box-shadow:
+0 0 0 3px rgba(239,48,56,.08);
+
+}
+
+
+/* =====================================================
+VERIFY BUTTON
+===================================================== */
+
+.verify-btn{
 
 width:100%;
 
@@ -336,13 +609,13 @@ height:58px;
 
 border:0;
 
-cursor:pointer;
+margin-top:14px;
 
 background:#dc2028;
 
 color:white;
 
-font-family:Inter,sans-serif;
+cursor:pointer;
 
 font-size:11px;
 
@@ -352,13 +625,11 @@ text-transform:uppercase;
 
 letter-spacing:1.5px;
 
-margin-top:25px;
-
 transition:.25s;
 
 }
 
-.pay-button:hover{
+.verify-btn:hover{
 
 background:#ff3038;
 
@@ -369,8 +640,69 @@ box-shadow:
 
 }
 
+.verify-btn:disabled{
 
-/* SECURITY */
+opacity:.55;
+
+cursor:not-allowed;
+
+transform:none;
+
+}
+
+
+/* =====================================================
+STATUS
+===================================================== */
+
+.status-box{
+
+display:none;
+
+margin-top:15px;
+
+padding:15px;
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+line-height:1.7;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:#0a0a0a;
+
+}
+
+.status-box.show{
+
+display:block;
+
+}
+
+.status-loading{
+
+color:#aaa;
+
+}
+
+.status-error{
+
+color:#ff646a;
+
+}
+
+.status-success{
+
+color:#58d78b;
+
+}
+
+
+/* =====================================================
+SECURITY
+===================================================== */
 
 .security{
 
@@ -378,11 +710,11 @@ display:flex;
 
 justify-content:center;
 
-gap:18px;
-
 flex-wrap:wrap;
 
-margin-top:20px;
+gap:18px;
+
+margin-top:22px;
 
 font-family:"DM Mono",monospace;
 
@@ -397,28 +729,32 @@ color:#555;
 }
 
 
-/* NOTE */
+/* =====================================================
+FOOTNOTE
+===================================================== */
 
 .note{
 
-margin-top:25px;
+text-align:center;
 
-font-size:11px;
+font-size:10px;
 
 line-height:1.7;
 
-color:#555;
+color:#444;
 
-text-align:center;
+margin-top:22px;
 
 }
 
 
-/* FOOTER */
+/* =====================================================
+FOOTER
+===================================================== */
 
 footer{
 
-padding:25px;
+padding:28px;
 
 text-align:center;
 
@@ -435,7 +771,9 @@ color:#444;
 }
 
 
-/* MOBILE */
+/* =====================================================
+MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
@@ -443,13 +781,29 @@ main{
 
 padding-top:45px;
 
-padding-bottom:45px;
+}
+
+.payment-card{
+
+padding:22px;
 
 }
 
-.card{
+.wallet-box{
 
-padding:22px;
+align-items:flex-start;
+
+}
+
+.wallet-address{
+
+font-size:10px;
+
+}
+
+.copy-btn{
+
+padding:9px;
 
 }
 
@@ -494,86 +848,192 @@ class="back">
 
 <main>
 
-<div class="payment">
+<div class="wrapper">
+
 
 <div class="eyebrow">
-Step 01 / Unlock
+
+Step 01 / Payment
+
 </div>
+
 
 <h1>
 
-A message is
+Unlock the
 <br>
-waiting for <em>you.</em>
+
+<em>unknown.</em>
 
 </h1>
 
+
 <p class="intro">
 
-Someone you will probably never meet
-left something behind.
+Someone left a message here before you.
 
-For $2, you get to find out what it is —
-and leave something for whoever comes next.
+Send exactly <strong>$2 USDT</strong> on the
+<strong>TRON (TRC20)</strong> network.
+Then submit your transaction hash below.
 
 </p>
 
 
-<div class="card">
+<div class="payment-card">
 
 
-<div class="price-row">
+<!-- AMOUNT -->
 
-<div class="price-label">
-Access
-</div>
+<div class="amount">
 
-<div class="price">
-$2 <small>USD</small>
-</div>
+<div class="amount-label">
+
+Amount
 
 </div>
 
+<div class="amount-value">
 
-<div class="get">
+$2 <span>USDT</span>
 
-<div class="get-title">
-Your access includes
 </div>
 
-<ul>
+</div>
 
-<li>
-Unlock one message from a stranger
-</li>
 
-<li>
-Leave a message for the next human
-</li>
+<!-- NETWORK -->
 
-<li>
-Become part of the chain
-</li>
+<div class="network">
 
-</ul>
+<div class="network-label">
+
+Network
+
+</div>
+
+<div class="network-value">
+
+TRON <span>TRC20</span>
+
+</div>
+
+</div>
+
+
+<!-- WALLET -->
+
+<div class="wallet-section">
+
+<div class="wallet-label">
+
+Send USDT to this address
+
+</div>
+
+
+<div class="wallet-box">
+
+<div
+class="wallet-address"
+id="walletAddress">
+
+TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx
 
 </div>
 
 
 <button
-class="pay-button"
-onclick="startPayment()">
+class="copy-btn"
+onclick="copyWallet()"
+id="copyButton">
 
-Unlock the message — $2
+Copy
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- QR -->
+
+<div class="qr-area">
+
+<div class="qr">
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx"
+alt="USDT TRC20 payment wallet QR code">
+
+</div>
+
+</div>
+
+
+<!-- WARNING -->
+
+<div class="warning">
+
+<strong>Important:</strong>
+
+Send exactly <strong>2 USDT</strong>
+using the <strong>TRON / TRC20</strong> network.
+
+Do not send USDT through ERC20, BEP20,
+Solana or another network.
+
+</div>
+
+
+<!-- HASH -->
+
+<div class="verify-section">
+
+<label
+class="verify-label"
+for="txHash">
+
+Transaction Hash
+
+</label>
+
+
+<input
+id="txHash"
+class="hash-input"
+type="text"
+autocomplete="off"
+spellcheck="false"
+placeholder="Paste your TRON transaction hash here">
+
+
+<button
+class="verify-btn"
+id="verifyButton"
+onclick="verifyPayment()">
+
+Verify Transaction
 
 </button>
 
 
+<div
+class="status-box"
+id="statusBox">
+
+<span id="statusText"></span>
+
+</div>
+
+</div>
+
+
 <div class="security">
 
-<span>Secure</span>
+<span>TRC20</span>
 
-<span>Private</span>
+<span>Secure</span>
 
 <span>No account required</span>
 
@@ -585,10 +1045,11 @@ Unlock the message — $2
 
 <p class="note">
 
-Payment integration is being connected.
-This button is currently a visual placeholder.
+Your transaction hash will be checked against
+the payment details before access is granted.
 
 </p>
+
 
 </div>
 
@@ -604,11 +1065,170 @@ This button is currently a visual placeholder.
 
 <script>
 
-function startPayment(){
+/* =====================================================
+   WALLET
+===================================================== */
 
-alert(
-"Payment system is coming next.\\n\\nThe Worker and real payment gateway will be connected after the design is finalized."
-);
+const wallet =
+"TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx";
+
+
+/* =====================================================
+   COPY WALLET
+===================================================== */
+
+async function copyWallet(){
+
+try{
+
+await navigator.clipboard.writeText(wallet);
+
+const button =
+document.getElementById("copyButton");
+
+button.textContent="Copied";
+
+setTimeout(()=>{
+
+button.textContent="Copy";
+
+},1800);
+
+}catch(error){
+
+alert("Unable to copy. Please copy the address manually.");
+
+}
+
+}
+
+
+/* =====================================================
+   VERIFY PAYMENT
+===================================================== */
+
+function verifyPayment(){
+
+const input =
+document.getElementById("txHash");
+
+const button =
+document.getElementById("verifyButton");
+
+const statusBox =
+document.getElementById("statusBox");
+
+const statusText =
+document.getElementById("statusText");
+
+const hash =
+input.value.trim();
+
+
+/*
+  TEMPORARY FRONT-END DEMO
+
+  Real verification will be handled by
+  the Cloudflare Worker later.
+
+  The Worker will verify:
+
+  1. Transaction exists
+  2. Transaction is confirmed
+  3. Network is TRON
+  4. Token is USDT
+  5. Amount is exactly 2 USDT
+  6. Destination address is our wallet
+  7. Transaction has not already been used
+*/
+
+
+if(!hash){
+
+statusBox.className =
+"status-box show";
+
+statusText.className =
+"status-error";
+
+statusText.textContent =
+"Please enter your transaction hash.";
+
+return;
+
+}
+
+
+/*
+  Basic TRON transaction hash check.
+  This is NOT blockchain verification.
+*/
+
+const validFormat =
+/^[a-fA-F0-9]{64}$/.test(hash);
+
+if(!validFormat){
+
+statusBox.className =
+"status-box show";
+
+statusText.className =
+"status-error";
+
+statusText.textContent =
+"Invalid transaction hash format. A TRON transaction hash should contain 64 hexadecimal characters.";
+
+return;
+
+}
+
+
+button.disabled=true;
+
+button.textContent="Checking...";
+
+statusBox.className =
+"status-box show";
+
+statusText.className =
+"status-loading";
+
+statusText.textContent =
+"Checking transaction. Please wait...";
+
+
+/*
+  DEMO ONLY
+
+  Later this will become:
+
+  fetch("/api/verify-payment", {
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        txHash:hash
+      })
+  })
+
+*/
+
+
+setTimeout(()=>{
+
+button.disabled=false;
+
+button.textContent=
+"Verify Transaction";
+
+statusText.className=
+"status-error";
+
+statusText.textContent=
+"Blockchain verification is not connected yet. The payment Worker will be connected in the next step.";
+
+},1500);
 
 }
 
