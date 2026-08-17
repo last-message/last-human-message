@@ -4,814 +4,805 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unlock Your Message — Pay $2 USDT</title>
+<title>Unlock the Message — $2 | Last Human Message</title>
 
 <meta
 name="description"
-content="Pay $2 USDT on TRON to unlock a message from another human."
+content="Send $2 in USDT on TRC20 to unlock the next human message and continue the Last Human Message chain."
 >
 
-<meta name="robots"
-content="noindex,nofollow">
+<meta
+name="robots"
+content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+>
 
-<meta name="theme-color"
-content="#070707">
+<meta
+name="author"
+content="Last Human Message"
+>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<meta
+name="theme-color"
+content="#070707"
+>
 
 <link
-href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
-rel="stylesheet">
+rel="canonical"
+href="https://last-human-mesage.pages.dev/payment.html"
+>
+
+
+<!-- OPEN GRAPH -->
+
+<meta
+property="og:type"
+content="website"
+>
+
+<meta
+property="og:url"
+content="https://last-human-mesage.pages.dev/payment.html"
+>
+
+<meta
+property="og:title"
+content="Unlock the Message — $2"
+>
+
+<meta
+property="og:description"
+content="One stranger left a message. Send $2 to unlock it and leave something for the human who comes after you."
+>
+
+<meta
+property="og:site_name"
+content="Last Human Message"
+>
+
+<meta
+property="og:locale"
+content="en_US"
+>
+
+
+<!-- X -->
+
+<meta
+name="twitter:card"
+content="summary"
+>
+
+<meta
+name="twitter:title"
+content="Unlock the Message — $2"
+>
+
+<meta
+name="twitter:description"
+content="One stranger. One message. One moment."
+>
+
+
+<!-- FONTS -->
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+rel="stylesheet"
+>
+
+
+<!-- STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://last-human-mesage.pages.dev/payment.html#webpage",
+  "url":"https://last-human-mesage.pages.dev/payment.html",
+  "name":"Unlock the Message — $2",
+  "description":"Unlock a message from another human and continue the Last Human Message chain.",
+  "isPartOf":{
+    "@type":"WebSite",
+    "@id":"https://last-human-mesage.pages.dev/#website",
+    "name":"Last Human Message",
+    "url":"https://last-human-mesage.pages.dev/"
+  },
+  "inLanguage":"en"
+}
+</script>
 
 
 <style>
 
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-
-min-height:100vh;
-
-background:
-radial-gradient(
-circle at 50% -10%,
-rgba(215,25,32,.18),
-transparent 42%
-),
-#070707;
-
-color:#f4f1ea;
-
-font-family:Inter,Arial,sans-serif;
-
-display:flex;
-
-flex-direction:column;
-
+    min-height:100vh;
+    background:#070707;
+    color:#f4f1ea;
+    font-family:Inter,Arial,sans-serif;
+    overflow-x:hidden;
 }
 
 body:before{
-
-content:"";
-
-position:fixed;
-
-inset:0;
-
-pointer-events:none;
-
-z-index:999;
-
-opacity:.035;
-
-background-image:url(
-"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
-);
-
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:999;
+    opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    text-decoration:none;
+    color:inherit;
 }
 
 button,
 input{
-font-family:inherit;
+    font-family:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 36px));
+    margin:auto;
 }
 
 
 /* =====================================================
-NAV
+   HEADER
 ===================================================== */
 
-nav{
-
-height:72px;
-
-border-bottom:1px solid rgba(255,255,255,.07);
-
-display:flex;
-
-align-items:center;
-
-background:rgba(7,7,7,.72);
-
-backdrop-filter:blur(18px);
-
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:72px;
+    z-index:100;
+    background:rgba(7,7,7,.76);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .nav-inner{
-
-width:min(1100px,calc(100% - 30px));
-
-margin:auto;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-
-font-size:15px;
-
-font-weight:900;
-
-letter-spacing:-.5px;
-
+    font-weight:900;
+    font-size:15px;
+    letter-spacing:-.5px;
 }
 
 .logo span{
-
-color:#ef3038;
-
+    color:#ef3038;
 }
 
 .back{
+    font-family:"DM Mono",monospace;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#777;
+    transition:.2s;
+}
 
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-letter-spacing:1.5px;
-
-text-transform:uppercase;
-
-color:#777;
-
+.back:hover{
+    color:#fff;
 }
 
 
 /* =====================================================
-MAIN
+   PAGE
 ===================================================== */
 
-main{
-
-flex:1;
-
-padding:70px 15px 100px;
-
+.page{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:130px 0 80px;
+    overflow:hidden;
 }
 
-.wrapper{
+.page-glow{
+    position:absolute;
+    width:800px;
+    height:800px;
+    left:50%;
+    top:35%;
+    transform:translate(-50%,-50%);
 
-width:min(620px,100%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(215,20,30,.17),
+            transparent 68%
+        );
 
-margin:auto;
+    pointer-events:none;
+}
 
+.page-grid{
+    position:absolute;
+    inset:0;
+    opacity:.10;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.055) 1px,
+            transparent 1px
+        );
+
+    background-size:80px 80px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 90%
+        );
+
+    pointer-events:none;
+}
+
+.payment-wrap{
+    position:relative;
+    z-index:2;
+    width:min(620px,100%);
+    margin:auto;
 }
 
 
 /* =====================================================
-HEADER
+   TOP LABEL
 ===================================================== */
 
 .eyebrow{
-
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-text-transform:uppercase;
-
-letter-spacing:2px;
-
-color:#ef3038;
-
-margin-bottom:20px;
-
+    text-align:center;
+    font-family:"DM Mono",monospace;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ef3038;
+    margin-bottom:25px;
 }
 
-h1{
-
-font-size:clamp(
-48px,
-9vw,
-78px
-);
-
-line-height:.92;
-
-letter-spacing:-.07em;
-
-margin-bottom:22px;
-
-}
-
-h1 em{
-
-font-family:"Playfair Display",serif;
-
-font-weight:500;
-
-}
-
-.intro{
-
-color:#858585;
-
-font-size:15px;
-
-line-height:1.8;
-
-max-width:550px;
-
-margin-bottom:35px;
-
+.eyebrow span{
+    color:#666;
 }
 
 
 /* =====================================================
-PAYMENT CARD
+   TITLE
+===================================================== */
+
+.title{
+    text-align:center;
+    font-size:clamp(48px,8vw,82px);
+    line-height:.92;
+    letter-spacing:-.07em;
+    font-weight:900;
+}
+
+.title em{
+    font-family:"Playfair Display",serif;
+    font-weight:500;
+}
+
+.subtitle{
+    max-width:520px;
+    margin:25px auto 0;
+    text-align:center;
+    color:#777;
+    line-height:1.8;
+    font-size:15px;
+}
+
+
+/* =====================================================
+   PAYMENT CARD
 ===================================================== */
 
 .payment-card{
+    position:relative;
+    margin-top:45px;
+    padding:34px;
 
-background:
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,25,25,.96),
+            rgba(10,10,10,.96)
+        );
 
-linear-gradient(
-145deg,
-#151515,
-#0c0c0c
-);
+    border:1px solid rgba(255,255,255,.11);
 
-border:1px solid rgba(255,255,255,.10);
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.45);
 
-padding:30px;
+    overflow:hidden;
+}
 
-box-shadow:
-0 30px 100px rgba(0,0,0,.45);
+.payment-card:before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    right:-170px;
+    top:-170px;
 
+    background:
+        radial-gradient(
+            circle,
+            rgba(239,48,56,.14),
+            transparent 70%
+        );
+
+    pointer-events:none;
 }
 
 
 /* =====================================================
-AMOUNT
+   AMOUNT
 ===================================================== */
 
-.amount{
+.amount-box{
+    position:relative;
+    text-align:center;
+    padding:30px 20px;
 
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding-bottom:25px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .amount-label{
-
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-text-transform:uppercase;
-
-letter-spacing:1.5px;
-
-color:#666;
-
+    font-family:"DM Mono",monospace;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#666;
 }
 
-.amount-value{
-
-font-size:42px;
-
-font-weight:900;
-
-letter-spacing:-.06em;
-
+.amount{
+    margin-top:8px;
+    font-size:64px;
+    line-height:1;
+    font-weight:900;
+    letter-spacing:-.07em;
 }
 
-.amount-value span{
-
-font-size:13px;
-
-font-weight:500;
-
-color:#777;
-
-letter-spacing:0;
-
+.amount span{
+    color:#ef3038;
 }
 
 
 /* =====================================================
-NETWORK
+   PAYMENT NETWORK
 ===================================================== */
 
 .network{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:25px 0;
 
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:22px 0;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
+    font-family:"DM Mono",monospace;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#aaa;
 }
 
-.network-label{
-
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-text-transform:uppercase;
-
-letter-spacing:1.5px;
-
-color:#666;
-
-}
-
-.network-value{
-
-font-size:12px;
-
-font-weight:800;
-
-color:#eee;
-
-}
-
-.network-value span{
-
-color:#ef3038;
-
+.network-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#41d17b;
+    box-shadow:0 0 12px #41d17b;
 }
 
 
 /* =====================================================
-WALLET
+   WALLET
 ===================================================== */
 
-.wallet-section{
-
-padding:25px 0;
-
-}
-
 .wallet-label{
+    display:block;
+    margin-bottom:10px;
 
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-text-transform:uppercase;
-
-letter-spacing:1.5px;
-
-color:#666;
-
-margin-bottom:12px;
-
+    font-family:"DM Mono",monospace;
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#666;
 }
 
 .wallet-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
 
-display:flex;
+    padding:15px;
 
-align-items:center;
-
-gap:10px;
-
-background:#090909;
-
-border:1px solid rgba(255,255,255,.08);
-
-padding:14px;
-
+    background:#080808;
+    border:1px solid rgba(255,255,255,.09);
 }
 
 .wallet-address{
+    flex:1;
+    min-width:0;
 
-flex:1;
+    font-family:"DM Mono",monospace;
+    font-size:12px;
+    line-height:1.6;
+    color:#ddd;
 
-font-family:"DM Mono",monospace;
-
-font-size:11px;
-
-line-height:1.6;
-
-color:#ccc;
-
-word-break:break-all;
-
+    word-break:break-all;
 }
 
 .copy-btn{
+    flex:0 0 auto;
 
-flex-shrink:0;
+    border:1px solid rgba(255,255,255,.12);
+    background:#111;
+    color:#aaa;
 
-border:1px solid rgba(255,255,255,.12);
+    padding:11px 13px;
 
-background:#151515;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
 
-color:#aaa;
-
-padding:10px 12px;
-
-cursor:pointer;
-
-font-size:9px;
-
-font-weight:800;
-
-text-transform:uppercase;
-
-letter-spacing:1px;
-
+    cursor:pointer;
+    transition:.2s;
 }
 
 .copy-btn:hover{
+    border-color:#555;
+    color:#fff;
+}
 
-color:white;
-
-border-color:#555;
-
+.copy-btn.copied{
+    color:#41d17b;
+    border-color:rgba(65,209,123,.4);
 }
 
 
 /* =====================================================
-QR
-===================================================== */
-
-.qr-area{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:22px 0;
-
-}
-
-.qr{
-
-width:155px;
-
-height:155px;
-
-background:white;
-
-padding:8px;
-
-border-radius:2px;
-
-}
-
-.qr img{
-
-display:block;
-
-width:100%;
-
-height:100%;
-
-}
-
-
-/* =====================================================
-WARNING
+   WARNING
 ===================================================== */
 
 .warning{
+    margin-top:15px;
+    padding:14px;
 
-padding:16px;
+    border-left:2px solid #ef3038;
 
-border:1px solid rgba(215,25,32,.25);
+    background:rgba(239,48,56,.035);
 
-background:rgba(215,25,32,.055);
+    color:#777;
 
-font-size:11px;
-
-line-height:1.7;
-
-color:#999;
-
+    font-size:11px;
+    line-height:1.7;
 }
 
 .warning strong{
-
-color:#eee;
-
+    color:#ddd;
 }
 
 
 /* =====================================================
-HASH
+   TRANSACTION INPUT
 ===================================================== */
 
-.verify-section{
-
-padding-top:30px;
-
+.verify{
+    margin-top:35px;
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
 .verify-label{
+    display:block;
+    margin-bottom:10px;
 
-display:block;
-
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-text-transform:uppercase;
-
-letter-spacing:1.5px;
-
-color:#777;
-
-margin-bottom:10px;
-
+    font-family:"DM Mono",monospace;
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#666;
 }
 
-.hash-input{
+.tx-input{
+    width:100%;
+    height:56px;
 
-width:100%;
+    padding:0 16px;
 
-min-height:56px;
+    background:#080808;
 
-border:1px solid rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.10);
 
-background:#090909;
+    color:#eee;
 
-color:#eee;
+    outline:none;
 
-padding:0 16px;
+    font-family:"DM Mono",monospace;
+    font-size:12px;
 
-outline:none;
-
-font-family:"DM Mono",monospace;
-
-font-size:12px;
-
-transition:.2s;
-
+    transition:.2s;
 }
 
-.hash-input::placeholder{
-
-color:#444;
-
+.tx-input::placeholder{
+    color:#444;
 }
 
-.hash-input:focus{
+.tx-input:focus{
+    border-color:rgba(239,48,56,.65);
 
-border-color:#ef3038;
-
-box-shadow:
-0 0 0 3px rgba(239,48,56,.08);
-
+    box-shadow:
+        0 0 0 3px rgba(239,48,56,.06);
 }
 
 
 /* =====================================================
-VERIFY BUTTON
+   CONTINUE BUTTON
 ===================================================== */
 
-.verify-btn{
+.continue-btn{
+    width:100%;
+    height:58px;
 
-width:100%;
+    margin-top:15px;
 
-height:58px;
+    border:0;
 
-border:0;
+    background:#dc2028;
+    color:#fff;
 
-margin-top:14px;
+    font-size:11px;
+    font-weight:900;
 
-background:#dc2028;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 
-color:white;
+    cursor:pointer;
 
-cursor:pointer;
+    box-shadow:
+        0 18px 50px rgba(220,32,40,.20);
 
-font-size:11px;
-
-font-weight:900;
-
-text-transform:uppercase;
-
-letter-spacing:1.5px;
-
-transition:.25s;
-
+    transition:.25s;
 }
 
-.verify-btn:hover{
+.continue-btn:hover{
+    background:#ff3038;
+    transform:translateY(-2px);
 
-background:#ff3038;
-
-transform:translateY(-2px);
-
-box-shadow:
-0 15px 45px rgba(220,32,40,.3);
-
-}
-
-.verify-btn:disabled{
-
-opacity:.55;
-
-cursor:not-allowed;
-
-transform:none;
-
+    box-shadow:
+        0 22px 65px rgba(220,32,40,.32);
 }
 
 
 /* =====================================================
-STATUS
+   TRUST
 ===================================================== */
 
-.status-box{
+.trust{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
 
-display:none;
+    margin-top:25px;
 
-margin-top:15px;
-
-padding:15px;
-
-font-family:"DM Mono",monospace;
-
-font-size:10px;
-
-line-height:1.7;
-
-border:1px solid rgba(255,255,255,.08);
-
-background:#0a0a0a;
-
+    border-top:1px solid rgba(255,255,255,.07);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
-.status-box.show{
+.trust-item{
+    padding:18px 10px;
+    text-align:center;
 
-display:block;
-
+    border-right:1px solid rgba(255,255,255,.07);
 }
 
-.status-loading{
-
-color:#aaa;
-
+.trust-item:last-child{
+    border-right:0;
 }
 
-.status-error{
-
-color:#ff646a;
-
+.trust-icon{
+    font-size:14px;
+    margin-bottom:7px;
 }
 
-.status-success{
-
-color:#58d78b;
-
+.trust-title{
+    font-family:"DM Mono",monospace;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#777;
 }
 
 
 /* =====================================================
-SECURITY
+   BOTTOM TEXT
 ===================================================== */
 
-.security{
+.bottom-note{
+    margin-top:30px;
 
-display:flex;
+    text-align:center;
 
-justify-content:center;
+    font-family:"DM Mono",monospace;
+    font-size:9px;
+    line-height:1.8;
 
-flex-wrap:wrap;
+    letter-spacing:.8px;
+    text-transform:uppercase;
 
-gap:18px;
-
-margin-top:22px;
-
-font-family:"DM Mono",monospace;
-
-font-size:9px;
-
-text-transform:uppercase;
-
-letter-spacing:1px;
-
-color:#555;
-
+    color:#555;
 }
 
 
 /* =====================================================
-FOOTNOTE
-===================================================== */
-
-.note{
-
-text-align:center;
-
-font-size:10px;
-
-line-height:1.7;
-
-color:#444;
-
-margin-top:22px;
-
-}
-
-
-/* =====================================================
-FOOTER
+   FOOTER
 ===================================================== */
 
 footer{
+    position:relative;
+    z-index:2;
 
-padding:28px;
+    padding:25px 0 35px;
 
-text-align:center;
+    font-family:"DM Mono",monospace;
+    font-size:9px;
 
-font-family:"DM Mono",monospace;
+    letter-spacing:1px;
+    text-transform:uppercase;
 
-font-size:9px;
+    color:#444;
+}
 
-letter-spacing:1px;
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
 
-text-transform:uppercase;
 
-color:#444;
+/* =====================================================
+   REVEAL
+===================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+
+    animation:
+        reveal .8s ease forwards;
+}
+
+.delay-1{
+    animation-delay:.12s;
+}
+
+.delay-2{
+    animation-delay:.22s;
+}
+
+.delay-3{
+    animation-delay:.32s;
+}
+
+.delay-4{
+    animation-delay:.42s;
+}
+
+@keyframes reveal{
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
 
 
 /* =====================================================
-MOBILE
+   MOBILE
 ===================================================== */
 
-@media(max-width:600px){
+@media(max-width:650px){
 
-main{
+    header{
+        height:64px;
+    }
 
-padding-top:45px;
+    .container{
+        width:calc(100% - 30px);
+    }
 
-}
+    .page{
+        padding:105px 0 55px;
+    }
 
-.payment-card{
+    .title{
+        font-size:clamp(48px,15vw,72px);
+    }
 
-padding:22px;
+    .subtitle{
+        font-size:14px;
+    }
 
-}
+    .payment-card{
+        padding:22px;
+        margin-top:35px;
+    }
 
-.wallet-box{
+    .amount{
+        font-size:56px;
+    }
 
-align-items:flex-start;
+    .wallet-box{
+        align-items:stretch;
+        flex-direction:column;
+    }
 
-}
+    .copy-btn{
+        width:100%;
+    }
 
-.wallet-address{
+    .trust{
+        grid-template-columns:1fr;
+    }
 
-font-size:10px;
+    .trust-item{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.07);
+    }
 
-}
+    .trust-item:last-child{
+        border-bottom:0;
+    }
 
-.copy-btn{
-
-padding:9px;
-
-}
-
-h1{
-
-font-size:52px;
-
-}
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+    }
 
 }
 
@@ -823,79 +814,111 @@ font-size:52px;
 <body>
 
 
-<nav>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-<div class="nav-inner">
+<header>
 
-<a href="index.html"
-class="logo">
+<nav
+class="container nav-inner"
+aria-label="Payment navigation"
+>
 
+<a
+href="/"
+class="logo"
+aria-label="Return to Last Human Message home"
+>
 Last<span>Human</span>Message
-
 </a>
 
-<a href="index.html"
-class="back">
 
+<a
+href="/"
+class="back"
+>
 ← Back
-
 </a>
-
-</div>
 
 </nav>
 
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main>
 
-<div class="wrapper">
+<section
+class="page"
+aria-labelledby="payment-title"
+>
+
+<div
+class="page-glow"
+aria-hidden="true"
+></div>
+
+<div
+class="page-grid"
+aria-hidden="true"
+></div>
 
 
-<div class="eyebrow">
+<div class="container">
 
-Step 01 / Payment
+<div class="payment-wrap">
 
+
+<!-- INTRO -->
+
+<div class="eyebrow reveal">
+Step 01 <span>/</span> Unlock
 </div>
 
 
-<h1>
+<h1
+id="payment-title"
+class="title reveal delay-1"
+>
 
-Unlock the
+One message.
 <br>
 
-<em>unknown.</em>
+<em>Two dollars.</em>
 
 </h1>
 
 
-<p class="intro">
+<p class="subtitle reveal delay-2">
 
-Someone left a message here before you.
+A stranger left something behind.
 
-Send exactly <strong>$2 USDT</strong> on the
-<strong>TRON (TRC20)</strong> network.
-Then submit your transaction hash below.
+Send $2 in USDT on the TRC20 network
+to unlock the next message and continue
+the chain.
 
 </p>
 
 
-<div class="payment-card">
+<!-- PAYMENT CARD -->
+
+<div class="payment-card reveal delay-3">
 
 
 <!-- AMOUNT -->
 
-<div class="amount">
+<div class="amount-box">
 
 <div class="amount-label">
-
-Amount
-
+Amount to send
 </div>
 
-<div class="amount-value">
-
-$2 <span>USDT</span>
-
+<div class="amount">
+$<span>2</span>
 </div>
 
 </div>
@@ -905,336 +928,287 @@ $2 <span>USDT</span>
 
 <div class="network">
 
-<div class="network-label">
+<span
+class="network-dot"
+aria-hidden="true"
+></span>
 
-Network
-
-</div>
-
-<div class="network-value">
-
-TRON <span>TRC20</span>
-
-</div>
+USDT · TRC20 Network
 
 </div>
 
 
 <!-- WALLET -->
 
-<div class="wallet-section">
-
-<div class="wallet-label">
-
-Send USDT to this address
-
-</div>
+<label
+class="wallet-label"
+for="walletAddress"
+>
+Send exactly $2 USDT to
+</label>
 
 
 <div class="wallet-box">
 
 <div
+id="walletAddress"
 class="wallet-address"
-id="walletAddress">
-
+>
 TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx
-
 </div>
 
 
 <button
+type="button"
 class="copy-btn"
-onclick="copyWallet()"
-id="copyButton">
-
+id="copyButton"
+>
 Copy
-
 </button>
 
 </div>
 
-</div>
-
-
-<!-- QR -->
-
-<div class="qr-area">
-
-<div class="qr">
-
-<img
-src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx"
-alt="USDT TRC20 payment wallet QR code">
-
-</div>
-
-</div>
-
-
-<!-- WARNING -->
 
 <div class="warning">
 
 <strong>Important:</strong>
+Only send USDT using the
+<strong>TRC20 network.</strong>
 
-Send exactly <strong>2 USDT</strong>
-using the <strong>TRON / TRC20</strong> network.
-
-Do not send USDT through ERC20, BEP20,
-Solana or another network.
+Sending another asset or using another
+network may result in permanent loss.
 
 </div>
 
 
-<!-- HASH -->
+<!-- VERIFY -->
 
-<div class="verify-section">
+<div class="verify">
 
 <label
 class="verify-label"
-for="txHash">
-
-Transaction Hash
-
+for="txHash"
+>
+After payment, enter your transaction hash
 </label>
 
 
 <input
 id="txHash"
-class="hash-input"
+class="tx-input"
 type="text"
+inputmode="text"
 autocomplete="off"
 spellcheck="false"
-placeholder="Paste your TRON transaction hash here">
+placeholder="Paste your transaction hash here"
+aria-label="Transaction hash"
+>
 
 
 <button
-class="verify-btn"
-id="verifyButton"
-onclick="verifyPayment()">
-
-Verify Transaction
-
+type="button"
+class="continue-btn"
+id="continueButton"
+>
+Verify transaction →
 </button>
 
+</div>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+
+<div class="trust-item">
 
 <div
-class="status-box"
-id="statusBox">
+class="trust-icon"
+aria-hidden="true"
+>
+◆
+</div>
 
-<span id="statusText"></span>
+<div class="trust-title">
+USDT
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<div
+class="trust-icon"
+aria-hidden="true"
+>
+◈
+</div>
+
+<div class="trust-title">
+TRC20
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<div
+class="trust-icon"
+aria-hidden="true"
+>
+∞
+</div>
+
+<div class="trust-title">
+Human chain
+</div>
+
+</div>
 
 </div>
 
 </div>
 
 
-<div class="security">
+<!-- BOTTOM -->
 
-<span>TRC20</span>
+<p class="bottom-note reveal delay-4">
 
-<span>Secure</span>
-
-<span>No account required</span>
-
-</div>
-
-
-</div>
-
-
-<p class="note">
-
-Your transaction hash will be checked against
-the payment details before access is granted.
+Your transaction hash is used to continue
+to the next step of the experience.
 
 </p>
 
 
 </div>
 
+</div>
+
+</section>
+
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
+<div class="container footer-inner">
+
+<span>
 © 2026 Last Human Message
+</span>
+
+<span>
+One stranger. One message.
+</span>
+
+</div>
 
 </footer>
 
 
+<!-- =====================================================
+     COPY WALLET
+===================================================== -->
+
 <script>
 
-/* =====================================================
-   WALLET
-===================================================== */
-
-const wallet =
+const walletAddress =
 "TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx";
 
-
-/* =====================================================
-   COPY WALLET
-===================================================== */
-
-async function copyWallet(){
-
-try{
-
-await navigator.clipboard.writeText(wallet);
-
-const button =
+const copyButton =
 document.getElementById("copyButton");
 
-button.textContent="Copied";
 
-setTimeout(()=>{
+copyButton.addEventListener(
+"click",
+async function(){
 
-button.textContent="Copy";
+    try{
 
-},1800);
+        await navigator.clipboard.writeText(
+            walletAddress
+        );
 
-}catch(error){
+        copyButton.textContent = "Copied ✓";
 
-alert("Unable to copy. Please copy the address manually.");
+        copyButton.classList.add("copied");
 
-}
+        setTimeout(function(){
 
-}
+            copyButton.textContent = "Copy";
+
+            copyButton.classList.remove("copied");
+
+        },2000);
+
+    }catch(error){
+
+        copyButton.textContent = "Copy manually";
+
+    }
+
+});
+
+</script>
 
 
-/* =====================================================
-   VERIFY PAYMENT
-===================================================== */
+<!-- =====================================================
+     TEMPORARY CONTINUE
+===================================================== -->
 
-function verifyPayment(){
+<script>
 
-const input =
+const continueButton =
+document.getElementById("continueButton");
+
+const txHash =
 document.getElementById("txHash");
 
-const button =
-document.getElementById("verifyButton");
 
-const statusBox =
-document.getElementById("statusBox");
+continueButton.addEventListener(
+"click",
+function(){
 
-const statusText =
-document.getElementById("statusText");
-
-const hash =
-input.value.trim();
+    const value =
+        txHash.value.trim();
 
 
-/*
-  TEMPORARY FRONT-END DEMO
+    if(!value){
 
-  Real verification will be handled by
-  the Cloudflare Worker later.
+        txHash.focus();
 
-  The Worker will verify:
+        txHash.style.borderColor =
+            "#ef3038";
 
-  1. Transaction exists
-  2. Transaction is confirmed
-  3. Network is TRON
-  4. Token is USDT
-  5. Amount is exactly 2 USDT
-  6. Destination address is our wallet
-  7. Transaction has not already been used
-*/
+        return;
+
+    }
 
 
-if(!hash){
+    /*
+      TEMPORARY FLOW
 
-statusBox.className =
-"status-box show";
+      Real transaction verification
+      will be connected later.
 
-statusText.className =
-"status-error";
+      For now this simply sends the
+      visitor to the Write Message page.
+    */
 
-statusText.textContent =
-"Please enter your transaction hash.";
+    window.location.href =
+        "/write-message.html?tx=" +
+        encodeURIComponent(value);
 
-return;
-
-}
-
-
-/*
-  Basic TRON transaction hash check.
-  This is NOT blockchain verification.
-*/
-
-const validFormat =
-/^[a-fA-F0-9]{64}$/.test(hash);
-
-if(!validFormat){
-
-statusBox.className =
-"status-box show";
-
-statusText.className =
-"status-error";
-
-statusText.textContent =
-"Invalid transaction hash format. A TRON transaction hash should contain 64 hexadecimal characters.";
-
-return;
-
-}
-
-
-button.disabled=true;
-
-button.textContent="Checking...";
-
-statusBox.className =
-"status-box show";
-
-statusText.className =
-"status-loading";
-
-statusText.textContent =
-"Checking transaction. Please wait...";
-
-
-/*
-  DEMO ONLY
-
-  Later this will become:
-
-  fetch("/api/verify-payment", {
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        txHash:hash
-      })
-  })
-
-*/
-
-
-setTimeout(()=>{
-
-button.disabled=false;
-
-button.textContent=
-"Verify Transaction";
-
-statusText.className=
-"status-error";
-
-statusText.textContent=
-"Blockchain verification is not connected yet. The payment Worker will be connected in the next step.";
-
-},1500);
-
-}
+});
 
 </script>
 
 
 </body>
 </html>
-
