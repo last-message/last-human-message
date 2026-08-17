@@ -1,1 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Unlock Your Message — Last Human Message</title>
+
+<meta
+name="description"
+content="Unlock a message from a stranger and leave something for the next human."
+>
+
+<meta name="robots"
+content="noindex,nofollow">
+
+<meta name="theme-color"
+content="#070707">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+min-height:100vh;
+
+background:
+radial-gradient(
+circle at 50% 0%,
+rgba(215,25,32,.18),
+transparent 40%
+),
+#070707;
+
+color:#f4f1ea;
+
+font-family:Inter,Arial,sans-serif;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+
+/* NAV */
+
+nav{
+
+height:72px;
+
+border-bottom:1px solid rgba(255,255,255,.07);
+
+display:flex;
+
+align-items:center;
+
+}
+
+.nav-inner{
+
+width:min(1100px,calc(100% - 30px));
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-weight:900;
+
+font-size:15px;
+
+}
+
+.logo span{
+
+color:#ef3038;
+
+}
+
+.back{
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+color:#777;
+
+}
+
+
+/* MAIN */
+
+main{
+
+flex:1;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:70px 15px;
+
+}
+
+.payment{
+
+width:min(520px,100%);
+
+}
+
+
+/* HEADER */
+
+.eyebrow{
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+color:#ef3038;
+
+margin-bottom:20px;
+
+}
+
+h1{
+
+font-size:clamp(45px,9vw,72px);
+
+line-height:.94;
+
+letter-spacing:-.065em;
+
+margin-bottom:20px;
+
+}
+
+h1 em{
+
+font-family:"Playfair Display",serif;
+
+font-weight:500;
+
+}
+
+
+/* INTRO */
+
+.intro{
+
+color:#888;
+
+font-size:15px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+
+/* CARD */
+
+.card{
+
+background:
+
+linear-gradient(
+145deg,
+#151515,
+#0d0d0d
+);
+
+border:1px solid rgba(255,255,255,.10);
+
+padding:30px;
+
+box-shadow:
+0 30px 100px rgba(0,0,0,.4);
+
+}
+
+
+/* PRICE */
+
+.price-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:end;
+
+padding-bottom:25px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.price-label{
+
+font-family:"DM Mono",monospace;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+color:#666;
+
+}
+
+.price{
+
+font-size:44px;
+
+font-weight:900;
+
+letter-spacing:-.06em;
+
+}
+
+.price small{
+
+font-size:14px;
+
+color:#777;
+
+font-weight:500;
+
+}
+
+
+/* WHAT YOU GET */
+
+.get{
+
+padding:25px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.get-title{
+
+font-size:12px;
+
+font-weight:800;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+margin-bottom:15px;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+li{
+
+color:#888;
+
+font-size:13px;
+
+margin:10px 0;
+
+}
+
+li:before{
+
+content:"✓";
+
+color:#ef3038;
+
+margin-right:10px;
+
+}
+
+
+/* BUTTON */
+
+.pay-button{
+
+width:100%;
+
+height:58px;
+
+border:0;
+
+cursor:pointer;
+
+background:#dc2028;
+
+color:white;
+
+font-family:Inter,sans-serif;
+
+font-size:11px;
+
+font-weight:900;
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+margin-top:25px;
+
+transition:.25s;
+
+}
+
+.pay-button:hover{
+
+background:#ff3038;
+
+transform:translateY(-2px);
+
+box-shadow:
+0 15px 45px rgba(220,32,40,.3);
+
+}
+
+
+/* SECURITY */
+
+.security{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:20px;
+
+font-family:"DM Mono",monospace;
+
+font-size:9px;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+color:#555;
+
+}
+
+
+/* NOTE */
+
+.note{
+
+margin-top:25px;
+
+font-size:11px;
+
+line-height:1.7;
+
+color:#555;
+
+text-align:center;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+padding:25px;
+
+text-align:center;
+
+font-family:"DM Mono",monospace;
+
+font-size:9px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#444;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+main{
+
+padding-top:45px;
+
+padding-bottom:45px;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+h1{
+
+font-size:52px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="nav-inner">
+
+<a href="index.html"
+class="logo">
+
+Last<span>Human</span>Message
+
+</a>
+
+<a href="index.html"
+class="back">
+
+← Back
+
+</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<div class="payment">
+
+<div class="eyebrow">
+Step 01 / Unlock
+</div>
+
+<h1>
+
+A message is
+<br>
+waiting for <em>you.</em>
+
+</h1>
+
+<p class="intro">
+
+Someone you will probably never meet
+left something behind.
+
+For $2, you get to find out what it is —
+and leave something for whoever comes next.
+
+</p>
+
+
+<div class="card">
+
+
+<div class="price-row">
+
+<div class="price-label">
+Access
+</div>
+
+<div class="price">
+$2 <small>USD</small>
+</div>
+
+</div>
+
+
+<div class="get">
+
+<div class="get-title">
+Your access includes
+</div>
+
+<ul>
+
+<li>
+Unlock one message from a stranger
+</li>
+
+<li>
+Leave a message for the next human
+</li>
+
+<li>
+Become part of the chain
+</li>
+
+</ul>
+
+</div>
+
+
+<button
+class="pay-button"
+onclick="startPayment()">
+
+Unlock the message — $2
+
+</button>
+
+
+<div class="security">
+
+<span>Secure</span>
+
+<span>Private</span>
+
+<span>No account required</span>
+
+</div>
+
+
+</div>
+
+
+<p class="note">
+
+Payment integration is being connected.
+This button is currently a visual placeholder.
+
+</p>
+
+</div>
+
+</main>
+
+
+<footer>
+
+© 2026 Last Human Message
+
+</footer>
+
+
+<script>
+
+function startPayment(){
+
+alert(
+"Payment system is coming next.\\n\\nThe Worker and real payment gateway will be connected after the design is finalized."
+);
+
+}
+
+</script>
+
+
+</body>
+</html>
 
