@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Write Your Message — Last Human Message</title>
+
+<meta name="description"
+content="Leave a message for the next human who arrives after you.">
+
+<meta name="robots" content="noindex,nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+min-height:100vh;
+background:
+radial-gradient(circle at 50% 0%,rgba(215,25,32,.16),transparent 42%),
+#070707;
+color:#f4f1ea;
+font-family:Inter,Arial,sans-serif;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+nav{
+height:72px;
+border-bottom:1px solid rgba(255,255,255,.07);
+display:flex;
+align-items:center;
+}
+
+.nav-inner{
+width:min(1100px,calc(100% - 30px));
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:15px;
+font-weight:900;
+}
+
+.logo span{
+color:#ef3038;
+}
+
+.step{
+font-family:"DM Mono",monospace;
+font-size:10px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:#666;
+}
+
+main{
+padding:65px 15px 100px;
+}
+
+.wrapper{
+width:min(760px,100%);
+margin:auto;
+}
+
+.eyebrow{
+font-family:"DM Mono",monospace;
+font-size:10px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#ef3038;
+margin-bottom:20px;
+}
+
+h1{
+font-size:clamp(48px,9vw,82px);
+line-height:.9;
+letter-spacing:-.07em;
+margin-bottom:24px;
+}
+
+h1 em{
+font-family:"Playfair Display",serif;
+font-weight:500;
+}
+
+.intro{
+max-width:600px;
+color:#858585;
+font-size:15px;
+line-height:1.8;
+margin-bottom:45px;
+}
+
+.card{
+background:linear-gradient(145deg,#151515,#0d0d0d);
+border:1px solid rgba(255,255,255,.10);
+padding:32px;
+box-shadow:0 30px 100px rgba(0,0,0,.45);
+}
+
+.transaction{
+margin-bottom:32px;
+}
+
+.label{
+display:block;
+font-family:"DM Mono",monospace;
+font-size:10px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:#666;
+margin-bottom:10px;
+}
+
+.tx{
+background:#090909;
+border:1px solid rgba(255,255,255,.08);
+padding:15px;
+font-family:"DM Mono",monospace;
+font-size:11px;
+color:#aaa;
+word-break:break-all;
+}
+
+.private-title{
+font-family:"DM Mono",monospace;
+font-size:10px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:#ef3038;
+padding-bottom:15px;
+border-bottom:1px solid rgba(255,255,255,.08);
+margin-bottom:22px;
+}
+
+.fields{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.field.full{
+grid-column:1 / -1;
+}
+
+input,
+textarea{
+width:100%;
+background:#090909;
+border:1px solid rgba(255,255,255,.09);
+color:#eee;
+outline:none;
+transition:.2s;
+}
+
+input{
+height:54px;
+padding:0 15px;
+font-size:13px;
+}
+
+textarea{
+height:320px;
+padding:18px;
+font-size:15px;
+line-height:1.8;
+resize:none;
+}
+
+input::placeholder,
+textarea::placeholder{
+color:#444;
+}
+
+input:focus,
+textarea:focus{
+border-color:#ef3038;
+box-shadow:0 0 0 3px rgba(239,48,56,.07);
+}
+
+.message-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:30px;
+margin-bottom:10px;
+}
+
+.counter{
+font-family:"DM Mono",monospace;
+font-size:10px;
+color:#555;
+}
+
+.counter.warning{
+color:#ef3038;
+}
+
+.message-note{
+font-size:11px;
+line-height:1.7;
+color:#555;
+margin-top:12px;
+}
+
+.submit{
+width:100%;
+height:60px;
+margin-top:25px;
+border:0;
+background:#dc2028;
+color:#fff;
+cursor:pointer;
+font-size:11px;
+font-weight:900;
+letter-spacing:1.5px;
+text-transform:uppercase;
+transition:.25s;
+}
+
+.submit:hover{
+background:#ff3038;
+transform:translateY(-2px);
+box-shadow:0 15px 45px rgba(220,32,40,.3);
+}
+
+.privacy{
+text-align:center;
+font-family:"DM Mono",monospace;
+font-size:9px;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#444;
+margin-top:18px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+font-family:"DM Mono",monospace;
+font-size:9px;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#444;
+}
+
+@media(max-width:600px){
+
+main{
+padding-top:45px;
+}
+
+.card{
+padding:22px;
+}
+
+.fields{
+grid-template-columns:1fr;
+}
+
+.field.full{
+grid-column:auto;
+}
+
+h1{
+font-size:53px;
+}
+
+textarea{
+height:300px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-inner">
+
+<a href="index.html" class="logo">
+Last<span>Human</span>Message
+</a>
+
+<div class="step">
+Step 02 / Write
+</div>
+
+</div>
+
+</nav>
+
+<main>
+
+<div class="wrapper">
+
+<div class="eyebrow">
+You are now part of it
+</div>
+
+<h1>
+Leave something
+<br>
+for the <em>next human.</em>
+</h1>
+
+<p class="intro">
+Someone left a message for you.
+Now it's your turn.
+
+Write anything you want the next stranger
+to discover when they arrive here.
+</p>
+
+
+<div class="card">
+
+
+<div class="transaction">
+
+<label class="label">
+Transaction
+</label>
+
+<div class="tx">
+Transaction hash will appear here
+</div>
+
+</div>
+
+
+<div class="private-title">
+Your details — private
+</div>
+
+
+<div class="fields">
+
+
+<div class="field">
+
+<label class="label">
+Full name
+</label>
+
+<input
+type="text"
+placeholder="Your full name"
+maxlength="100"
+>
+
+</div>
+
+
+<div class="field">
+
+<label class="label">
+Email
+</label>
+
+<input
+type="email"
+placeholder="you@example.com"
+maxlength="150"
+>
+
+</div>
+
+
+<div class="field">
+
+<label class="label">
+City
+</label>
+
+<input
+type="text"
+placeholder="Your city"
+maxlength="80"
+>
+
+</div>
+
+
+<div class="field">
+
+<label class="label">
+Country
+</label>
+
+<input
+type="text"
+placeholder="Your country"
+maxlength="80"
+>
+
+</div>
+
+
+</div>
+
+
+<div class="message-head">
+
+<label class="label" style="margin:0;">
+Your message
+</label>
+
+<div class="counter" id="counter">
+0 / 4000
+</div>
+
+</div>
+
+
+<textarea
+id="message"
+maxlength="4000"
+placeholder="Write something worth finding..."></textarea>
+
+
+<div class="message-note">
+Your personal information will not be shown
+to the person who discovers your message.
+Only your message will be visible.
+</div>
+
+
+<button
+class="submit"
+onclick="submitMessage()">
+
+Leave My Message
+
+</button>
+
+
+<div class="privacy">
+Your words will become part of the chain.
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+© 2026 Last Human Message
+</footer>
+
+
+<script>
+
+const message =
+document.getElementById("message");
+
+const counter =
+document.getElementById("counter");
+
+message.addEventListener("input",function(){
+
+const length=this.value.length;
+
+counter.textContent =
+length + " / 4000";
+
+if(length >= 3800){
+
+counter.classList.add("warning");
+
+}else{
+
+counter.classList.remove("warning");
+
+}
+
+});
+
+
+function submitMessage(){
+
+if(message.value.trim().length < 1){
+
+alert("Please write your message first.");
+
+return;
+
+}
+
+
+/*
+Temporary visual navigation.
+The real submission will be connected later.
+*/
+
+window.location.href="view-message.html";
+
+}
+
+</script>
+
+</body>
+</html>
