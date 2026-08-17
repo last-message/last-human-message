@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://last-human-mesage.pages.dev/sitemap.xml
+
