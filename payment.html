@@ -3,14 +3,13 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Unlock the Message — $2 | Last Human Message</title>
 
 <meta
 name="description"
-content="Send $2 in USDT on TRC20 to unlock the next human message and continue the Last Human Message chain."
+content="Send exactly $2 in USDT on TRC20 to unlock the next human message and continue the Last Human Message chain."
 >
 
 <meta
@@ -18,28 +17,15 @@ name="robots"
 content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
 >
 
-<meta
-name="author"
-content="Last Human Message"
->
-
-<meta
-name="theme-color"
-content="#070707"
->
+<meta name="author" content="Last Human Message">
+<meta name="theme-color" content="#070707">
 
 <link
 rel="canonical"
 href="https://last-human-mesage.pages.dev/payment.html"
 >
 
-
-<!-- OPEN GRAPH -->
-
-<meta
-property="og:type"
-content="website"
->
+<meta property="og:type" content="website">
 
 <meta
 property="og:url"
@@ -53,7 +39,7 @@ content="Unlock the Message — $2"
 
 <meta
 property="og:description"
-content="One stranger left a message. Send $2 to unlock it and leave something for the human who comes after you."
+content="One stranger left a message. Send exactly $2 USDT to unlock it."
 >
 
 <meta
@@ -61,18 +47,9 @@ property="og:site_name"
 content="Last Human Message"
 >
 
-<meta
-property="og:locale"
-content="en_US"
->
+<meta property="og:locale" content="en_US">
 
-
-<!-- X -->
-
-<meta
-name="twitter:card"
-content="summary"
->
+<meta name="twitter:card" content="summary">
 
 <meta
 name="twitter:title"
@@ -84,52 +61,15 @@ name="twitter:description"
 content="One stranger. One message. One moment."
 >
 
-
-<!-- FONTS -->
-
-<link
-rel="preconnect"
-href="https://fonts.googleapis.com"
->
-
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
 href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
 rel="stylesheet"
 >
 
-
-<!-- STRUCTURED DATA -->
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "@id":"https://last-human-mesage.pages.dev/payment.html#webpage",
-  "url":"https://last-human-mesage.pages.dev/payment.html",
-  "name":"Unlock the Message — $2",
-  "description":"Unlock a message from another human and continue the Last Human Message chain.",
-  "isPartOf":{
-    "@type":"WebSite",
-    "@id":"https://last-human-mesage.pages.dev/#website",
-    "name":"Last Human Message",
-    "url":"https://last-human-mesage.pages.dev/"
-  },
-  "inLanguage":"en"
-}
-</script>
-
-
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -175,9 +115,7 @@ input{
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 header{
     position:fixed;
@@ -222,9 +160,7 @@ header{
 }
 
 
-/* =====================================================
-   PAGE
-===================================================== */
+/* PAGE */
 
 .page{
     min-height:100vh;
@@ -289,9 +225,7 @@ header{
 }
 
 
-/* =====================================================
-   TOP LABEL
-===================================================== */
+/* TOP LABEL */
 
 .eyebrow{
     text-align:center;
@@ -308,9 +242,7 @@ header{
 }
 
 
-/* =====================================================
-   TITLE
-===================================================== */
+/* TITLE */
 
 .title{
     text-align:center;
@@ -335,9 +267,7 @@ header{
 }
 
 
-/* =====================================================
-   PAYMENT CARD
-===================================================== */
+/* PAYMENT CARD */
 
 .payment-card{
     position:relative;
@@ -378,9 +308,7 @@ header{
 }
 
 
-/* =====================================================
-   AMOUNT
-===================================================== */
+/* AMOUNT */
 
 .amount-box{
     position:relative;
@@ -411,9 +339,7 @@ header{
 }
 
 
-/* =====================================================
-   PAYMENT NETWORK
-===================================================== */
+/* NETWORK */
 
 .network{
     display:flex;
@@ -438,9 +364,7 @@ header{
 }
 
 
-/* =====================================================
-   WALLET
-===================================================== */
+/* WALLET */
 
 .wallet-label{
     display:block;
@@ -505,9 +429,7 @@ header{
 }
 
 
-/* =====================================================
-   WARNING
-===================================================== */
+/* WARNING */
 
 .warning{
     margin-top:15px;
@@ -528,9 +450,7 @@ header{
 }
 
 
-/* =====================================================
-   TRANSACTION INPUT
-===================================================== */
+/* VERIFY */
 
 .verify{
     margin-top:35px;
@@ -581,9 +501,7 @@ header{
 }
 
 
-/* =====================================================
-   CONTINUE BUTTON
-===================================================== */
+/* BUTTON */
 
 .continue-btn{
     width:100%;
@@ -618,10 +536,14 @@ header{
         0 22px 65px rgba(220,32,40,.32);
 }
 
+.continue-btn:disabled{
+    opacity:.65;
+    cursor:wait;
+    transform:none;
+}
 
-/* =====================================================
-   TRUST
-===================================================== */
+
+/* TRUST */
 
 .trust{
     display:grid;
@@ -658,9 +580,7 @@ header{
 }
 
 
-/* =====================================================
-   BOTTOM TEXT
-===================================================== */
+/* BOTTOM */
 
 .bottom-note{
     margin-top:30px;
@@ -678,9 +598,7 @@ header{
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer{
     position:relative;
@@ -704,9 +622,7 @@ footer{
 }
 
 
-/* =====================================================
-   REVEAL
-===================================================== */
+/* REVEAL */
 
 .reveal{
     opacity:0;
@@ -742,9 +658,7 @@ footer{
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:650px){
 
@@ -814,10 +728,6 @@ footer{
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
 <nav
@@ -833,7 +743,6 @@ aria-label="Return to Last Human Message home"
 Last<span>Human</span>Message
 </a>
 
-
 <a
 href="/"
 class="back"
@@ -845,10 +754,6 @@ class="back"
 
 </header>
 
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
 
 <main>
 
@@ -873,8 +778,6 @@ aria-hidden="true"
 <div class="payment-wrap">
 
 
-<!-- INTRO -->
-
 <div class="eyebrow reveal">
 Step 01 <span>/</span> Unlock
 </div>
@@ -897,19 +800,15 @@ One message.
 
 A stranger left something behind.
 
-Send $2 in USDT on the TRC20 network
+Send exactly $2 in USDT on the TRC20 network
 to unlock the next message and continue
 the chain.
 
 </p>
 
 
-<!-- PAYMENT CARD -->
-
 <div class="payment-card reveal delay-3">
 
-
-<!-- AMOUNT -->
 
 <div class="amount-box">
 
@@ -924,8 +823,6 @@ $<span>2</span>
 </div>
 
 
-<!-- NETWORK -->
-
 <div class="network">
 
 <span
@@ -937,8 +834,6 @@ USDT · TRC20 Network
 
 </div>
 
-
-<!-- WALLET -->
 
 <label
 class="wallet-label"
@@ -981,8 +876,6 @@ network may result in permanent loss.
 </div>
 
 
-<!-- VERIFY -->
-
 <div class="verify">
 
 <label
@@ -1015,8 +908,6 @@ Verify transaction →
 
 </div>
 
-
-<!-- TRUST -->
 
 <div class="trust">
 
@@ -1072,12 +963,10 @@ Human chain
 </div>
 
 
-<!-- BOTTOM -->
-
 <p class="bottom-note reveal delay-4">
 
-Your transaction hash is used to continue
-to the next step of the experience.
+Your transaction hash is verified on the TRON network
+before access is granted.
 
 </p>
 
@@ -1090,10 +979,6 @@ to the next step of the experience.
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
@@ -1112,18 +997,15 @@ One stranger. One message.
 </footer>
 
 
-<!-- =====================================================
-     COPY WALLET
-===================================================== -->
-
 <script>
+
+/* WALLET COPY */
 
 const walletAddress =
 "TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx";
 
 const copyButton =
 document.getElementById("copyButton");
-
 
 copyButton.addEventListener(
 "click",
@@ -1135,34 +1017,38 @@ async function(){
             walletAddress
         );
 
-        copyButton.textContent = "Copied ✓";
+        copyButton.textContent =
+            "Copied ✓";
 
-        copyButton.classList.add("copied");
+        copyButton.classList.add(
+            "copied"
+        );
 
         setTimeout(function(){
 
-            copyButton.textContent = "Copy";
+            copyButton.textContent =
+                "Copy";
 
-            copyButton.classList.remove("copied");
+            copyButton.classList.remove(
+                "copied"
+            );
 
         },2000);
 
     }catch(error){
 
-        copyButton.textContent = "Copy manually";
+        copyButton.textContent =
+            "Copy manually";
 
     }
 
 });
 
-</script>
 
+/* WORKER PAYMENT VERIFICATION */
 
-<!-- =====================================================
-     TEMPORARY CONTINUE
-===================================================== -->
-
-<script>
+const API_URL =
+"https://last-human-message-api.aaa6654292.workers.dev";
 
 const continueButton =
 document.getElementById("continueButton");
@@ -1173,7 +1059,7 @@ document.getElementById("txHash");
 
 continueButton.addEventListener(
 "click",
-function(){
+async function(){
 
     const value =
         txHash.value.trim();
@@ -1191,19 +1077,89 @@ function(){
     }
 
 
-    /*
-      TEMPORARY FLOW
+    if(value.length < 20){
 
-      Real transaction verification
-      will be connected later.
+        alert(
+            "Please enter a valid TRON transaction hash."
+        );
 
-      For now this simply sends the
-      visitor to the Write Message page.
-    */
+        txHash.focus();
 
-    window.location.href =
-        "/write-message.html?tx=" +
-        encodeURIComponent(value);
+        return;
+
+    }
+
+
+    continueButton.disabled =
+        true;
+
+    continueButton.textContent =
+        "VERIFYING...";
+
+
+    try{
+
+        const response =
+            await fetch(
+                API_URL + "/verify-payment",
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+                        txHash:value
+                    })
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if(
+            !response.ok ||
+            !data.ok
+        ){
+
+            alert(
+                data.error ||
+                "Payment could not be verified."
+            );
+
+            continueButton.disabled =
+                false;
+
+            continueButton.textContent =
+                "Verify transaction →";
+
+            return;
+
+        }
+
+
+        window.location.href =
+            "/write-message.html?payment=" +
+            encodeURIComponent(value);
+
+
+    }catch(error){
+
+        alert(
+            "Could not connect to the payment verification service."
+        );
+
+        continueButton.disabled =
+            false;
+
+        continueButton.textContent =
+            "Verify transaction →";
+
+    }
 
 });
 
