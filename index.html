@@ -5,16 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Last Human Message — One Stranger. One Message.</title>
+<title>Last Human Message — Leave Something Behind</title>
 
 <meta
 name="description"
-content="A stranger left a message for you. Find it, read it, and leave something behind for the next human."
+content="Leave a message for a stranger somewhere in the world. One human. One message. No profiles, no followers, no algorithm."
 >
 
 <meta
 name="robots"
-content="index,follow,max-image-preview:large"
+content="index,follow"
 >
 
 <meta name="author" content="Last Human Message">
@@ -39,12 +39,12 @@ content="https://last-human-mesage.pages.dev/"
 
 <meta
 property="og:title"
-content="Last Human Message — One Stranger. One Message."
+content="Last Human Message — Leave Something Behind"
 >
 
 <meta
 property="og:description"
-content="Someone left a message for you. Find it, read it, and leave something behind for the next human."
+content="Leave a message for a stranger somewhere in the world. One human. One message. No profiles, no followers, no algorithm."
 >
 
 <meta
@@ -54,29 +54,25 @@ content="Last Human Message"
 
 <meta property="og:locale" content="en_US">
 
+
 <!-- X -->
 
-<meta
-name="twitter:card"
-content="summary"
->
+<meta name="twitter:card" content="summary">
 
 <meta
 name="twitter:title"
-content="Last Human Message"
+content="Last Human Message — Leave Something Behind"
 >
 
 <meta
 name="twitter:description"
-content="One stranger. One message. Find the words someone left behind, then leave something for the next human."
+content="Leave a message for a stranger somewhere in the world. One human. One message. No profiles, no followers."
 >
 
-<!-- FONTS -->
 
-<link
-rel="preconnect"
-href="https://fonts.googleapis.com"
->
+<!-- PERFORMANCE -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
 rel="preconnect"
@@ -89,6 +85,7 @@ href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter
 rel="stylesheet"
 >
 
+
 <!-- STRUCTURED DATA -->
 
 <script type="application/ld+json">
@@ -98,12 +95,18 @@ rel="stylesheet"
   "@id":"https://last-human-mesage.pages.dev/#website",
   "url":"https://last-human-mesage.pages.dev/",
   "name":"Last Human Message",
-  "description":"A chain of anonymous human messages passed from one stranger to the next.",
-  "inLanguage":"en"
+  "description":"A place where strangers leave human messages for strangers.",
+  "inLanguage":"en",
+  "isAccessibleForFree":false
 }
 </script>
 
+
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -121,23 +124,20 @@ body{
 
     background:
         radial-gradient(
-            circle at 50% -15%,
-            rgba(239,48,56,.20),
-            transparent 42%
+            circle at 50% -10%,
+            rgba(239,48,56,.18),
+            transparent 38%
         ),
         radial-gradient(
-            circle at 0% 55%,
-            rgba(239,48,56,.045),
-            transparent 32%
+            circle at 10% 50%,
+            rgba(255,255,255,.025),
+            transparent 30%
         ),
         #070707;
 
     color:#f4f1ea;
 
-    font-family:
-        Inter,
-        Arial,
-        sans-serif;
+    font-family:Inter,Arial,sans-serif;
 
     overflow-x:hidden;
 }
@@ -161,13 +161,18 @@ body:before{
     );
 }
 
+button,
 a{
-    color:inherit;
-    text-decoration:none;
+    font-family:inherit;
 }
 
 button{
-    font-family:inherit;
+    border:0;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 
@@ -179,29 +184,26 @@ header{
 
     height:72px;
 
-    position:sticky;
+    position:relative;
 
-    top:0;
+    z-index:20;
 
-    z-index:50;
+    display:flex;
+
+    align-items:center;
 
     border-bottom:
         1px solid rgba(255,255,255,.07);
 
     background:
-        rgba(7,7,7,.78);
+        rgba(7,7,7,.76);
 
     backdrop-filter:blur(20px);
 }
 
-.nav{
+.nav-inner{
 
-    width:min(
-        1120px,
-        calc(100% - 30px)
-    );
-
-    height:100%;
+    width:min(1120px,calc(100% - 32px));
 
     margin:auto;
 
@@ -231,13 +233,11 @@ header{
 
     align-items:center;
 
-    gap:8px;
+    gap:12px;
 
-    font-family:
-        "DM Mono",
-        monospace;
+    font-family:"DM Mono",monospace;
 
-    font-size:8px;
+    font-size:9px;
 
     letter-spacing:1.5px;
 
@@ -246,7 +246,7 @@ header{
     color:#555;
 }
 
-.status{
+.status-dot{
 
     width:6px;
     height:6px;
@@ -256,18 +256,13 @@ header{
     background:#42d27e;
 
     box-shadow:
-        0 0 12px rgba(66,210,126,.7);
+        0 0 12px rgba(66,210,126,.8);
 }
 
 
 /* =====================================================
    HERO
 ===================================================== */
-
-main{
-
-    min-height:calc(100vh - 72px);
-}
 
 .hero{
 
@@ -278,18 +273,17 @@ main{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
     padding:
-        90px 15px
-        120px;
+        100px 16px 120px;
 
     overflow:hidden;
 }
 
-.hero-glow{
+.hero:before{
+
+    content:"";
 
     position:absolute;
 
@@ -297,50 +291,48 @@ main{
     height:900px;
 
     left:50%;
-    top:-390px;
+    top:-250px;
 
-    transform:
-        translateX(-50%);
+    transform:translateX(-50%);
 
     background:
         radial-gradient(
             circle,
-            rgba(220,28,38,.16),
-            transparent 68%
+            rgba(220,28,38,.13),
+            transparent 67%
         );
 
     pointer-events:none;
 }
 
-.grid{
+.hero-grid{
 
     position:absolute;
 
     inset:0;
 
-    opacity:.055;
+    opacity:.07;
 
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,.08) 1px,
+            rgba(255,255,255,.06) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255,255,255,.08) 1px,
+            rgba(255,255,255,.06) 1px,
             transparent 1px
         );
 
-    background-size:
-        90px 90px;
+    background-size:90px 90px;
 
     mask-image:
         linear-gradient(
             to bottom,
             #000,
-            transparent 75%
+            transparent 80%
         );
 
     pointer-events:none;
@@ -351,16 +343,13 @@ main{
    CONTENT
 ===================================================== */
 
-.container{
+.content{
+
+    width:min(940px,100%);
 
     position:relative;
 
     z-index:2;
-
-    width:min(
-        1080px,
-        100%
-    );
 
     margin:auto;
 
@@ -380,13 +369,11 @@ main{
 
     justify-content:center;
 
-    gap:12px;
+    gap:14px;
 
-    margin-bottom:27px;
+    margin-bottom:28px;
 
-    font-family:
-        "DM Mono",
-        monospace;
+    font-family:"DM Mono",monospace;
 
     font-size:9px;
 
@@ -399,7 +386,7 @@ main{
 
 .eyebrow-line{
 
-    width:34px;
+    width:38px;
     height:1px;
 
     background:#333;
@@ -417,32 +404,21 @@ main{
    TITLE
 ===================================================== */
 
-h1{
-
-    max-width:1050px;
-
-    margin:auto;
+.title{
 
     font-size:
-        clamp(
-            54px,
-            10vw,
-            112px
-        );
+        clamp(52px,9vw,96px);
 
-    line-height:.86;
+    line-height:.88;
 
-    letter-spacing:-.085em;
+    letter-spacing:-.08em;
 
     font-weight:900;
 }
 
-h1 em{
+.title em{
 
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+    font-family:"Playfair Display",serif;
 
     font-weight:500;
 
@@ -451,51 +427,82 @@ h1 em{
 
 
 /* =====================================================
-   INTRO
+   SUBTITLE
 ===================================================== */
 
-.intro{
+.subtitle{
 
-    max-width:610px;
+    max-width:600px;
 
     margin:
-        32px auto 0;
+        28px auto 0;
 
     color:#707070;
 
-    font-size:15px;
+    font-size:14px;
 
-    line-height:1.85;
-}
-
-.intro strong{
-
-    color:#aaa;
-
-    font-weight:500;
+    line-height:1.8;
 }
 
 
 /* =====================================================
-   ACTIONS
+   META
 ===================================================== */
 
-.actions{
+.meta{
 
     display:flex;
 
     justify-content:center;
 
+    align-items:center;
+
     flex-wrap:wrap;
 
-    gap:10px;
+    gap:13px;
 
-    margin-top:38px;
+    margin-top:25px;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:#444;
 }
 
-.primary{
+.meta strong{
+    color:#777;
+}
 
-    min-height:60px;
+.meta-dot{
+
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:#444;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-wrap{
+
+    margin-top:55px;
+
+    text-align:center;
+}
+
+.cta{
+
+    min-height:58px;
 
     padding:
         0 28px;
@@ -519,371 +526,190 @@ h1 em{
     text-transform:uppercase;
 
     box-shadow:
-        0 20px 55px
-        rgba(220,32,40,.20);
+        0 18px 50px
+        rgba(220,32,40,.18);
 
     transition:.25s;
 }
 
-.primary:hover{
+.cta:hover{
 
     background:#ff3038;
 
-    transform:
-        translateY(-3px);
+    transform:translateY(-3px);
 
     box-shadow:
-        0 25px 70px
-        rgba(220,32,40,.32);
+        0 24px 65px
+        rgba(220,32,40,.3);
 }
 
-.secondary{
+.cta:focus-visible{
 
-    min-height:60px;
+    outline:
+        2px solid #fff;
 
-    padding:
-        0 24px;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#0b0b0b;
-
-    border:
-        1px solid rgba(255,255,255,.10);
-
-    color:#888;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:1.4px;
-
-    text-transform:uppercase;
-
-    transition:.25s;
+    outline-offset:4px;
 }
 
-.secondary:hover{
+.cta-note{
 
-    color:#fff;
+    margin-top:16px;
 
-    border-color:#444;
-
-    transform:
-        translateY(-3px);
-}
-
-
-/* =====================================================
-   PRICE / TRUST
-===================================================== */
-
-.trust{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:13px;
-
-    margin-top:20px;
-
-    font-family:
-        "DM Mono",
-        monospace;
+    font-family:"DM Mono",monospace;
 
     font-size:8px;
 
-    letter-spacing:1.2px;
+    letter-spacing:1px;
 
     text-transform:uppercase;
 
-    color:#414141;
-}
-
-.trust strong{
-    color:#777;
-}
-
-.trust-dot{
-
-    width:3px;
-    height:3px;
-
-    border-radius:50%;
-
-    background:#444;
+    color:#3f3f3f;
 }
 
 
 /* =====================================================
-   CONCEPT
+   MANIFESTO
 ===================================================== */
 
-.concept{
+.manifesto{
 
-    max-width:900px;
+    margin-top:110px;
 
-    margin:
-        105px auto 0;
+    padding-top:75px;
 
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    border:
-        1px solid rgba(255,255,255,.07);
-
-    background:
-        rgba(10,10,10,.65);
-
-    text-align:left;
-}
-
-.concept-item{
-
-    min-height:190px;
-
-    padding:30px;
-
-    border-right:
-        1px solid rgba(255,255,255,.07);
-}
-
-.concept-item:last-child{
-    border-right:0;
-}
-
-.number{
-
-    font-family:
-        "DM Mono",
-        monospace;
-
-    font-size:9px;
-
-    letter-spacing:1.5px;
-
-    color:#ef3038;
-
-    margin-bottom:30px;
-}
-
-.concept-item h2{
-
-    font-size:20px;
-
-    line-height:1;
-
-    letter-spacing:-.04em;
-
-    margin-bottom:13px;
-}
-
-.concept-item p{
-
-    color:#5e5e5e;
-
-    font-size:11px;
-
-    line-height:1.7;
-}
-
-
-/* =====================================================
-   MESSAGE TEASER
-===================================================== */
-
-.teaser{
-
-    max-width:900px;
-
-    margin:
-        100px auto 0;
-
-    padding:
-        60px 40px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(25,25,25,.95),
-            rgba(9,9,9,.98)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.09);
-
-    text-align:left;
-}
-
-.teaser:before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:2px;
-    height:100%;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            #ef3038,
-            transparent
-        );
-}
-
-.teaser-label{
-
-    font-family:
-        "DM Mono",
-        monospace;
-
-    font-size:8px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:#ef3038;
-
-    margin-bottom:30px;
-}
-
-.teaser blockquote{
-
-    max-width:780px;
-
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            28px,
-            5vw,
-            50px
-        );
-
-    line-height:1.22;
-
-    letter-spacing:-.025em;
-
-    color:#e9e5dc;
-}
-
-.teaser-author{
-
-    margin-top:30px;
-
-    font-family:
-        "DM Mono",
-        monospace;
-
-    font-size:8px;
-
-    letter-spacing:1.3px;
-
-    text-transform:uppercase;
-
-    color:#555;
-}
-
-
-/* =====================================================
-   FINAL CTA
-===================================================== */
-
-.final{
-
-    margin:
-        120px auto 0;
-
-    max-width:760px;
+    border-top:
+        1px solid rgba(255,255,255,.08);
 
     text-align:center;
 }
 
-.final-label{
+.manifesto-label{
 
-    font-family:
-        "DM Mono",
-        monospace;
+    font-family:"DM Mono",monospace;
 
     font-size:8px;
 
-    letter-spacing:2px;
+    letter-spacing:2.2px;
 
     text-transform:uppercase;
 
     color:#ef3038;
 }
 
-.final h2{
+.manifesto h2{
 
-    margin-top:18px;
+    margin-top:20px;
 
     font-size:
-        clamp(
-            43px,
-            7vw,
-            76px
-        );
+        clamp(43px,7vw,76px);
 
     line-height:.9;
 
-    letter-spacing:-.075em;
+    letter-spacing:-.07em;
 
     font-weight:900;
 }
 
-.final h2 em{
+.manifesto h2 em{
 
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+    font-family:"Playfair Display",serif;
 
     font-weight:500;
 }
 
-.final p{
+.manifesto p{
 
-    max-width:510px;
+    max-width:550px;
 
     margin:
         25px auto 0;
 
-    color:#686868;
+    color:#707070;
 
     font-size:14px;
 
     line-height:1.8;
 }
 
-.final .primary{
 
-    margin-top:30px;
+/* =====================================================
+   RULES
+===================================================== */
+
+.rules{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:10px;
+
+    text-align:left;
+}
+
+.rule{
+
+    padding:25px 22px;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    background:
+        rgba(12,12,12,.55);
+}
+
+.rule-number{
+
+    font-family:"DM Mono",monospace;
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+
+    color:#ef3038;
+}
+
+.rule h3{
+
+    margin-top:18px;
+
+    font-size:17px;
+
+    letter-spacing:-.03em;
+}
+
+.rule p{
+
+    margin-top:10px;
+
+    color:#555;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.closing{
+
+    margin-top:75px;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:#3f3f3f;
 }
 
 
@@ -893,17 +719,15 @@ h1 em{
 
 footer{
 
-    margin-top:110px;
-
     padding:
-        35px 15px;
+        35px 16px;
+
+    margin-top:100px;
 
     border-top:
         1px solid rgba(255,255,255,.06);
 
-    font-family:
-        "DM Mono",
-        monospace;
+    font-family:"DM Mono",monospace;
 
     font-size:8px;
 
@@ -916,10 +740,7 @@ footer{
 
 .footer-inner{
 
-    width:min(
-        1080px,
-        100%
-    );
+    width:min(1120px,100%);
 
     margin:auto;
 
@@ -941,9 +762,8 @@ footer{
         height:64px;
     }
 
-    .nav{
-        width:
-            calc(100% - 24px);
+    .nav-inner{
+        width:calc(100% - 26px);
     }
 
     .logo{
@@ -960,99 +780,42 @@ footer{
             calc(100vh - 64px);
 
         padding:
-            65px 14px 85px;
+            75px 15px 90px;
     }
 
-    .grid{
-        background-size:
-            60px 60px;
+    .hero-grid{
+        background-size:65px 65px;
     }
 
-    h1{
+    .title{
 
         font-size:
-            clamp(
-                51px,
-                15vw,
-                75px
-            );
-
-        line-height:.88;
+            clamp(50px,15vw,72px);
     }
 
-    .intro{
-
+    .subtitle{
         font-size:13px;
-
-        line-height:1.8;
-
-        margin-top:25px;
     }
 
-    .actions{
-
-        flex-direction:column;
+    .cta{
 
         width:100%;
 
-        margin-top:30px;
+        min-height:56px;
     }
 
-    .primary,
-    .secondary{
+    .manifesto{
 
-        width:100%;
+        margin-top:75px;
+
+        padding-top:55px;
     }
 
-    .trust{
-
-        gap:8px;
-
-        line-height:1.7;
-    }
-
-    .concept{
+    .rules{
 
         grid-template-columns:1fr;
 
-        margin-top:75px;
-    }
-
-    .concept-item{
-
-        min-height:auto;
-
-        padding:25px;
-
-        border-right:0;
-
-        border-bottom:
-            1px solid rgba(255,255,255,.07);
-    }
-
-    .concept-item:last-child{
-        border-bottom:0;
-    }
-
-    .number{
-        margin-bottom:20px;
-    }
-
-    .teaser{
-
-        margin-top:75px;
-
-        padding:
-            38px 24px;
-    }
-
-    .teaser blockquote{
-        font-size:29px;
-    }
-
-    .final{
-
-        margin-top:80px;
+        margin-top:45px;
     }
 
     .footer-inner{
@@ -1061,7 +824,6 @@ footer{
 
         text-align:center;
     }
-
 }
 
 
@@ -1083,7 +845,6 @@ footer{
 
         transition:none !important;
     }
-
 }
 
 </style>
@@ -1097,7 +858,7 @@ footer{
 <header>
 
 <nav
-class="nav"
+class="nav-inner"
 aria-label="Main navigation"
 >
 
@@ -1112,14 +873,9 @@ Last<span>Human</span>Message
 
 <div class="nav-right">
 
-<span
-class="status"
-aria-hidden="true"
-></span>
+<span class="status-dot"></span>
 
-<span>
-Chain online
-</span>
+<span>Human chain online</span>
 
 </div>
 
@@ -1130,24 +886,18 @@ Chain online
 
 <main>
 
-
 <section
 class="hero"
-aria-labelledby="hero-title"
+aria-labelledby="page-title"
 >
 
 <div
-class="hero-glow"
-aria-hidden="true"
-></div>
-
-<div
-class="grid"
+class="hero-grid"
 aria-hidden="true"
 ></div>
 
 
-<div class="container">
+<div class="content">
 
 
 <div class="eyebrow">
@@ -1157,9 +907,7 @@ class="eyebrow-line"
 aria-hidden="true"
 ></span>
 
-<strong>
-A message is waiting
-</strong>
+<strong>One human. One message.</strong>
 
 <span
 class="eyebrow-line"
@@ -1169,216 +917,181 @@ aria-hidden="true"
 </div>
 
 
-<h1 id="hero-title">
+<h1
+id="page-title"
+class="title"
+>
 
-Someone was here
+Leave something
 <br>
 
-<em>before you.</em>
+<em>behind.</em>
 
 </h1>
 
 
-<p class="intro">
+<p class="subtitle">
 
-A stranger left a message behind.
+Write something that a stranger somewhere in the world
+will find after you.
 
-You don't know who they are.
+No profile.
 
-You don't know why they wrote it.
+No followers.
 
-You only know that
-<strong>you found it.</strong>
+No algorithm.
+
+Just one human leaving words for another human.
 
 </p>
 
 
-<div class="actions">
+<div
+class="meta"
+aria-label="Message information"
+>
+
+<strong>$2</strong>
+
+<span
+class="meta-dot"
+aria-hidden="true"
+></span>
+
+<span>One message</span>
+
+<span
+class="meta-dot"
+aria-hidden="true"
+></span>
+
+<span>Anonymous</span>
+
+<span
+class="meta-dot"
+aria-hidden="true"
+></span>
+
+<span>One stranger</span>
+
+</div>
+
+
+<div class="cta-wrap">
 
 <a
-href="/view-message.html"
-class="primary"
+href="/payment.html"
+class="cta"
 >
-Find the message →
+Leave a message →
 </a>
 
-
-<a
-href="/write-message.html"
-class="secondary"
->
-Leave a message
-</a>
-
+<div class="cta-note">
+One payment · One message · One human connection
 </div>
-
-
-<div class="trust">
-
-<span>
-One message
-</span>
-
-<span
-class="trust-dot"
-aria-hidden="true"
-></span>
-
-<strong>
-$2 USDT
-</strong>
-
-<span
-class="trust-dot"
-aria-hidden="true"
-></span>
-
-<span>
-Anonymous
-</span>
-
-<span
-class="trust-dot"
-aria-hidden="true"
-></span>
-
-<span>
-No profiles
-</span>
 
 </div>
 
 
 <section
-class="concept"
-aria-label="How Last Human Message works"
+class="manifesto"
+aria-labelledby="manifesto-title"
 >
 
-
-<div class="concept-item">
-
-<div class="number">
-01 — FIND
-</div>
-
-<h2>
-Read a stranger.
-</h2>
-
-<p>
-Someone paid $2 to leave words for a human they would never meet.
-Those words are now waiting for you.
-</p>
-
+<div class="manifesto-label">
+Why this exists
 </div>
 
 
-<div class="concept-item">
+<h2 id="manifesto-title">
 
-<div class="number">
-02 — WRITE
-</div>
-
-<h2>
-Leave something.
-</h2>
-
-<p>
-Write whatever you want the next stranger to discover.
-A thought. A memory. A warning. A joke.
-</p>
-
-</div>
-
-
-<div class="concept-item">
-
-<div class="number">
-03 — CONTINUE
-</div>
-
-<h2>
-Pass it on.
-</h2>
-
-<p>
-Your message becomes part of the chain.
-One stranger after another.
-No followers. No likes. No algorithm.
-</p>
-
-</div>
-
-
-</section>
-
-
-<section
-class="teaser"
-aria-label="Example human message"
->
-
-<div class="teaser-label">
-A message from someone
-</div>
-
-
-<blockquote>
-
-"If you're reading this,
-
-you made it through every version
-of yourself that thought you wouldn't.
-
-Keep going."
-
-</blockquote>
-
-
-<div class="teaser-author">
-— Someone who was here before you
-</div>
-
-</section>
-
-
-<section
-class="final"
-aria-labelledby="final-title"
->
-
-<div class="final-label">
-The chain continues
-</div>
-
-
-<h2 id="final-title">
-
-What will you leave
+The internet
 <br>
 
-<em>behind?</em>
+<em>forgot humans.</em>
 
 </h2>
 
 
 <p>
 
-The next person won't know your name.
+Everything became profiles, followers, numbers,
+likes and algorithms.
 
-They won't know your story.
+Last Human Message is different.
 
-They'll only have your words.
+You leave one message.
+
+A stranger finds it.
+
+Then the chain continues with another human.
 
 </p>
 
 
-<a
-href="/write-message.html"
-class="primary"
->
-Leave a message for the next human →
-</a>
+<div class="rules">
+
+
+<div class="rule">
+
+<div class="rule-number">
+01
+</div>
+
+<h3>
+No profiles.
+</h3>
+
+<p>
+You do not need an account, followers or a public identity.
+</p>
+
+</div>
+
+
+<div class="rule">
+
+<div class="rule-number">
+02
+</div>
+
+<h3>
+No algorithm.
+</h3>
+
+<p>
+Your words are not competing for likes, views or attention.
+</p>
+
+</div>
+
+
+<div class="rule">
+
+<div class="rule-number">
+03
+</div>
+
+<h3>
+Just humans.
+</h3>
+
+<p>
+One person leaves something behind. Another person finds it.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="closing">
+
+What would you say if you knew a stranger would find it?
+
+</div>
+
 
 </section>
 
@@ -1386,7 +1099,6 @@ Leave a message for the next human →
 </div>
 
 </section>
-
 
 </main>
 
@@ -1408,67 +1120,5 @@ One stranger. One message.
 </footer>
 
 
-<script>
-
-/* =====================================================
-   LAST HUMAN MESSAGE
-   SITE:
-   https://last-human-mesage.pages.dev/
-
-   API:
-   https://last-human-message-api.aaa6654292.workers.dev/
-===================================================== */
-
-const API_URL =
-"https://last-human-message-api.aaa6654292.workers.dev";
-
-
-/* =====================================================
-   OPTIONAL LIVE API CHECK
-===================================================== */
-
-async function checkAPI(){
-
-    try{
-
-        const response =
-            await fetch(
-                API_URL + "/",
-                {
-                    method:"GET",
-                    cache:"no-store"
-                }
-            );
-
-
-        if(
-            response.ok
-        ){
-
-            document
-                .querySelector(".nav-right span:last-child")
-                .textContent =
-                "Chain online";
-
-        }
-
-    }catch(error){
-
-        document
-            .querySelector(".nav-right span:last-child")
-            .textContent =
-            "Chain online";
-
-    }
-
-}
-
-
-checkAPI();
-
-</script>
-
-
 </body>
 </html>
-
