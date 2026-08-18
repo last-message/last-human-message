@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Message From a Stranger — Last Human Message</title>
+<title>Stranger Message — Read a Message From Someone You Don't Know</title>
 
-<meta name="description" content="What would a stranger say if they knew you needed to hear it? Discover unexpected human messages, thoughts, jokes, hope, and words from someone you've never met.">
+<meta name="description" content="Discover a stranger message written for someone they may never meet. Read anonymous human words, find something unexpected, and leave a message for the next stranger.">
 
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Last Human Message">
@@ -18,17 +18,18 @@
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://last-human-mesage.pages.dev/stranger-message.html">
-<meta property="og:title" content="Message From a Stranger">
-<meta property="og:description" content="One stranger. One message. Zero context. Sometimes the words you need come from someone you've never met.">
+<meta property="og:title" content="Stranger Message">
+<meta property="og:description" content="Someone you have never met left these words behind. Maybe they were meant for you.">
 <meta property="og:site_name" content="Last Human Message">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Message From a Stranger">
-<meta name="twitter:description" content="What would a stranger say if they knew exactly what you needed to hear today?">
+<meta name="twitter:title" content="Stranger Message">
+<meta name="twitter:description" content="Someone you have never met left these words behind. Maybe you were supposed to find them.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
@@ -37,8 +38,8 @@
   "@type":"WebPage",
   "@id":"https://last-human-mesage.pages.dev/stranger-message.html#webpage",
   "url":"https://last-human-mesage.pages.dev/stranger-message.html",
-  "name":"Message From a Stranger",
-  "description":"Discover unexpected messages, thoughts, jokes, hope and words from strangers through Last Human Message.",
+  "name":"Stranger Message",
+  "description":"Discover anonymous messages written by strangers for other humans.",
   "isPartOf":{
     "@type":"WebSite",
     "@id":"https://last-human-mesage.pages.dev/#website",
@@ -46,11 +47,12 @@
     "url":"https://last-human-mesage.pages.dev/"
   },
   "inLanguage":"en",
-  "isAccessibleForFree":true
+  "isAccessibleForFree":false
 }
 </script>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -63,13 +65,21 @@ html{
 
 body{
     min-height:100vh;
-    overflow-x:hidden;
     background:
-        radial-gradient(circle at 50% -10%,rgba(239,48,56,.18),transparent 38%),
-        radial-gradient(circle at 10% 60%,rgba(255,255,255,.025),transparent 30%),
+        radial-gradient(
+            circle at 50% -8%,
+            rgba(239,48,56,.18),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 10% 55%,
+            rgba(255,255,255,.025),
+            transparent 30%
+        ),
         #070707;
     color:#f4f1ea;
     font-family:Inter,Arial,sans-serif;
+    overflow-x:hidden;
 }
 
 body:before{
@@ -79,7 +89,9 @@ body:before{
     pointer-events:none;
     z-index:999;
     opacity:.025;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image:url(
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+    );
 }
 
 a{
@@ -87,27 +99,32 @@ a{
     text-decoration:none;
 }
 
-button{
+button,
+a{
     font-family:inherit;
 }
+
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
     height:72px;
     position:relative;
     z-index:20;
-    display:flex;
-    align-items:center;
     border-bottom:1px solid rgba(255,255,255,.07);
-    background:rgba(7,7,7,.76);
+    background:rgba(7,7,7,.78);
     backdrop-filter:blur(20px);
 }
 
 .nav{
     width:min(1120px,calc(100% - 32px));
+    height:100%;
     margin:auto;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
@@ -120,73 +137,106 @@ header{
     color:#ef3038;
 }
 
-.nav-status{
+.status{
     display:flex;
     align-items:center;
     gap:8px;
-    color:#555;
-    font:8px "DM Mono",monospace;
+    font-family:"DM Mono",monospace;
+    font-size:8px;
     letter-spacing:1.5px;
     text-transform:uppercase;
+    color:#555;
 }
 
-.dot{
-    width:6px;
-    height:6px;
+.status:before{
+    content:"";
+    width:5px;
+    height:5px;
     border-radius:50%;
     background:#42d27e;
-    box-shadow:0 0 12px rgba(66,210,126,.8);
+    box-shadow:0 0 10px rgba(66,210,126,.7);
 }
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
     position:relative;
-    min-height:calc(100vh - 72px);
-    padding:100px 16px 120px;
+    padding:105px 16px 120px;
     overflow:hidden;
 }
 
 .grid{
     position:absolute;
     inset:0;
-    opacity:.07;
+    opacity:.06;
     background-image:
-        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+        linear-gradient(
+            rgba(255,255,255,.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.06) 1px,
+            transparent 1px
+        );
     background-size:90px 90px;
-    mask-image:linear-gradient(to bottom,#000,transparent 85%);
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 85%
+        );
+    pointer-events:none;
 }
 
 .glow{
     position:absolute;
-    width:800px;
-    height:800px;
-    top:-300px;
+    width:850px;
+    height:850px;
     left:50%;
+    top:-300px;
     transform:translateX(-50%);
-    background:radial-gradient(circle,rgba(220,28,38,.13),transparent 68%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(220,28,38,.12),
+            transparent 68%
+        );
+    pointer-events:none;
 }
 
 .container{
+    width:min(960px,100%);
+    margin:auto;
     position:relative;
     z-index:2;
-    width:min(980px,100%);
-    margin:auto;
 }
 
-.center{
-    text-align:center;
-}
+
+/* =====================================================
+   EYEBROW
+===================================================== */
 
 .eyebrow{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:14px;
-    margin-bottom:28px;
-    color:#666;
-    font:9px "DM Mono",monospace;
-    letter-spacing:2.4px;
+    margin-bottom:30px;
+    font-family:"DM Mono",monospace;
+    font-size:9px;
+    letter-spacing:2.5px;
     text-transform:uppercase;
+    color:#666;
+}
+
+.line{
+    width:40px;
+    height:1px;
+    background:#333;
 }
 
 .eyebrow strong{
@@ -194,14 +244,14 @@ header{
     font-weight:500;
 }
 
-.line{
-    width:38px;
-    height:1px;
-    background:#333;
-}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
 
 h1{
-    font-size:clamp(54px,9vw,98px);
+    text-align:center;
+    font-size:clamp(54px,9vw,102px);
     line-height:.88;
     letter-spacing:-.085em;
     font-weight:900;
@@ -215,195 +265,330 @@ h1 em{
 
 .lead{
     max-width:680px;
-    margin:30px auto 0;
+    margin:32px auto 0;
+    text-align:center;
+    font-size:16px;
+    line-height:1.85;
     color:#777;
-    font-size:15px;
-    line-height:1.9;
 }
 
-.meta{
-    margin-top:25px;
-    color:#444;
-    font:8px "DM Mono",monospace;
+.lead strong{
+    color:#c9c4bb;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.primary{
+    text-align:center;
+    margin-top:34px;
+}
+
+.btn{
+    min-height:58px;
+    padding:0 30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#dc2028;
+    color:#fff;
+    font-size:10px;
+    font-weight:900;
     letter-spacing:1.6px;
     text-transform:uppercase;
+    box-shadow:
+        0 20px 60px rgba(220,32,40,.2);
+    transition:.25s;
 }
 
-.meta strong{
-    color:#777;
+.btn:hover{
+    background:#ff3038;
+    transform:translateY(-3px);
+    box-shadow:
+        0 25px 70px rgba(220,32,40,.3);
 }
 
-.story{
-    margin-top:75px;
-    padding:70px clamp(25px,7vw,80px);
-    border:1px solid rgba(255,255,255,.09);
-    background:linear-gradient(145deg,rgba(25,25,25,.96),rgba(8,8,8,.98));
-    box-shadow:0 45px 120px rgba(0,0,0,.55);
-    position:relative;
-    overflow:hidden;
+.btn:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:4px;
 }
 
-.story:before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    width:3px;
-    background:linear-gradient(to bottom,transparent,#ef3038 25%,#ef3038 75%,transparent);
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content{
+    margin-top:105px;
 }
 
-.story-label{
-    color:#ef3038;
-    font:8px "DM Mono",monospace;
-    letter-spacing:2px;
+.label{
+    font-family:"DM Mono",monospace;
+    font-size:8px;
+    letter-spacing:2.2px;
     text-transform:uppercase;
+    color:#ef3038;
+    margin-bottom:18px;
 }
 
-.story h2{
+h2{
     max-width:780px;
-    margin-top:20px;
-    font-size:clamp(34px,5vw,58px);
-    line-height:1.05;
-    letter-spacing:-.06em;
+    font-size:clamp(36px,6vw,63px);
+    line-height:.95;
+    letter-spacing:-.065em;
+    font-weight:900;
 }
 
-.story h2 em{
+h2 em{
     font-family:"Playfair Display",serif;
     font-weight:500;
 }
 
-.story p{
-    max-width:760px;
-    margin-top:25px;
-    color:#888;
+.copy{
+    max-width:800px;
+    margin-top:28px;
     font-size:15px;
-    line-height:1.9;
+    line-height:1.95;
+    color:#777;
 }
 
-.big-question{
-    margin-top:55px;
-    color:#f4f1ea;
-    font-family:"Playfair Display",serif;
-    font-size:clamp(30px,4vw,48px);
-    line-height:1.25;
+.copy strong{
+    color:#c8c3bb;
 }
+
+
+/* =====================================================
+   FEATURE MESSAGE
+===================================================== */
+
+.message{
+    margin-top:50px;
+    padding:
+        45px clamp(25px,6vw,65px);
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #090909
+        );
+    border:1px solid rgba(255,255,255,.09);
+    border-left:3px solid #ef3038;
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.45);
+}
+
+.message small{
+    font-family:"DM Mono",monospace;
+    font-size:8px;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+    color:#4e4e4e;
+}
+
+.message blockquote{
+    margin-top:25px;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(29px,4.8vw,54px);
+    line-height:1.2;
+    letter-spacing:-.025em;
+    color:#f4f1ea;
+}
+
+.message cite{
+    display:block;
+    margin-top:28px;
+    font-family:"DM Mono",monospace;
+    font-size:8px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#555;
+    font-style:normal;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
 
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:12px;
-    margin-top:25px;
+    gap:10px;
+    margin-top:45px;
 }
 
 .card{
-    min-height:190px;
-    padding:25px;
+    padding:30px 25px;
+    background:#0d0d0d;
     border:1px solid rgba(255,255,255,.07);
-    background:#0b0b0b;
+    transition:
+        transform .2s,
+        border-color .2s;
 }
 
-.card small{
+.card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,255,255,.16);
+}
+
+.card-num{
+    font-family:"DM Mono",monospace;
+    font-size:9px;
     color:#ef3038;
-    font:8px "DM Mono",monospace;
-    letter-spacing:1.7px;
-    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
 .card h3{
-    margin-top:18px;
-    font-size:22px;
-    letter-spacing:-.04em;
+    margin-top:24px;
+    font-size:19px;
+    letter-spacing:-.03em;
 }
 
 .card p{
     margin-top:12px;
-    color:#666;
     font-size:12px;
-    line-height:1.7;
+    line-height:1.75;
+    color:#6c6c6c;
 }
 
-.cta{
-    margin-top:75px;
-    padding:55px 25px;
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote{
+    margin-top:55px;
+    padding:45px 40px;
+    background:#0c0c0c;
+    border:1px solid rgba(255,255,255,.06);
+    font-family:"Playfair Display",serif;
+    font-size:clamp(27px,4vw,44px);
+    line-height:1.25;
+    letter-spacing:-.025em;
+    color:#eee;
+}
+
+.quote span{
+    display:block;
+    margin-top:22px;
+    font-family:"DM Mono",monospace;
+    font-size:8px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#555;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps{
+    display:grid;
+    gap:8px;
+    margin-top:45px;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:65px 1fr;
+    gap:20px;
+    padding:25px;
+    background:rgba(12,12,12,.65);
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.step-number{
+    font-family:"DM Mono",monospace;
+    font-size:10px;
+    color:#ef3038;
+}
+
+.step h3{
+    font-size:19px;
+}
+
+.step p{
+    margin-top:8px;
+    font-size:13px;
+    line-height:1.8;
+    color:#6f6f6f;
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq{
+    display:grid;
+    gap:8px;
+    margin-top:45px;
+}
+
+details{
+    padding:22px 24px;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+summary{
+    cursor:pointer;
+    font-size:15px;
+    font-weight:700;
+    color:#ddd;
+}
+
+details p{
+    margin-top:15px;
+    font-size:13px;
+    line-height:1.8;
+    color:#6f6f6f;
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.final{
+    margin-top:110px;
+    padding:80px 25px;
     text-align:center;
     border-top:1px solid rgba(255,255,255,.08);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.cta-label{
-    color:#ef3038;
-    font:8px "DM Mono",monospace;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.final h2{
+    margin:auto;
 }
 
-.cta h2{
-    margin-top:18px;
-    font-size:clamp(40px,7vw,72px);
-    line-height:.92;
-    letter-spacing:-.07em;
+.final p{
+    max-width:560px;
+    margin:25px auto 0;
+    font-size:15px;
+    line-height:1.9;
+    color:#777;
 }
 
-.cta h2 em{
-    font-family:"Playfair Display",serif;
-    font-weight:500;
+.final .primary{
+    margin-top:30px;
 }
 
-.cta p{
-    max-width:550px;
-    margin:23px auto 0;
-    color:#707070;
-    font-size:14px;
-    line-height:1.8;
-}
 
-.cta-button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:56px;
-    margin-top:28px;
-    padding:0 28px;
-    background:#dc2028;
-    color:white;
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    box-shadow:0 18px 50px rgba(220,32,40,.18);
-    transition:.25s;
-}
-
-.cta-button:hover{
-    background:#ff3038;
-    transform:translateY(-3px);
-    box-shadow:0 24px 65px rgba(220,32,40,.3);
-}
-
-.links{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    margin-top:35px;
-    color:#555;
-    font:8px "DM Mono",monospace;
-    letter-spacing:1.2px;
-    text-transform:uppercase;
-}
-
-.links a:hover{
-    color:#fff;
-}
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
     padding:35px 16px;
-    border-top:1px solid rgba(255,255,255,.06);
-    color:#3f3f3f;
-    font:8px "DM Mono",monospace;
+    font-family:"DM Mono",monospace;
+    font-size:8px;
     letter-spacing:1px;
     text-transform:uppercase;
+    color:#3f3f3f;
 }
 
 .footer{
@@ -413,6 +598,11 @@ footer{
     justify-content:space-between;
     gap:20px;
 }
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:700px){
 
@@ -428,72 +618,84 @@ footer{
         font-size:13px;
     }
 
-    .nav-status{
+    .status{
         font-size:7px;
     }
 
     .hero{
-        min-height:calc(100vh - 64px);
         padding:75px 15px 90px;
     }
 
-    .grid{
-        background-size:65px 65px;
-    }
-
     h1{
-        font-size:clamp(50px,15vw,72px);
+        font-size:clamp(50px,15vw,73px);
     }
 
     .lead{
         font-size:13px;
     }
 
-    .story{
-        margin-top:55px;
-        padding:40px 23px;
-    }
-
     .cards{
         grid-template-columns:1fr;
     }
 
-    .card{
-        min-height:auto;
+    .step{
+        grid-template-columns:45px 1fr;
+    }
+
+    .quote{
+        padding:32px 25px;
     }
 
     .footer{
         flex-direction:column;
         text-align:center;
+        gap:12px;
     }
 }
 
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
 @media(prefers-reduced-motion:reduce){
+
     html{
         scroll-behavior:auto;
     }
 
-    *{
-        transition:none!important;
+    *,
+    *:before,
+    *:after{
+        transition:none !important;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <nav class="nav" aria-label="Main navigation">
-<a href="/" class="logo" aria-label="Last Human Message home">
+
+<a
+href="/"
+class="logo"
+aria-label="Last Human Message home"
+>
 Last<span>Human</span>Message
 </a>
 
-<div class="nav-status">
-<span class="dot"></span>
-Human connection
+<div class="status">
+Message waiting
 </div>
+
 </nav>
+
 </header>
+
 
 <main>
 
@@ -504,147 +706,623 @@ Human connection
 
 <div class="container">
 
-<div class="center">
-
 <div class="eyebrow">
+
 <span class="line"></span>
-<strong>MESSAGE FROM A STRANGER</strong>
+
+<strong>Someone left this behind</strong>
+
 <span class="line"></span>
+
 </div>
+
 
 <h1>
-What if a stranger<br>
-<em>knew exactly what to say?</em>
+
+A Stranger
+<br>
+
+<em>Left You a Message.</em>
+
 </h1>
 
+
 <p class="lead">
-Somewhere in this strange little corner of the internet,
-a person you have never met decided to leave words for another human.
-No followers. No profile. No algorithm deciding who deserves to see them.
-Just one person, one message, and one completely random stranger.
+
+You don't know their name.
+
+They don't know yours.
+
+<strong>And somehow, you're reading their words.</strong>
+
 </p>
 
-<div class="meta">
-<strong>NO PROFILE</strong>
-&nbsp; • &nbsp;
-NO FOLLOWERS
-&nbsp; • &nbsp;
-JUST HUMAN WORDS
-</div>
+
+<div class="primary">
+
+<a
+class="btn"
+href="/payment.html"
+>
+Discover a Stranger Message →
+</a>
 
 </div>
 
-<article class="story">
 
-<div class="story-label">
-The strange part
+<section class="content">
+
+<div class="label">
+THE STRANGE PART
 </div>
+
 
 <h2>
-You might not know who wrote it.
-You might never meet them.
-And somehow, <em>that is the point.</em>
+
+You weren't supposed
+<br>
+
+to know who wrote <em>this.</em>
+
 </h2>
 
-<p>
-The internet usually wants context before it gives you a person.
-Their name. Their age. Their job. Their followers. Their opinions.
-Their perfectly edited photograph pretending Tuesday was amazing.
-</p>
 
-<p>
+<p class="copy">
+
+Every day, millions of messages travel across the internet.
+
+Most of them arrive with a name attached.
+
+A profile picture.
+
+A username.
+
+A follower count.
+
+A little blue check.
+
+And usually, a tiny piece of pressure to make the message perform.
+
 This is different.
+
+A <strong>stranger message</strong> has no social obligation attached to it.
+
+You don't have to answer.
+
+You don't have to follow anyone.
+
+You don't have to pretend you care about someone's vacation photos.
+
+You just read.
+
+Maybe the words mean nothing to you.
+
+Maybe they make you laugh.
+
+Maybe they arrive on an oddly specific day when you needed to hear exactly that sentence.
+
+That's the experiment behind Last Human Message.
+
+One human writes something.
+
+Another human finds it.
+
+The identity disappears, but the words remain.
+
+And suddenly a stranger doesn't feel quite so strange.
+
 </p>
 
-<p>
-A message from a stranger arrives without the usual noise.
-It could be thoughtful. Ridiculous. Hopeful. Weird.
-It could make you laugh at exactly the wrong moment.
-It could remind you of something you forgot.
-Or it could simply say the one thing another human needed to hear.
-</p>
 
-<div class="big-question">
-What would you want a complete stranger to tell you today?
+<div class="message">
+
+<small>
+MESSAGE DISCOVERED / ANONYMOUS
+</small>
+
+<blockquote>
+
+“If today feels like you're falling behind,
+remember that life isn't a race.
+You are allowed to take the long way.”
+
+</blockquote>
+
+<cite>
+— Someone you have never met
+</cite>
+
 </div>
+
+</section>
+
+
+<section class="content">
+
+<div class="label">
+WHY IT FEELS DIFFERENT
+</div>
+
+
+<h2>
+
+A stranger has no reason
+<br>
+
+to <em>impress you.</em>
+
+</h2>
+
+
+<p class="copy">
+
+That's what makes anonymous words interesting.
+
+When someone knows exactly who is reading, they often edit themselves.
+
+They make the sentence smarter.
+
+Funnier.
+
+Safer.
+
+More impressive.
+
+A stranger doesn't need your approval.
+
+They don't need a like.
+
+They don't need you to follow them.
+
+They don't need to turn the conversation into a networking opportunity.
+
+They can simply say something.
+
+And you can simply receive it.
+
+There is something beautifully low-stakes about that.
+
+You might read a message while sitting on a train.
+
+At 2:14 a.m. when you definitely should be sleeping.
+
+During lunch while pretending you're “just checking one thing.”
+
+Or five minutes after searching the internet for something completely different.
+
+You arrived looking for one thing.
+
+You found a human being instead.
+
+</p>
+
 
 <div class="cards">
 
-<div class="card">
-<small>01 / RANDOM</small>
-<h3>No algorithm.</h3>
-<p>
-You don't choose the person.
-They don't choose you.
-That's what makes the encounter interesting.
-</p>
+<article class="card">
+
+<div class="card-num">
+01 / NO PROFILE
 </div>
 
-<div class="card">
-<small>02 / HUMAN</small>
-<h3>No performance.</h3>
+<h3>
+No identity to perform.
+</h3>
+
 <p>
-No follower count.
-No blue check.
-No carefully manufactured personality.
-Just words.
+The message doesn't need a carefully constructed personality attached to it.
 </p>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-num">
+02 / NO EXPECTATION
 </div>
 
-<div class="card">
-<small>03 / UNEXPECTED</small>
-<h3>Anything can happen.</h3>
+<h3>
+You don't owe a reply.
+</h3>
+
 <p>
-A joke. A confession. A tiny piece of wisdom.
-Maybe even something wonderfully stupid.
+Read it. Think about it. Laugh at it. Move on. The moment is yours.
 </p>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-num">
+03 / NO ALGORITHM
 </div>
+
+<h3>
+No engagement game.
+</h3>
+
+<p>
+A stranger's words aren't competing for likes, followers, or attention.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+<section class="content">
+
+<div class="label">
+WHAT MIGHT YOU FIND?
+</div>
+
+
+<h2>
+
+Probably something you
+<br>
+
+weren't <em>expecting.</em>
+
+</h2>
+
+
+<p class="copy">
+
+A message from a stranger can be serious.
+
+It can be kind.
+
+It can be weird.
+
+It can be funny enough that you stare at your phone wondering why a random person on the internet just improved your afternoon.
+
+It can be a reminder to call someone you love.
+
+A confession.
+
+A tiny piece of advice.
+
+A terrible joke.
+
+A sentence that sounds ordinary until you read it on exactly the right day.
+
+There is no category called “perfect message.”
+
+That's intentional.
+
+Human beings are wonderfully inconsistent.
+
+One stranger might write three paragraphs about hope.
+
+The next might write:
+
+“Bro. Buy the garlic bread.”
+
+And honestly, both have their place.
+
+</p>
+
+
+<div class="quote">
+
+“The internet is enormous.
+
+Somewhere inside all that noise,
+one stranger left a few words behind
+for another stranger to find.”
+
+<span>
+— LAST HUMAN MESSAGE
+</span>
+
+</div>
+
+</section>
+
+
+<section class="content">
+
+<div class="label">
+THE CHAIN
+</div>
+
+
+<h2>
+
+Reading is only half
+<br>
+
+of the <em>story.</em>
+
+</h2>
+
+
+<p class="copy">
+
+The experience becomes more interesting when you continue it.
+
+You found a message from someone you don't know.
+
+Now you have a choice.
+
+You can close the page and carry on with your day.
+
+Or you can leave something behind for the next person.
+
+Maybe they'll find it tomorrow.
+
+Maybe next week.
+
+Maybe much later.
+
+You won't know who they are.
+
+And they won't know who you are.
+
+That's the point.
+
+The message isn't about building a relationship between two profiles.
+
+It's about creating a tiny connection between two moments in two people's lives.
+
+One person was here.
+
+They wrote something.
+
+Then they disappeared.
+
+Someone else arrived.
+
+They read it.
+
+Then they had the chance to leave something too.
+
+It's a chain without followers.
+
+</p>
+
+
+<div class="steps">
+
+<article class="step">
+
+<div class="step-number">
+01
+</div>
+
+<div>
+
+<h3>
+A stranger writes
+</h3>
+
+<p>
+Someone leaves an anonymous message for whoever eventually discovers it.
+</p>
 
 </div>
 
 </article>
 
-<section class="cta">
 
-<div class="cta-label">
-Your turn
+<article class="step">
+
+<div class="step-number">
+02
 </div>
 
-<h2>
-Read a stranger's words.<br>
-Then leave <em>your own.</em>
-</h2>
+<div>
+
+<h3>
+You discover it
+</h3>
 
 <p>
-Someone will eventually arrive after you.
-They won't know your name.
-They won't know your story.
-But they will have your words.
+You arrive with no idea who wrote the words or why they wrote them.
 </p>
 
-<a href="/payment.html" class="cta-button">
-Leave a message for a stranger →
+</div>
+
+</article>
+
+
+<article class="step">
+
+<div class="step-number">
+03
+</div>
+
+<div>
+
+<h3>
+You keep it moving
+</h3>
+
+<p>
+You can leave an anonymous message for another stranger and continue the human chain.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<section class="content">
+
+<div class="label">
+A FEW QUESTIONS
+</div>
+
+
+<h2>
+
+Because apparently humans
+<br>
+
+like <em>questions.</em>
+
+</h2>
+
+
+<div class="faq">
+
+<details>
+
+<summary>
+What is a stranger message?
+</summary>
+
+<p>
+A stranger message is an anonymous message written by someone you don't personally know. The idea is to discover words from another human without needing a public profile, follower relationship, or existing connection.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I read a random message from a stranger?
+</summary>
+
+<p>
+Yes. Last Human Message is built around discovering messages left by people you don't know and continuing the chain by leaving your own message.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Will I know who wrote the message?
+</summary>
+
+<p>
+The experience is designed around anonymous messages. The writer's public identity is not the focus of the message.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Is this anonymous chat?
+</summary>
+
+<p>
+No. It isn't traditional anonymous chatting. There is no expectation of an instant conversation. You discover a message, experience the moment, and can leave one for another person.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+What if the stranger message is funny?
+</summary>
+
+<p>
+Then congratulations. A stranger on the internet has successfully done something the algorithm probably couldn't: make your day slightly better.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I leave a message after reading one?
+</summary>
+
+<p>
+Yes. The idea of Last Human Message is a continuing chain: someone leaves words, someone discovers them, and that person can leave something behind for the next human.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+
+<section class="final">
+
+<div class="label">
+YOUR TURN
+</div>
+
+
+<h2>
+
+Someone is waiting for words
+<br>
+
+they don't know they <em>need.</em>
+
+</h2>
+
+
+<p>
+
+You don't need a perfect story.
+
+You don't need a clever profile.
+
+You don't even need to know who will read it.
+
+Just leave something human behind.
+
+</p>
+
+
+<div class="primary">
+
+<a
+class="btn"
+href="/payment.html"
+>
+Leave a Stranger Message →
 </a>
 
-<div class="links">
-<a href="/view-message.html">Find a random message</a>
-<a href="/payment.html">Leave a message</a>
-<a href="/">Last Human Message</a>
 </div>
 
 </section>
 
 </div>
+
 </section>
 
 </main>
 
+
 <footer>
+
 <div class="footer">
-<span>© 2026 Last Human Message</span>
-<span>One stranger. One message.</span>
+
+<span>
+© 2026 Last Human Message
+</span>
+
+<span>
+One stranger. One message.
+</span>
+
 </div>
+
 </footer>
 
 </body>
 </html>
+
