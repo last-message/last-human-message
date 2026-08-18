@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Write a Message for the Next Human — Last Human Message</title>
+<title>Write a Human Message — Last Human Message</title>
 
 <meta
 name="description"
-content="Leave a message for the next human. Write something meaningful, personal, funny, hopeful, or unforgettable and become part of the Last Human Message chain."
+content="Write something meaningful for a stranger who will discover your message later. Leave a human message behind with Last Human Message."
 >
 
 <meta
@@ -18,64 +18,17 @@ content="noindex,nofollow,noarchive,nosnippet,noimageindex"
 >
 
 <meta name="author" content="Last Human Message">
+<meta name="application-name" content="Last Human Message">
+
 <meta name="theme-color" content="#070707">
 <meta name="color-scheme" content="dark">
 
 <link
 rel="canonical"
-href="https://last-human-message.pages.dev/write-message.html"
+href="https://last-human-mesage.pages.dev/write-message.html"
 >
 
-<meta
-property="og:type"
-content="website"
->
-
-<meta
-property="og:url"
-content="https://last-human-message.pages.dev/write-message.html"
->
-
-<meta
-property="og:title"
-content="Leave a Message for the Next Human"
->
-
-<meta
-property="og:description"
-content="Someone left a message for you. Now leave something behind for the stranger who comes next."
->
-
-<meta
-property="og:site_name"
-content="Last Human Message"
->
-
-<meta
-property="og:locale"
-content="en_US"
->
-
-<meta
-name="twitter:card"
-content="summary"
->
-
-<meta
-name="twitter:title"
-content="Leave a Message for the Next Human"
->
-
-<meta
-name="twitter:description"
-content="Someone left a message for you. Now leave something behind for the stranger who comes next."
->
-
-<link
-rel="preconnect"
-href="https://fonts.googleapis.com"
->
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link
 rel="preconnect"
 href="https://fonts.gstatic.com"
@@ -87,25 +40,11 @@ href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter
 rel="stylesheet"
 >
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "@id":"https://last-human-message.pages.dev/write-message.html#webpage",
-  "url":"https://last-human-message.pages.dev/write-message.html",
-  "name":"Write a Message for the Next Human",
-  "description":"Leave a message for the next human in the Last Human Message chain.",
-  "isPartOf":{
-    "@type":"WebSite",
-    "@id":"https://last-human-message.pages.dev/#website",
-    "name":"Last Human Message",
-    "url":"https://last-human-message.pages.dev/"
-  },
-  "inLanguage":"en"
-}
-</script>
-
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -118,43 +57,60 @@ html{
 }
 
 body{
+
     min-height:100vh;
 
     background:
         radial-gradient(
             circle at 50% -10%,
-            rgba(215,25,32,.19),
-            transparent 42%
+            rgba(239,48,56,.18),
+            transparent 38%
         ),
         radial-gradient(
-            circle at 10% 60%,
-            rgba(215,25,32,.045),
-            transparent 35%
+            circle at 10% 50%,
+            rgba(255,255,255,.025),
+            transparent 30%
         ),
         #070707;
 
     color:#f4f1ea;
 
-    font-family:Inter,Arial,sans-serif;
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
 
     overflow-x:hidden;
 }
 
 body:before{
+
     content:"";
 
     position:fixed;
+
     inset:0;
 
     pointer-events:none;
 
     z-index:999;
 
-    opacity:.028;
+    opacity:.025;
 
     background-image:url(
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
     );
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+button{
+    border:0;
 }
 
 a{
@@ -162,24 +118,22 @@ a{
     text-decoration:none;
 }
 
-button,
-input,
-textarea{
-    font-family:inherit;
-}
-
 
 /* =====================================================
-   NAV
+   HEADER
 ===================================================== */
 
 header{
+
     height:72px;
 
-    position:sticky;
-    top:0;
+    position:relative;
 
-    z-index:50;
+    z-index:20;
+
+    display:flex;
+
+    align-items:center;
 
     border-bottom:
         1px solid rgba(255,255,255,.07);
@@ -187,13 +141,14 @@ header{
     background:
         rgba(7,7,7,.78);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:
+        blur(20px);
 }
 
-.nav-inner{
-    width:min(1100px,calc(100% - 30px));
+.nav{
 
-    height:100%;
+    width:
+        min(1120px,calc(100% - 32px));
 
     margin:auto;
 
@@ -205,71 +160,51 @@ header{
 }
 
 .logo{
+
     font-size:15px;
 
     font-weight:900;
 
-    letter-spacing:-.5px;
+    letter-spacing:-.7px;
 }
 
 .logo span{
     color:#ef3038;
 }
 
-.nav-right{
+.status{
+
     display:flex;
 
     align-items:center;
 
-    gap:22px;
-}
+    gap:8px;
 
-.back-link{
-    font-family:"DM Mono",monospace;
+    font-family:
+        "DM Mono",
+        monospace;
 
-    font-size:9px;
-
-    letter-spacing:1.4px;
-
-    text-transform:uppercase;
-
-    color:#666;
-
-    transition:.2s;
-}
-
-.back-link:hover{
-    color:#fff;
-}
-
-.step{
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
+    font-size:8px;
 
     letter-spacing:1.5px;
 
     text-transform:uppercase;
 
-    color:#666;
+    color:#555;
 }
 
-.step:before{
-    content:"";
-
-    display:inline-block;
+.status-dot{
 
     width:6px;
     height:6px;
 
     border-radius:50%;
 
-    background:#ef3038;
+    background:#42d27e;
 
     box-shadow:
-        0 0 10px rgba(239,48,56,.6);
-
-    margin-right:8px;
+        0 0 12px
+        rgba(66,210,126,.8);
 }
 
 
@@ -278,126 +213,221 @@ header{
 ===================================================== */
 
 main{
-    padding:
-        80px
-        15px
-        120px;
-}
 
-.wrapper{
-    width:min(780px,100%);
-
-    margin:auto;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.eyebrow{
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:#ef3038;
-
-    margin-bottom:24px;
-}
-
-.eyebrow:before{
-    content:"";
-
-    width:34px;
-    height:1px;
-
-    background:#ef3038;
-}
-
-h1{
-    font-size:
-        clamp(50px,9vw,86px);
-
-    line-height:.89;
-
-    letter-spacing:-.075em;
-
-    margin-bottom:28px;
-}
-
-h1 em{
-    font-family:"Playfair Display",serif;
-
-    font-weight:500;
-}
-
-.intro{
-    max-width:620px;
-
-    color:#858585;
-
-    font-size:15px;
-
-    line-height:1.85;
-
-    margin-bottom:50px;
-}
-
-.intro strong{
-    color:#c9c6be;
-
-    font-weight:600;
-}
-
-
-/* =====================================================
-   CARD
-===================================================== */
-
-.card{
     position:relative;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(23,23,23,.98),
-            rgba(10,10,10,.98)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.10);
-
     padding:
-        clamp(22px,5vw,38px);
-
-    box-shadow:
-        0 40px 120px rgba(0,0,0,.5);
+        90px 16px 120px;
 
     overflow:hidden;
 }
 
-.card:before{
+.hero-glow{
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    left:50%;
+    top:-380px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(220,28,38,.14),
+            transparent 68%
+        );
+
+    pointer-events:none;
+}
+
+.grid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.06;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.06) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.06) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        90px 90px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 82%
+        );
+
+    pointer-events:none;
+}
+
+.container{
+
+    width:
+        min(900px,100%);
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-bottom:28px;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size:9px;
+
+    letter-spacing:2.4px;
+
+    text-transform:uppercase;
+
+    color:#666;
+}
+
+.eyebrow-line{
+
+    width:38px;
+    height:1px;
+
+    background:#333;
+}
+
+.eyebrow strong{
+
+    color:#ef3038;
+
+    font-weight:500;
+}
+
+h1{
+
+    text-align:center;
+
+    font-size:
+        clamp(52px,9vw,94px);
+
+    line-height:.88;
+
+    letter-spacing:-.08em;
+
+    font-weight:900;
+}
+
+h1 em{
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight:500;
+
+    letter-spacing:-.045em;
+}
+
+.intro{
+
+    max-width:650px;
+
+    margin:
+        30px auto 0;
+
+    text-align:center;
+
+    color:#707070;
+
+    font-size:14px;
+
+    line-height:1.85;
+}
+
+
+/* =====================================================
+   MESSAGE CARD
+===================================================== */
+
+.message-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:60px;
+
+    padding:
+        clamp(28px,6vw,58px);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(25,25,25,.98),
+            rgba(8,8,8,.99)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.105);
+
+    box-shadow:
+
+        0 45px 120px
+        rgba(0,0,0,.55),
+
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+}
+
+.message-card:before{
+
     content:"";
 
     position:absolute;
 
-    left:0;
     top:0;
+    left:0;
 
-    width:2px;
+    width:3px;
     height:100%;
 
     background:
+
         linear-gradient(
             to bottom,
             transparent,
@@ -406,25 +436,27 @@ h1 em{
             transparent
         );
 
-    opacity:.8;
+    opacity:.85;
 }
 
-.card:after{
+.message-card:after{
+
     content:"";
 
     position:absolute;
 
-    width:300px;
-    height:300px;
+    width:430px;
+    height:430px;
 
-    right:-190px;
-    top:-190px;
+    right:-260px;
+    top:-260px;
 
     background:
+
         radial-gradient(
             circle,
-            rgba(239,48,56,.11),
-            transparent 70%
+            rgba(239,48,56,.12),
+            transparent 68%
         );
 
     pointer-events:none;
@@ -432,297 +464,154 @@ h1 em{
 
 
 /* =====================================================
-   TRANSACTION
+   CARD HEADER
 ===================================================== */
 
-.transaction{
+.card-header{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding-bottom:22px;
+
     margin-bottom:34px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size:8px;
+
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
+
+    color:#555;
 }
 
-.label{
+.card-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#42d27e;
+}
+
+.card-status:before{
+
+    content:"";
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:#42d27e;
+
+    box-shadow:
+        0 0 10px
+        rgba(66,210,126,.7);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+form{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.field{
+
+    margin-top:25px;
+}
+
+.field:first-child{
+    margin-top:0;
+}
+
+label{
+
     display:block;
 
-    font-family:"DM Mono",monospace;
+    margin-bottom:10px;
 
-    font-size:9px;
+    font-family:
+        "DM Mono",
+        monospace;
 
-    letter-spacing:1.6px;
+    font-size:8px;
+
+    letter-spacing:1.8px;
 
     text-transform:uppercase;
 
     color:#666;
-
-    margin-bottom:10px;
 }
 
-.tx{
-    min-height:50px;
+.optional{
 
-    display:flex;
+    color:#3f3f3f;
 
-    align-items:center;
+    font-size:7px;
 
-    background:#080808;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    padding:14px;
-
-    font-family:"DM Mono",monospace;
-
-    font-size:10px;
-
-    color:#777;
-
-    line-height:1.6;
-
-    word-break:break-all;
+    margin-left:5px;
 }
 
-.tx.verified{
-    color:#42d27e;
+input,
+textarea{
 
-    border-color:
-        rgba(66,210,126,.25);
-}
-
-
-/* =====================================================
-   PRIVATE AREA
-===================================================== */
-
-.private-box{
-    position:relative;
-
-    margin-bottom:35px;
-
-    padding:22px;
-
-    background:
-        rgba(239,48,56,.025);
-
-    border:
-        1px solid rgba(239,48,56,.16);
-}
-
-.private-header{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-bottom:22px;
-
-    padding-bottom:15px;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.07);
-}
-
-.private-title{
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
-
-    letter-spacing:1.7px;
-
-    text-transform:uppercase;
-
-    color:#ef3038;
-}
-
-.private-badge{
-    font-family:"DM Mono",monospace;
-
-    font-size:8px;
-
-    letter-spacing:1.2px;
-
-    text-transform:uppercase;
-
-    color:#888;
-
-    padding:6px 8px;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    background:#0b0b0b;
-}
-
-.private-description{
-    color:#555;
-
-    font-size:11px;
-
-    line-height:1.7;
-
-    margin-bottom:22px;
-}
-
-.fields{
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:17px;
-}
-
-.field.full{
-    grid-column:1 / -1;
-}
-
-.field label{
-    display:block;
-}
-
-.field input{
     width:100%;
-
-    height:54px;
-
-    padding:
-        0
-        15px;
-
-    background:#080808;
-
-    border:
-        1px solid rgba(255,255,255,.09);
 
     color:#eee;
 
+    background:#080808;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
     outline:none;
 
-    font-size:13px;
-
-    transition:.2s;
+    transition:
+        border-color .2s,
+        box-shadow .2s,
+        background .2s;
 }
 
-.field input::placeholder{
-    color:#414141;
-}
+input{
 
-.field input:hover{
-    border-color:
-        rgba(255,255,255,.16);
-}
+    min-height:56px;
 
-.field input:focus{
-    border-color:#ef3038;
+    padding:
+        0 17px;
 
-    box-shadow:
-        0 0 0 3px
-        rgba(239,48,56,.07);
-
-    background:#0b0b0b;
-}
-
-.field-hint{
-    display:block;
-
-    margin-top:7px;
-
-    color:#414141;
-
-    font-family:"DM Mono",monospace;
-
-    font-size:8px;
-
-    letter-spacing:.4px;
-}
-
-
-/* =====================================================
-   MESSAGE
-===================================================== */
-
-.message-section{
-    position:relative;
-
-    padding-top:4px;
-}
-
-.message-head{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-    gap:15px;
-
-    margin-bottom:10px;
-}
-
-.message-label{
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
-
-    letter-spacing:1.7px;
-
-    text-transform:uppercase;
-
-    color:#aaa;
-}
-
-.counter{
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
-
-    letter-spacing:.5px;
-
-    color:#555;
-
-    white-space:nowrap;
-
-    transition:.2s;
-}
-
-.counter.warning{
-    color:#ef3038;
-}
-
-.counter.complete{
-    color:#42d27e;
-}
-
-
-/* =====================================================
-   TEXTAREA
-===================================================== */
-
-.editor{
-    position:relative;
+    font-size:14px;
 }
 
 textarea{
-    width:100%;
 
-    min-height:390px;
+    min-height:280px;
 
-    padding:25px 22px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #090909,
-            #080808
-        );
-
-    border:
-        1px solid rgba(255,255,255,.10);
-
-    color:#f4f1ea;
-
-    outline:none;
+    padding:20px 18px;
 
     resize:vertical;
 
@@ -732,37 +621,34 @@ textarea{
         serif;
 
     font-size:
-        clamp(18px,2.5vw,22px);
+        clamp(24px,4vw,38px);
 
-    line-height:1.75;
+    line-height:1.45;
 
-    letter-spacing:-.01em;
-
-    transition:
-        border-color .2s,
-        box-shadow .2s;
+    letter-spacing:-.018em;
 }
 
+input::placeholder,
 textarea::placeholder{
-    color:#3d3d3d;
+
+    color:#393939;
 }
 
-textarea:hover{
-    border-color:
-        rgba(255,255,255,.16);
-}
-
+input:focus,
 textarea:focus{
-    border-color:
-        rgba(239,48,56,.75);
+
+    border-color:#ef3038;
+
+    background:#0a0a0a;
 
     box-shadow:
-        0 0 0 4px
-        rgba(239,48,56,.055),
-        0 20px 70px rgba(0,0,0,.3);
+        0 0 0 3px
+        rgba(239,48,56,.08);
 }
 
-textarea::selection{
+textarea::selection,
+input::selection{
+
     background:#ef3038;
 
     color:#fff;
@@ -770,47 +656,24 @@ textarea::selection{
 
 
 /* =====================================================
-   TOOLS
+   CHARACTER COUNT
 ===================================================== */
 
-.writing-tools{
-    display:flex;
+.message-meta{
 
-    justify-content:space-between;
+    display:flex;
 
     align-items:center;
 
+    justify-content:space-between;
+
     gap:15px;
 
-    margin-top:11px;
-}
+    margin-top:9px;
 
-.message-note{
-    color:#505050;
-
-    font-size:10px;
-
-    line-height:1.6;
-}
-
-.message-note strong{
-    color:#777;
-
-    font-weight:500;
-}
-
-.clear-btn{
-    flex-shrink:0;
-
-    border:0;
-
-    background:transparent;
-
-    color:#555;
-
-    cursor:pointer;
-
-    font-family:"DM Mono",monospace;
+    font-family:
+        "DM Mono",
+        monospace;
 
     font-size:8px;
 
@@ -818,11 +681,142 @@ textarea::selection{
 
     text-transform:uppercase;
 
-    transition:.2s;
+    color:#414141;
 }
 
-.clear-btn:hover{
+#charCount{
+
+    transition:
+        color .2s;
+}
+
+#charCount.warning{
+    color:#e0a343;
+}
+
+#charCount.danger{
     color:#ef3038;
+}
+
+
+/* =====================================================
+   PRIVATE DETAILS
+===================================================== */
+
+.details-title{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:45px;
+
+    padding-top:30px;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+
+    font-size:20px;
+
+    letter-spacing:-.03em;
+
+    font-weight:800;
+}
+
+.details-description{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:8px;
+
+    color:#555;
+
+    font-size:11px;
+
+    line-height:1.7;
+}
+
+.details-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:22px;
+}
+
+
+/* =====================================================
+   CONSENT
+===================================================== */
+
+.consent{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-top:30px;
+
+    padding:17px;
+
+    background:#0a0a0a;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+}
+
+.consent input{
+
+    width:17px;
+    min-width:17px;
+    height:17px;
+
+    min-height:17px;
+
+    margin-top:1px;
+
+    accent-color:#ef3038;
+
+    cursor:pointer;
+}
+
+.consent label{
+
+    margin:0;
+
+    color:#666;
+
+    font-family:Inter,Arial,sans-serif;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    letter-spacing:0;
+
+    text-transform:none;
+
+    cursor:pointer;
+}
+
+.consent strong{
+    color:#999;
 }
 
 
@@ -830,28 +824,38 @@ textarea::selection{
    SUBMIT
 ===================================================== */
 
-.submit{
+.submit-area{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:30px;
+}
+
+.submit-button{
+
     width:100%;
 
     min-height:62px;
-
-    margin-top:28px;
-
-    border:0;
 
     background:#dc2028;
 
     color:#fff;
 
-    cursor:pointer;
-
     font-size:11px;
 
     font-weight:900;
 
-    letter-spacing:1.6px;
+    letter-spacing:1.7px;
 
     text-transform:uppercase;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 18px 55px
+        rgba(220,32,40,.18);
 
     transition:
         background .25s,
@@ -859,28 +863,20 @@ textarea::selection{
         box-shadow .25s;
 }
 
-.submit:hover{
+.submit-button:hover{
+
     background:#ff3038;
 
     transform:translateY(-2px);
 
     box-shadow:
-        0 18px 55px
-        rgba(220,32,40,.30);
+        0 24px 65px
+        rgba(220,32,40,.3);
 }
 
-.submit:active{
-    transform:translateY(0);
-}
+.submit-button:disabled{
 
-.submit:focus-visible{
-    outline:2px solid #fff;
-
-    outline-offset:4px;
-}
-
-.submit:disabled{
-    opacity:.5;
+    opacity:.55;
 
     cursor:not-allowed;
 
@@ -889,97 +885,190 @@ textarea::selection{
     box-shadow:none;
 }
 
+.submit-note{
+
+    margin-top:13px;
+
+    text-align:center;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size:7px;
+
+    line-height:1.7;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:#3e3e3e;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.error-box{
+
+    display:none;
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:18px;
+
+    padding:16px;
+
+    border:
+        1px solid
+        rgba(239,48,56,.25);
+
+    background:
+        rgba(239,48,56,.045);
+
+    color:#ef777d;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size:9px;
+
+    line-height:1.7;
+
+    text-transform:uppercase;
+}
+
+.error-box.show{
+    display:block;
+}
+
 
 /* =====================================================
    PRIVACY
 ===================================================== */
 
 .privacy{
-    display:flex;
 
-    justify-content:center;
+    position:relative;
 
-    align-items:center;
+    z-index:2;
 
-    gap:8px;
+    display:grid;
 
-    margin-top:17px;
+    grid-template-columns:
+        repeat(3,1fr);
 
-    color:#444;
+    gap:10px;
 
-    font-family:"DM Mono",monospace;
+    margin-top:25px;
+}
 
-    font-size:8px;
+.privacy-item{
+
+    padding:16px;
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    background:#090909;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size:7px;
+
+    line-height:1.7;
 
     letter-spacing:1px;
 
-    line-height:1.8;
-
     text-transform:uppercase;
 
-    text-align:center;
+    color:#4d4d4d;
 }
 
-.privacy-dot{
-    width:5px;
-    height:5px;
+.privacy-item strong{
 
-    border-radius:50%;
+    display:block;
 
-    background:#42d27e;
+    margin-bottom:5px;
 
-    box-shadow:
-        0 0 8px rgba(66,210,126,.5);
+    color:#777;
 }
 
 
 /* =====================================================
-   BACK
+   FOOTER MESSAGE
 ===================================================== */
 
-.back-message{
-    margin-top:65px;
+.bottom-message{
 
-    padding-top:35px;
+    margin-top:95px;
+
+    padding-top:60px;
 
     border-top:
-        1px solid rgba(255,255,255,.07);
+        1px solid rgba(255,255,255,.08);
 
     text-align:center;
 }
 
-.back-message p{
-    color:#555;
+.bottom-label{
 
-    font-size:12px;
+    font-family:
+        "DM Mono",
+        monospace;
 
-    line-height:1.7;
+    font-size:8px;
 
-    margin-bottom:17px;
-}
-
-.back-message a{
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
-
-    letter-spacing:1.3px;
+    letter-spacing:2px;
 
     text-transform:uppercase;
 
-    color:#777;
-
-    transition:.2s;
+    color:#ef3038;
 }
 
-.back-message a:hover{
-    color:#fff;
+.bottom-message h2{
+
+    margin-top:19px;
+
+    font-size:
+        clamp(42px,7vw,72px);
+
+    line-height:.9;
+
+    letter-spacing:-.075em;
+
+    font-weight:900;
+}
+
+.bottom-message h2 em{
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight:500;
+}
+
+.bottom-message p{
+
+    max-width:530px;
+
+    margin:
+        24px auto 0;
+
+    color:#626262;
+
+    font-size:13px;
+
+    line-height:1.8;
 }
 
 
@@ -988,22 +1077,40 @@ textarea::selection{
 ===================================================== */
 
 footer{
-    padding:35px 15px;
+
+    padding:
+        35px 16px;
 
     border-top:
         1px solid rgba(255,255,255,.06);
 
-    text-align:center;
+    font-family:
+        "DM Mono",
+        monospace;
 
-    font-family:"DM Mono",monospace;
-
-    font-size:9px;
+    font-size:8px;
 
     letter-spacing:1px;
 
     text-transform:uppercase;
 
-    color:#444;
+    color:#3f3f3f;
+}
+
+.footer-inner{
+
+    width:
+        min(1120px,100%);
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
 }
 
 
@@ -1012,25 +1119,32 @@ footer{
 ===================================================== */
 
 .toast{
+
     position:fixed;
 
     left:50%;
     bottom:25px;
 
-    transform:
-        translate(-50%,20px);
+    z-index:1000;
+
+    min-width:210px;
+
+    padding:
+        14px 18px;
+
+    text-align:center;
 
     background:#f4f1ea;
 
     color:#080808;
 
-    padding:13px 18px;
+    font-family:
+        "DM Mono",
+        monospace;
 
-    font-family:"DM Mono",monospace;
+    font-size:8px;
 
-    font-size:9px;
-
-    letter-spacing:1px;
+    letter-spacing:1.2px;
 
     text-transform:uppercase;
 
@@ -1038,12 +1152,14 @@ footer{
 
     pointer-events:none;
 
-    transition:.3s;
+    transform:
+        translate(-50%,18px);
 
-    z-index:1000;
+    transition:.3s;
 }
 
 .toast.show{
+
     opacity:1;
 
     transform:
@@ -1055,107 +1171,75 @@ footer{
    MOBILE
 ===================================================== */
 
-@media(max-width:600px){
+@media(max-width:650px){
 
     header{
         height:64px;
     }
 
-    .nav-inner{
-        width:calc(100% - 24px);
+    .nav{
+
+        width:
+            calc(100% - 26px);
     }
 
-    .nav-right{
-        gap:12px;
+    .logo{
+        font-size:13px;
     }
 
-    .step{
-        display:none;
-    }
-
-    .back-link{
-        font-size:8px;
+    .status{
+        font-size:7px;
     }
 
     main{
+
         padding:
-            52px
-            13px
-            85px;
+            70px 15px 90px;
     }
 
-    h1{
-        font-size:53px;
+    .message-card{
 
-        line-height:.9;
+        margin-top:48px;
+
+        padding:
+            28px 21px;
     }
 
-    .intro{
-        font-size:14px;
+    .card-header{
 
-        line-height:1.8;
-
-        margin-bottom:36px;
-    }
-
-    .card{
-        padding:20px 18px;
-    }
-
-    .private-box{
-        padding:17px;
-
-        margin-bottom:30px;
-    }
-
-    .private-header{
-        align-items:flex-start;
-
-        flex-direction:column;
-
-        gap:10px;
-    }
-
-    .fields{
-        grid-template-columns:1fr;
-
-        gap:15px;
-    }
-
-    .field.full{
-        grid-column:auto;
+        margin-bottom:28px;
     }
 
     textarea{
-        min-height:340px;
 
-        padding:20px 17px;
+        min-height:300px;
 
-        font-size:18px;
+        font-size:25px;
     }
 
-    .writing-tools{
-        align-items:flex-start;
+    .details-grid{
 
-        flex-direction:column;
-
-        gap:8px;
-    }
-
-    .clear-btn{
-        align-self:flex-end;
-    }
-
-    .submit{
-        min-height:58px;
+        grid-template-columns:1fr;
     }
 
     .privacy{
-        flex-direction:column;
 
-        gap:4px;
+        grid-template-columns:1fr;
     }
 
+    .bottom-message{
+
+        margin-top:75px;
+
+        padding-top:50px;
+    }
+
+    .footer-inner{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
 }
 
 
@@ -1172,21 +1256,25 @@ footer{
     *,
     *:before,
     *:after{
+
+        animation:none !important;
+
         transition:none !important;
     }
-
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
 <nav
-class="nav-inner"
+class="nav"
 aria-label="Main navigation"
 >
 
@@ -1198,18 +1286,11 @@ aria-label="Last Human Message home"
 Last<span>Human</span>Message
 </a>
 
-<div class="nav-right">
+<div class="status">
 
-<a
-href="/view-message.html"
-class="back-link"
->
-← View message
-</a>
+<span class="status-dot"></span>
 
-<div class="step">
-Step 02 / Write
-</div>
+Payment verified
 
 </div>
 
@@ -1220,309 +1301,314 @@ Step 02 / Write
 
 <main>
 
-<div class="wrapper">
+<div
+class="hero-glow"
+aria-hidden="true"
+></div>
+
+<div
+class="grid"
+aria-hidden="true"
+></div>
+
+
+<div class="container">
 
 
 <div class="eyebrow">
-You are now part of it
+
+<span
+class="eyebrow-line"
+aria-hidden="true"
+></span>
+
+<strong>One message. One stranger.</strong>
+
+<span
+class="eyebrow-line"
+aria-hidden="true"
+></span>
+
 </div>
 
 
 <h1>
-Leave something
+
+Say something
 <br>
-for the <em>next human.</em>
+
+<em>that stays.</em>
+
 </h1>
 
 
 <p class="intro">
 
-Someone left a message for you.
+A stranger will eventually find these words.
 
-Now it's your turn.
+You don't know who they are.
 
-Write something you want the next stranger
-to discover when they arrive here.
+You don't know when they'll arrive.
 
-<strong>
-Your words become part of the chain.
-</strong>
+You only get one chance to leave something behind.
 
 </p>
 
 
+<section
+class="message-card"
+aria-labelledby="message-form-title"
+>
+
+
+<div class="card-header">
+
+<span id="message-form-title">
+WRITE YOUR MESSAGE
+</span>
+
+<span class="card-status">
+READY
+</span>
+
+</div>
+
+
 <form
-class="card"
 id="messageForm"
 novalidate
 >
 
 
-<div class="transaction">
+<div class="field">
 
-<label class="label">
-Transaction
+<label for="message">
+
+Your message
+
+<span class="optional">
+required
+</span>
+
 </label>
 
-<div
-class="tx"
-id="transactionHash"
-aria-live="polite"
->
-Loading transaction...
-</div>
 
-</div>
+<textarea
+id="message"
+name="message"
+maxlength="5000"
+placeholder="If someone finds this years from now, I hope they know..."
+required
+></textarea>
 
 
-<section
-class="private-box"
-aria-labelledby="privateTitle"
->
+<div class="message-meta">
 
-<div class="private-header">
+<span>
+Write honestly. There is no perfect message.
+</span>
 
-<h2
-class="private-title"
-id="privateTitle"
->
-Private details
-</h2>
+<span id="charCount">
+0 / 5000
+</span>
 
-<div class="private-badge">
-Private · Never shown
 </div>
 
 </div>
 
 
-<p class="private-description">
+<div class="details-title">
 
-These details are kept separate from your message.
-They are not displayed to the person who discovers
-your words.
+A little about you
+
+</div>
+
+
+<p class="details-description">
+
+These details are optional and are kept separate from the public message.
+They help preserve the context of the person who left it.
 
 </p>
 
 
-<div class="fields">
+<div class="details-grid">
 
 
 <div class="field">
 
-<label
-class="label"
-for="fullName"
->
+<label for="fullName">
+
 Name
+
+<span class="optional">
+optional
+</span>
+
 </label>
 
 <input
 type="text"
 id="fullName"
 name="fullName"
-placeholder="Your name"
 maxlength="100"
+placeholder="Your name"
 autocomplete="name"
 >
 
-<span class="field-hint">
-PRIVATE
-</span>
-
 </div>
 
 
 <div class="field">
 
-<label
-class="label"
-for="age"
->
-Age
-</label>
+<label for="email">
 
-<input
-type="number"
-id="age"
-name="age"
-placeholder="Your age"
-min="13"
-max="120"
-inputmode="numeric"
-autocomplete="off"
->
-
-<span class="field-hint">
-PRIVATE
-</span>
-
-</div>
-
-
-<div class="field">
-
-<label
-class="label"
-for="city"
->
-City
-</label>
-
-<input
-type="text"
-id="city"
-name="city"
-placeholder="Your city"
-maxlength="80"
-autocomplete="address-level2"
->
-
-<span class="field-hint">
-PRIVATE
-</span>
-
-</div>
-
-
-<div class="field">
-
-<label
-class="label"
-for="country"
->
-Country
-</label>
-
-<input
-type="text"
-id="country"
-name="country"
-placeholder="Your country"
-maxlength="80"
-autocomplete="country-name"
->
-
-<span class="field-hint">
-PRIVATE
-</span>
-
-</div>
-
-
-<div class="field full">
-
-<label
-class="label"
-for="email"
->
 Email
+
+<span class="optional">
+optional
+</span>
+
 </label>
 
 <input
 type="email"
 id="email"
 name="email"
-placeholder="you@example.com"
 maxlength="150"
+placeholder="you@example.com"
 autocomplete="email"
-inputmode="email"
 >
 
-<span class="field-hint">
-PRIVATE · NEVER DISPLAYED WITH YOUR MESSAGE
+</div>
+
+
+<div class="field">
+
+<label for="city">
+
+City
+
+<span class="optional">
+optional
 </span>
 
-</div>
-
-
-</div>
-
-</section>
-
-
-<section
-class="message-section"
-aria-labelledby="messageLabel"
->
-
-<div class="message-head">
-
-<label
-class="message-label"
-id="messageLabel"
-for="message"
->
-Your message
 </label>
 
-<div
-class="counter"
-id="counter"
-aria-live="polite"
+<input
+type="text"
+id="city"
+name="city"
+maxlength="80"
+placeholder="Your city"
+autocomplete="address-level2"
 >
-0 / 5000
-</div>
 
 </div>
 
 
-<div class="editor">
+<div class="field">
 
-<textarea
-id="message"
-name="message"
-maxlength="5000"
-placeholder="Write something worth finding..."
-aria-describedby="messageNote"
+<label for="country">
+
+Country
+
+<span class="optional">
+optional
+</span>
+
+</label>
+
+<input
+type="text"
+id="country"
+name="country"
+maxlength="80"
+placeholder="Your country"
+autocomplete="country-name"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="age">
+
+Age
+
+<span class="optional">
+optional
+</span>
+
+</label>
+
+<input
+type="number"
+id="age"
+name="age"
+min="13"
+max="120"
+placeholder="Your age"
+inputmode="numeric"
+>
+
+</div>
+
+
+</div>
+
+
+<div class="consent">
+
+<input
+type="checkbox"
+id="consent"
+name="consent"
 required
-></textarea>
+>
+
+<label for="consent">
+
+I understand that my message is intended to be discovered by another human.
+I will not include passwords, private keys, financial information, or sensitive
+personal information that I would not want a stranger to read.
+
+<strong>This message cannot be edited after submission.</strong>
+
+</label>
 
 </div>
 
 
-<div class="writing-tools">
-
-<p
-class="message-note"
-id="messageNote"
->
-<strong>5,000 characters.</strong>
-Take your time. There is no perfect message.
-</p>
+<div
+class="error-box"
+id="errorBox"
+role="alert"
+aria-live="assertive"
+></div>
 
 
-<button
-type="button"
-class="clear-btn"
-id="clearButton"
->
-Clear
-</button>
-
-</div>
-
-</section>
-
+<div class="submit-area">
 
 <button
 type="submit"
-class="submit"
+class="submit-button"
 id="submitButton"
 >
-Leave My Message →
+
+Leave this message behind →
+
 </button>
 
 
-<div class="privacy">
+<div class="submit-note">
 
-<span
-class="privacy-dot"
-aria-hidden="true"
-></span>
+Your verified payment is linked to this message.
 
-Your personal details are private.
-Only your message becomes part of the chain.
+One payment = one message.
+
+</div>
 
 </div>
 
@@ -1530,19 +1616,70 @@ Only your message becomes part of the chain.
 </form>
 
 
-<section
-class="back-message"
-aria-label="Return to message"
->
+<div class="privacy">
+
+
+<div class="privacy-item">
+
+<strong>01 — Anonymous</strong>
+
+Your public message does not display your identity.
+
+</div>
+
+
+<div class="privacy-item">
+
+<strong>02 — One chance</strong>
+
+Each verified payment can create one message.
+
+</div>
+
+
+<div class="privacy-item">
+
+<strong>03 — Human chain</strong>
+
+Your words become part of the next stranger's discovery.
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<section class="bottom-message">
+
+<div class="bottom-label">
+Think before you send
+</div>
+
+
+<h2>
+
+Leave words
+<br>
+
+<em>worth finding.</em>
+
+</h2>
+
 
 <p>
-Not ready to write yet?
-You can return to the message you discovered.
-</p>
 
-<a href="/view-message.html">
-← Back to the message
-</a>
+Maybe someone discovers your message tomorrow.
+
+Maybe years from now.
+
+Maybe on a night when they desperately needed to hear exactly what you wrote.
+
+Make it count.
+
+</p>
 
 </section>
 
@@ -1554,7 +1691,17 @@ You can return to the message you discovered.
 
 <footer>
 
+<div class="footer-inner">
+
+<span>
 © 2026 Last Human Message
+</span>
+
+<span>
+One stranger. One message.
+</span>
+
+</div>
 
 </footer>
 
@@ -1565,44 +1712,98 @@ id="toast"
 role="status"
 aria-live="polite"
 >
-Message
+Saved
 </div>
 
 
 <script>
 
 /* =====================================================
-   CONFIG
+   API
 ===================================================== */
 
-const WORKER_API =
-    "https://last-human-message-api.aaa6654292.workers.dev";
+const API_BASE =
+"https://last-human-message-api.aaa6654292.workers.dev";
 
 
 /* =====================================================
    ELEMENTS
 ===================================================== */
 
-const message =
-    document.getElementById("message");
+const messageForm =
+document.getElementById(
+    "messageForm"
+);
 
-const counter =
-    document.getElementById("counter");
+const messageInput =
+document.getElementById(
+    "message"
+);
 
-const form =
-    document.getElementById("messageForm");
+const fullNameInput =
+document.getElementById(
+    "fullName"
+);
+
+const emailInput =
+document.getElementById(
+    "email"
+);
+
+const cityInput =
+document.getElementById(
+    "city"
+);
+
+const countryInput =
+document.getElementById(
+    "country"
+);
+
+const ageInput =
+document.getElementById(
+    "age"
+);
+
+const consentInput =
+document.getElementById(
+    "consent"
+);
+
+const charCount =
+document.getElementById(
+    "charCount"
+);
 
 const submitButton =
-    document.getElementById("submitButton");
+document.getElementById(
+    "submitButton"
+);
 
-const clearButton =
-    document.getElementById("clearButton");
+const errorBox =
+document.getElementById(
+    "errorBox"
+);
 
 const toast =
-    document.getElementById("toast");
+document.getElementById(
+    "toast"
+);
 
-const transactionHashElement =
-    document.getElementById("transactionHash");
+
+/* =====================================================
+   SESSION PAYMENT
+===================================================== */
+
+const savedTxHash =
+sessionStorage.getItem(
+    "lastHumanMessageTxHash"
+);
+
+const savedPaymentId =
+sessionStorage.getItem(
+    "lastHumanMessagePaymentId"
+);
 
 
 /* =====================================================
@@ -1613,313 +1814,220 @@ let toastTimer;
 
 function showToast(text){
 
-    toast.textContent = text;
+    toast.textContent =
+        text;
 
-    toast.classList.add("show");
+    toast.classList.add(
+        "show"
+    );
 
-    clearTimeout(toastTimer);
+    clearTimeout(
+        toastTimer
+    );
 
     toastTimer =
         setTimeout(
             function(){
 
-                toast.classList.remove("show");
+                toast.classList.remove(
+                    "show"
+                );
 
             },
-            2500
+            1800
         );
-
 }
 
 
 /* =====================================================
-   TRANSACTION HASH
+   ERROR
 ===================================================== */
 
-function getTransactionHash(){
+function showError(text){
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
+    errorBox.textContent =
+        text;
 
-    const fromUrl =
-        params.get("txHash");
-
-
-    if(fromUrl){
-
-        return fromUrl.trim();
-
-    }
-
-
-    const possibleKeys = [
-        "txHash",
-        "transactionHash",
-        "lastHumanMessageTxHash"
-    ];
-
-
-    for(const key of possibleKeys){
-
-        const value =
-            localStorage.getItem(key);
-
-        if(value){
-
-            return value.trim();
-
-        }
-
-    }
-
-
-    return "";
-
-}
-
-
-/* =====================================================
-   LOAD TRANSACTION
-===================================================== */
-
-const transactionHash =
-    getTransactionHash();
-
-
-if(transactionHash){
-
-    transactionHashElement.textContent =
-        transactionHash;
-
-    transactionHashElement.classList.add(
-        "verified"
+    errorBox.classList.add(
+        "show"
     );
 
-}else{
+    errorBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+}
 
-    transactionHashElement.textContent =
-        "No transaction found";
 
+function clearError(){
+
+    errorBox.textContent =
+        "";
+
+    errorBox.classList.remove(
+        "show"
+    );
 }
 
 
 /* =====================================================
-   CHARACTER COUNTER
+   CHARACTER COUNT
 ===================================================== */
 
-function updateCounter(){
+function updateCharacterCount(){
 
     const length =
-        message.value.length;
+        messageInput.value.length;
 
-
-    counter.textContent =
+    charCount.textContent =
         length + " / 5000";
 
-
-    counter.classList.remove(
+    charCount.classList.remove(
         "warning",
-        "complete"
+        "danger"
     );
-
 
     if(length >= 4500){
 
-        counter.classList.add(
+        charCount.classList.add(
             "warning"
         );
 
     }
 
+    if(length >= 4900){
 
-    if(length === 5000){
-
-        counter.classList.remove(
+        charCount.classList.remove(
             "warning"
         );
 
-        counter.classList.add(
-            "complete"
+        charCount.classList.add(
+            "danger"
         );
-
     }
-
 }
 
 
-message.addEventListener(
+messageInput.addEventListener(
     "input",
-    updateCounter
+    updateCharacterCount
 );
+
+updateCharacterCount();
 
 
 /* =====================================================
-   CLEAR
+   INPUT CLEANUP
 ===================================================== */
 
-clearButton.addEventListener(
-    "click",
-    function(){
+function cleanValue(
+    input,
+    maxLength
+){
 
-        if(!message.value){
-
-            message.focus();
-
-            return;
-
-        }
-
-
-        const confirmed =
-            confirm(
-                "Clear your message?"
-            );
-
-
-        if(!confirmed){
-
-            return;
-
-        }
-
-
-        message.value = "";
-
-        updateCounter();
-
-        message.focus();
-
-    }
-);
-
-
-/* =====================================================
-   EMAIL VALIDATION
-===================================================== */
-
-function validEmail(email){
-
-    if(!email){
-
-        return true;
-
-    }
-
-
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-        email
-    );
-
+    return input.value
+        .trim()
+        .slice(0,maxLength);
 }
 
 
 /* =====================================================
-   SAVE MESSAGE
+   SUBMIT
 ===================================================== */
 
-form.addEventListener(
+messageForm.addEventListener(
     "submit",
     async function(event){
 
         event.preventDefault();
 
-
-        const text =
-            message.value.trim();
+        clearError();
 
 
-        if(!transactionHash){
-
-            showToast(
-                "Payment transaction not found."
-            );
-
-            return;
-
-        }
-
-
-        if(!text){
-
-            showToast(
-                "Please write your message first."
-            );
-
-            message.focus();
-
-            return;
-
-        }
-
-
-        if(text.length > 5000){
-
-            showToast(
-                "Your message cannot exceed 5,000 characters."
-            );
-
-            return;
-
-        }
+        const message =
+            messageInput.value.trim();
 
 
         const fullName =
-            document
-            .getElementById("fullName")
-            .value
-            .trim()
-            .slice(0,100);
-
-
-        const ageValue =
-            document
-            .getElementById("age")
-            .value
-            .trim();
-
-
-        const city =
-            document
-            .getElementById("city")
-            .value
-            .trim()
-            .slice(0,80);
-
-
-        const country =
-            document
-            .getElementById("country")
-            .value
-            .trim()
-            .slice(0,80);
+            cleanValue(
+                fullNameInput,
+                100
+            );
 
 
         const email =
-            document
-            .getElementById("email")
-            .value
-            .trim()
-            .slice(0,150);
-
-
-        if(!validEmail(email)){
-
-            showToast(
-                "Please enter a valid email."
+            cleanValue(
+                emailInput,
+                150
             );
 
-            document
-            .getElementById("email")
-            .focus();
+
+        const city =
+            cleanValue(
+                cityInput,
+                80
+            );
+
+
+        const country =
+            cleanValue(
+                countryInput,
+                80
+            );
+
+
+        const ageValue =
+            ageInput.value.trim();
+
+
+        /* ---------------------------------------------
+           PAYMENT CHECK
+        --------------------------------------------- */
+
+        if(!savedTxHash){
+
+            showError(
+                "No verified payment was found. Please return to the payment page and verify your transaction first."
+            );
 
             return;
-
         }
 
 
-        let age = null;
+        /* ---------------------------------------------
+           MESSAGE CHECK
+        --------------------------------------------- */
+
+        if(!message){
+
+            showError(
+                "Your message cannot be empty."
+            );
+
+            messageInput.focus();
+
+            return;
+        }
+
+
+        if(message.length > 5000){
+
+            showError(
+                "Your message cannot exceed 5000 characters."
+            );
+
+            messageInput.focus();
+
+            return;
+        }
+
+
+        /* ---------------------------------------------
+           AGE
+        --------------------------------------------- */
+
+        let age =
+            null;
 
 
         if(ageValue !== ""){
@@ -1934,33 +2042,76 @@ form.addEventListener(
                 age > 120
             ){
 
-                showToast(
-                    "Please enter a valid age."
+                showError(
+                    "Age must be a whole number between 13 and 120."
                 );
 
-                document
-                .getElementById("age")
-                .focus();
+                ageInput.focus();
 
                 return;
-
             }
-
         }
 
+
+        /* ---------------------------------------------
+           CONSENT
+        --------------------------------------------- */
+
+        if(!consentInput.checked){
+
+            showError(
+                "Please confirm that you understand how your message will be used."
+            );
+
+            consentInput.focus();
+
+            return;
+        }
+
+
+        /* ---------------------------------------------
+           EMAIL
+        --------------------------------------------- */
+
+        if(email){
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if(
+                !emailPattern.test(
+                    email
+                )
+            ){
+
+                showError(
+                    "Please enter a valid email address."
+                );
+
+                emailInput.focus();
+
+                return;
+            }
+        }
+
+
+        /* ---------------------------------------------
+           BUTTON
+        --------------------------------------------- */
 
         submitButton.disabled =
             true;
 
         submitButton.textContent =
-            "Saving your message...";
+            "SAVING YOUR MESSAGE...";
 
 
         try{
 
             const response =
                 await fetch(
-                    WORKER_API +
+                    API_BASE +
                     "/save-message",
                     {
                         method:"POST",
@@ -1970,100 +2121,115 @@ form.addEventListener(
                                 "application/json"
                         },
 
-                        body:
-                            JSON.stringify({
+                        body:JSON.stringify({
 
-                                txHash:
-                                    transactionHash,
+                            txHash:
+                                savedTxHash,
 
-                                message:
-                                    text,
+                            message:
+                                message,
 
-                                fullName:
-                                    fullName || null,
+                            fullName:
+                                fullName || null,
 
-                                age:
-                                    age,
+                            email:
+                                email || null,
 
-                                city:
-                                    city || null,
+                            city:
+                                city || null,
 
-                                country:
-                                    country || null,
+                            country:
+                                country || null,
 
-                                email:
-                                    email || null
+                            age:
+                                age
 
-                            })
-
-                        }
-                    );
+                        })
+                    }
+                );
 
 
             const data =
                 await response
-                .json()
-                .catch(
-                    () => null
-                );
+                    .json()
+                    .catch(
+                        function(){
+                            return null;
+                        }
+                    );
 
+
+            /* -----------------------------------------
+               SUCCESS
+            ----------------------------------------- */
 
             if(
-                !response.ok ||
-                !data ||
-                data.ok !== true ||
-                data.saved !== true
+                response.ok &&
+                data &&
+                data.ok === true &&
+                data.saved === true &&
+                data.messageId
             ){
 
-                throw new Error(
-                    data?.error ||
-                    "Unable to save your message."
-                );
-
-            }
-
-
-            if(data.messageId){
-
-                localStorage.setItem(
+                sessionStorage.setItem(
                     "lastHumanMessageId",
-                    String(data.messageId)
+                    String(
+                        data.messageId
+                    )
                 );
 
+
+                sessionStorage.setItem(
+                    "lastHumanMessageSaved",
+                    "true"
+                );
+
+
+                showToast(
+                    "Message saved"
+                );
+
+
+                submitButton.textContent =
+                    "MESSAGE SAVED ✓";
+
+
+                setTimeout(
+                    function(){
+
+                        window.location.href =
+                            "/view-message.html";
+
+                    },
+                    900
+                );
+
+
+                return;
             }
 
 
-            localStorage.removeItem(
-                "txHash"
+            /* -----------------------------------------
+               ERROR FROM WORKER
+            ----------------------------------------- */
+
+            const serverError =
+                data &&
+                data.error
+                    ? data.error
+                    : "Your message could not be saved. Please try again.";
+
+
+            showError(
+                serverError
             );
 
-            localStorage.removeItem(
-                "transactionHash"
-            );
 
-            localStorage.removeItem(
-                "lastHumanMessageTxHash"
-            );
-
+            submitButton.disabled =
+                false;
 
             submitButton.textContent =
-                "Message saved ✓";
-
-
-            showToast(
-                "Your message is now part of the chain."
-            );
-
-
-            setTimeout(
-                function(){
-
-                    window.location.href =
-                        "/view-message.html";
-
-                },
-                900
-            );
+                "Leave this message behind →";
 
 
         }catch(error){
@@ -2071,17 +2237,16 @@ form.addEventListener(
             console.error(error);
 
 
+            showError(
+                "Could not connect to the message service. Please check your connection and try again."
+            );
+
+
             submitButton.disabled =
                 false;
 
             submitButton.textContent =
-                "Leave My Message →";
-
-
-            showToast(
-                error.message ||
-                "Something went wrong."
-            );
+                "Leave this message behind →";
 
         }
 
@@ -2090,10 +2255,40 @@ form.addEventListener(
 
 
 /* =====================================================
-   INITIAL
+   PREVENT ACCIDENTAL DOUBLE SUBMIT
 ===================================================== */
 
-updateCounter();
+window.addEventListener(
+    "beforeunload",
+    function(){
+        /* intentionally empty */
+    }
+);
+
+
+/* =====================================================
+   FOCUS MESSAGE
+===================================================== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        if(savedTxHash){
+
+            setTimeout(
+                function(){
+
+                    messageInput.focus();
+
+                },
+                350
+            );
+
+        }
+
+    }
+);
 
 </script>
 
