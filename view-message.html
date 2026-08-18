@@ -23,91 +23,66 @@ content="noindex,nofollow,noarchive,nosnippet,noimageindex"
 <meta name="theme-color" content="#070707">
 <meta name="color-scheme" content="dark">
 
-<link rel="canonical"
-href="https://last-human-mesage.pages.dev/view-message.html">
-
-
-<!-- OPEN GRAPH -->
-
-<meta property="og:type" content="website">
-
-<meta
-property="og:url"
-content="https://last-human-mesage.pages.dev/view-message.html"
+<link
+rel="canonical"
+href="https://last-human-message.pages.dev/view-message.html"
 >
 
+<meta property="og:type" content="website">
+<meta
+property="og:url"
+content="https://last-human-message.pages.dev/view-message.html"
+>
 <meta
 property="og:title"
 content="I Found a Human Message"
 >
-
 <meta
 property="og:description"
 content="Someone left these words behind for a stranger. I was the one who found them. What would you leave for the next human?"
 >
-
-<meta
-property="og:site_name"
-content="Last Human Message"
->
-
+<meta property="og:site_name" content="Last Human Message">
 <meta property="og:locale" content="en_US">
 
-
-<!-- X -->
-
 <meta name="twitter:card" content="summary">
-
-<meta
-name="twitter:title"
-content="I Found a Human Message"
->
-
+<meta name="twitter:title" content="I Found a Human Message">
 <meta
 name="twitter:description"
 content="Someone left these words behind for a stranger. What would you leave for the next human?"
 >
 
-
-<!-- PERFORMANCE -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
 
 <link
 href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap"
-rel="stylesheet">
-
-
-<!-- STRUCTURED DATA -->
+rel="stylesheet"
+>
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebPage",
-  "@id":"https://last-human-mesage.pages.dev/view-message.html#webpage",
-  "url":"https://last-human-mesage.pages.dev/view-message.html",
+  "@id":"https://last-human-message.pages.dev/view-message.html#webpage",
+  "url":"https://last-human-message.pages.dev/view-message.html",
   "name":"I Found a Human Message",
   "description":"A human message discovered through the Last Human Message chain.",
   "isPartOf":{
     "@type":"WebSite",
-    "@id":"https://last-human-mesage.pages.dev/#website",
+    "@id":"https://last-human-message.pages.dev/#website",
     "name":"Last Human Message",
-    "url":"https://last-human-mesage.pages.dev/"
+    "url":"https://last-human-message.pages.dev/"
   },
   "inLanguage":"en",
   "isAccessibleForFree":false
 }
 </script>
 
-
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -120,9 +95,7 @@ html{
 }
 
 body{
-
     min-height:100vh;
-
     background:
         radial-gradient(
             circle at 50% -10%,
@@ -135,28 +108,18 @@ body{
             transparent 30%
         ),
         #070707;
-
     color:#f4f1ea;
-
     font-family:Inter,Arial,sans-serif;
-
     overflow-x:hidden;
 }
 
 body:before{
-
     content:"";
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     z-index:999;
-
     opacity:.025;
-
     background-image:url(
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
     );
@@ -177,50 +140,30 @@ a{
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 header{
-
     height:72px;
-
     position:relative;
-
     z-index:20;
-
     display:flex;
-
     align-items:center;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.07);
-
-    background:
-        rgba(7,7,7,.76);
-
+    border-bottom:1px solid rgba(255,255,255,.07);
+    background:rgba(7,7,7,.76);
     backdrop-filter:blur(20px);
 }
 
 .nav-inner{
-
     width:min(1120px,calc(100% - 32px));
-
     margin:auto;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 }
 
 .logo{
-
     font-size:15px;
-
     font-weight:900;
-
     letter-spacing:-.6px;
 }
 
@@ -229,249 +172,156 @@ header{
 }
 
 .nav-right{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     font-family:"DM Mono",monospace;
-
     font-size:9px;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
     color:#555;
 }
 
 .status-dot{
-
     width:6px;
     height:6px;
-
     border-radius:50%;
-
     background:#42d27e;
-
-    box-shadow:
-        0 0 12px rgba(66,210,126,.8);
+    box-shadow:0 0 12px rgba(66,210,126,.8);
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero{
-
     position:relative;
-
-    min-height:
-        calc(100vh - 72px);
-
+    min-height:calc(100vh - 72px);
     display:flex;
-
     justify-content:center;
-
-    padding:
-        100px 16px 120px;
-
+    padding:100px 16px 120px;
     overflow:hidden;
 }
 
 .hero:before{
-
     content:"";
-
     position:absolute;
-
     width:900px;
     height:900px;
-
     left:50%;
     top:-250px;
-
     transform:translateX(-50%);
-
     background:
         radial-gradient(
             circle,
             rgba(220,28,38,.13),
             transparent 67%
         );
-
     pointer-events:none;
 }
 
 .hero-grid{
-
     position:absolute;
-
     inset:0;
-
     opacity:.07;
-
     background-image:
-
         linear-gradient(
             rgba(255,255,255,.06) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             90deg,
             rgba(255,255,255,.06) 1px,
             transparent 1px
         );
-
     background-size:90px 90px;
-
     mask-image:
         linear-gradient(
             to bottom,
             #000,
             transparent 80%
         );
-
     pointer-events:none;
 }
 
 
-/* =====================================================
-   CONTENT
-===================================================== */
+/* CONTENT */
 
 .content{
-
     width:min(940px,100%);
-
     position:relative;
-
     z-index:2;
-
     margin:auto;
-
     text-align:center;
 }
 
 
-/* =====================================================
-   EYEBROW
-===================================================== */
+/* EYEBROW */
 
 .eyebrow{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:14px;
-
     margin-bottom:28px;
-
     font-family:"DM Mono",monospace;
-
     font-size:9px;
-
     letter-spacing:2.4px;
-
     text-transform:uppercase;
-
     color:#666;
 }
 
 .eyebrow-line{
-
     width:38px;
     height:1px;
-
     background:#333;
 }
 
 .eyebrow strong{
-
     color:#ef3038;
-
     font-weight:500;
 }
 
 
-/* =====================================================
-   TITLE
-===================================================== */
+/* TITLE */
 
 .title{
-
-    font-size:
-        clamp(52px,9vw,96px);
-
+    font-size:clamp(52px,9vw,96px);
     line-height:.88;
-
     letter-spacing:-.08em;
-
     font-weight:900;
 }
 
 .title em{
-
     font-family:"Playfair Display",serif;
-
     font-weight:500;
-
     letter-spacing:-.045em;
 }
 
 
-/* =====================================================
-   SUBTITLE
-===================================================== */
+/* SUBTITLE */
 
 .subtitle{
-
     max-width:600px;
-
-    margin:
-        28px auto 0;
-
+    margin:28px auto 0;
     color:#707070;
-
     font-size:14px;
-
     line-height:1.8;
 }
 
 
-/* =====================================================
-   META
-===================================================== */
+/* META */
 
 .meta{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     flex-wrap:wrap;
-
     gap:13px;
-
     margin-top:25px;
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
     color:#444;
 }
 
@@ -480,94 +330,59 @@ header{
 }
 
 .meta-dot{
-
     width:3px;
     height:3px;
-
     border-radius:50%;
-
     background:#444;
 }
 
 
-/* =====================================================
-   MESSAGE AREA
-===================================================== */
+/* MESSAGE AREA */
 
 .message-wrapper{
-
     position:relative;
-
     margin-top:65px;
-
     text-align:left;
 }
 
 .quote-mark{
-
     position:absolute;
-
     top:-50px;
     left:-28px;
-
     font-family:Georgia,serif;
-
     font-size:300px;
-
     line-height:1;
-
     color:rgba(255,255,255,.025);
-
     pointer-events:none;
-
     user-select:none;
 }
 
 
-/* =====================================================
-   MESSAGE CARD
-===================================================== */
+/* MESSAGE CARD */
 
 .message-card{
-
     position:relative;
-
     overflow:hidden;
-
     background:
-
         linear-gradient(
             145deg,
             rgba(27,27,27,.98),
             rgba(9,9,9,.99)
         );
-
-    border:
-        1px solid rgba(255,255,255,.105);
-
+    border:1px solid rgba(255,255,255,.105);
     box-shadow:
-
         0 45px 120px rgba(0,0,0,.55),
-
-        inset 0 1px 0
-        rgba(255,255,255,.025);
-
-    padding:
-        clamp(32px,7vw,76px);
+        inset 0 1px 0 rgba(255,255,255,.025);
+    padding:clamp(32px,7vw,76px);
 }
 
 .message-card:before{
-
     content:"";
-
     position:absolute;
-
     top:0;
     left:0;
-
     width:3px;
     height:100%;
-
     background:
         linear-gradient(
             to bottom,
@@ -576,155 +391,118 @@ header{
             #ef3038 75%,
             transparent
         );
-
     opacity:.8;
 }
 
 .message-card:after{
-
     content:"";
-
     position:absolute;
-
     width:420px;
     height:420px;
-
     right:-260px;
     top:-260px;
-
     background:
         radial-gradient(
             circle,
             rgba(239,48,56,.12),
             transparent 68%
         );
-
     pointer-events:none;
 }
 
 
-/* =====================================================
-   MESSAGE HEADER
-===================================================== */
+/* MESSAGE HEADER */
 
 .message-header{
-
     position:relative;
-
     z-index:2;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     gap:15px;
-
     padding-bottom:22px;
-
     margin-bottom:42px;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.07);
-
+    border-bottom:1px solid rgba(255,255,255,.07);
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:1.7px;
-
     text-transform:uppercase;
-
     color:#555;
 }
 
 .found{
-
     color:#42d27e;
-
     display:flex;
-
     align-items:center;
-
     gap:7px;
 }
 
 .found:before{
-
     content:"";
-
     width:5px;
     height:5px;
-
     border-radius:50%;
-
     background:#42d27e;
-
-    box-shadow:
-        0 0 10px rgba(66,210,126,.7);
+    box-shadow:0 0 10px rgba(66,210,126,.7);
 }
 
 
-/* =====================================================
-   MESSAGE TEXT
-===================================================== */
+/* MESSAGE TEXT */
 
 .message-text{
-
     position:relative;
-
     z-index:2;
-
     max-width:790px;
-
     color:#f4f1ea;
-
     font-family:
         "Playfair Display",
         Georgia,
         serif;
-
-    font-size:
-        clamp(34px,5.2vw,63px);
-
+    font-size:clamp(34px,5.2vw,63px);
     line-height:1.17;
-
     letter-spacing:-.028em;
-
     white-space:pre-line;
+    overflow-wrap:anywhere;
 }
 
 .message-text::selection{
-
     background:#ef3038;
-
     color:#fff;
 }
 
 
-/* =====================================================
-   AUTHOR
-===================================================== */
+/* LOADING */
+
+.message-loading{
+    color:#555;
+    font-family:"DM Mono",monospace;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    line-height:1.8;
+}
+
+.message-error{
+    color:#ef3038;
+    font-family:"DM Mono",monospace;
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    line-height:1.8;
+}
+
+
+/* AUTHOR */
 
 .author{
-
     position:relative;
-
     z-index:2;
-
     margin-top:50px;
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     line-height:1.7;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
     color:#4e4e4e;
 }
 
@@ -733,73 +511,41 @@ header{
 }
 
 
-/* =====================================================
-   ACTION BAR
-===================================================== */
+/* ACTION BAR */
 
 .actions{
-
     position:relative;
-
     z-index:2;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     gap:12px;
-
     margin-top:30px;
-
     padding-top:20px;
-
-    border-top:
-        1px solid rgba(255,255,255,.07);
+    border-top:1px solid rgba(255,255,255,.07);
 }
 
 .action-left{
-
     display:flex;
-
     gap:8px;
-
     flex-wrap:wrap;
 }
 
 .action-btn{
-
     min-height:42px;
-
-    padding:
-        0 14px;
-
+    padding:0 14px;
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:8px;
-
     background:#0b0b0b;
-
-    border:
-        1px solid rgba(255,255,255,.09);
-
+    border:1px solid rgba(255,255,255,.09);
     color:#777;
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
     cursor:pointer;
-
     transition:
         transform .2s,
         border-color .2s,
@@ -808,359 +554,208 @@ header{
 }
 
 .action-btn:hover{
-
     color:#fff;
-
     border-color:#444;
-
     background:#111;
-
     transform:translateY(-2px);
 }
 
 .action-btn.copied{
-
     color:#42d27e;
-
-    border-color:
-        rgba(66,210,126,.35);
+    border-color:rgba(66,210,126,.35);
 }
 
 .action-btn:focus-visible{
-
-    outline:
-        2px solid #ef3038;
-
+    outline:2px solid #ef3038;
     outline-offset:3px;
 }
 
 
-/* =====================================================
-   SHARE
-===================================================== */
+/* SHARE */
 
 .share-section{
-
     margin-top:65px;
-
-    padding:
-        30px 20px;
-
-    border:
-        1px solid rgba(255,255,255,.07);
-
-    background:
-        rgba(12,12,12,.55);
+    padding:30px 20px;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(12,12,12,.55);
 }
 
 .share-label{
-
     margin-bottom:18px;
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
     color:#555;
 }
 
 .share-buttons{
-
     display:flex;
-
     justify-content:center;
-
     flex-wrap:wrap;
-
     gap:8px;
 }
 
 .share-btn{
-
     min-height:42px;
-
-    padding:
-        0 16px;
-
+    padding:0 16px;
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:8px;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
+    border:1px solid rgba(255,255,255,.08);
     background:#090909;
-
     color:#777;
-
     font-size:9px;
-
     font-weight:700;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
 .share-btn:hover{
-
     color:#fff;
-
     border-color:#444;
-
     transform:translateY(-2px);
 }
 
 .share-btn:focus-visible{
-
-    outline:
-        2px solid #ef3038;
-
+    outline:2px solid #ef3038;
     outline-offset:3px;
 }
 
 .share-icon{
-
     font-family:"DM Mono",monospace;
-
     font-size:10px;
-
     color:#aaa;
 }
 
 
-/* =====================================================
-   CONTINUE
-===================================================== */
+/* CONTINUE */
 
 .continue{
-
     margin-top:110px;
-
     padding-top:75px;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
+    border-top:1px solid rgba(255,255,255,.08);
     text-align:center;
 }
 
 .continue-label{
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:2.2px;
-
     text-transform:uppercase;
-
     color:#ef3038;
 }
 
 .continue h2{
-
     margin-top:20px;
-
-    font-size:
-        clamp(43px,7vw,76px);
-
+    font-size:clamp(43px,7vw,76px);
     line-height:.9;
-
     letter-spacing:-.07em;
-
     font-weight:900;
 }
 
 .continue h2 em{
-
     font-family:"Playfair Display",serif;
-
     font-weight:500;
 }
 
 .continue p{
-
     max-width:500px;
-
-    margin:
-        25px auto 0;
-
+    margin:25px auto 0;
     color:#707070;
-
     font-size:14px;
-
     line-height:1.8;
 }
 
 .continue-btn{
-
     min-height:56px;
-
     margin-top:30px;
-
-    padding:
-        0 26px;
-
+    padding:0 26px;
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     background:#dc2028;
-
     color:#fff;
-
     font-size:10px;
-
     font-weight:900;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
-    box-shadow:
-        0 18px 50px
-        rgba(220,32,40,.18);
-
+    box-shadow:0 18px 50px rgba(220,32,40,.18);
     transition:.25s;
 }
 
 .continue-btn:hover{
-
     background:#ff3038;
-
     transform:translateY(-3px);
-
-    box-shadow:
-        0 24px 65px
-        rgba(220,32,40,.3);
+    box-shadow:0 24px 65px rgba(220,32,40,.3);
 }
 
 .continue-btn:focus-visible{
-
-    outline:
-        2px solid #fff;
-
+    outline:2px solid #fff;
     outline-offset:4px;
 }
 
 .privacy{
-
     margin-top:25px;
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
     color:#3f3f3f;
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer{
-
-    padding:
-        35px 16px;
-
-    border-top:
-        1px solid rgba(255,255,255,.06);
-
+    padding:35px 16px;
+    border-top:1px solid rgba(255,255,255,.06);
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
     color:#3f3f3f;
 }
 
 .footer-inner{
-
     width:min(1120px,100%);
-
     margin:auto;
-
     display:flex;
-
     justify-content:space-between;
-
     gap:20px;
 }
 
 
-/* =====================================================
-   TOAST
-===================================================== */
+/* TOAST */
 
 .toast{
-
     position:fixed;
-
     left:50%;
     bottom:25px;
-
     z-index:1000;
-
     min-width:190px;
-
-    padding:
-        13px 18px;
-
+    padding:13px 18px;
     text-align:center;
-
     background:#f4f1ea;
-
     color:#080808;
-
     font-family:"DM Mono",monospace;
-
     font-size:8px;
-
     letter-spacing:1.2px;
-
     text-transform:uppercase;
-
     opacity:0;
-
     pointer-events:none;
-
-    transform:
-        translate(-50%,18px);
-
+    transform:translate(-50%,18px);
     transition:.3s;
 }
 
 .toast.show{
-
     opacity:1;
-
-    transform:
-        translate(-50%,0);
+    transform:translate(-50%,0);
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:650px){
 
@@ -1181,12 +776,8 @@ footer{
     }
 
     .hero{
-
-        min-height:
-            calc(100vh - 64px);
-
-        padding:
-            75px 15px 90px;
+        min-height:calc(100vh - 64px);
+        padding:75px 15px 90px;
     }
 
     .hero-grid{
@@ -1194,8 +785,7 @@ footer{
     }
 
     .title{
-        font-size:
-            clamp(50px,15vw,72px);
+        font-size:clamp(50px,15vw,72px);
     }
 
     .subtitle{
@@ -1211,8 +801,7 @@ footer{
     }
 
     .message-card{
-        padding:
-            28px 22px;
+        padding:28px 22px;
     }
 
     .message-header{
@@ -1246,9 +835,7 @@ footer{
 
     .share-buttons{
         display:grid;
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .share-btn{
@@ -1256,8 +843,7 @@ footer{
     }
 
     .share-btn:last-child{
-        grid-column:
-            1 / -1;
+        grid-column:1 / -1;
     }
 
     .continue{
@@ -1269,12 +855,11 @@ footer{
         flex-direction:column;
         text-align:center;
     }
+
 }
 
 
-/* =====================================================
-   REDUCED MOTION
-===================================================== */
+/* REDUCED MOTION */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -1283,17 +868,16 @@ footer{
     }
 
     *,
-    *:before,
-    *:after{
+    *:before{
         animation:none !important;
         transition:none !important;
     }
+
 }
 
 </style>
 
 </head>
-
 
 <body>
 
@@ -1313,10 +897,12 @@ aria-label="Last Human Message home"
 Last<span>Human</span>Message
 </a>
 
-
 <div class="nav-right">
 
-<span class="status-dot"></span>
+<span
+class="status-dot"
+aria-hidden="true"
+></span>
 
 <span>Message discovered</span>
 
@@ -1390,7 +976,7 @@ aria-label="Message information"
 >
 
 <strong id="messageNumber">
-Message #08,431
+Finding...
 </strong>
 
 <span
@@ -1441,17 +1027,12 @@ FOUND
 <blockquote
 class="message-text"
 id="messageText"
+aria-live="polite"
 >
 
-If you're reading this,
-
-you made it through every version
-of yourself that thought you wouldn't.
-
-Keep going.
-
-There is still something ahead
-that you haven't seen yet.
+<span class="message-loading">
+Finding a message from another human...
+</span>
 
 </blockquote>
 
@@ -1467,11 +1048,11 @@ that you haven't seen yet.
 
 <div class="action-left">
 
-
 <button
 type="button"
 class="action-btn"
 id="copyMessageButton"
+disabled
 >
 <span>⌁</span>
 Copy message
@@ -1486,7 +1067,6 @@ id="copyLinkButton"
 <span>↗</span>
 Copy link
 </button>
-
 
 </div>
 
@@ -1511,7 +1091,6 @@ Share this moment
 
 
 <div class="share-buttons">
-
 
 <button
 type="button"
@@ -1581,7 +1160,6 @@ id="shareMore"
 <span class="share-icon">•••</span>
 More
 </button>
-
 
 </div>
 
@@ -1673,12 +1251,15 @@ Copied
 
 <script>
 
-/* =====================================================
-   ELEMENTS
-===================================================== */
+const API_BASE =
+"https://last-human-message-api.aaa6654292.workers.dev";
+
 
 const messageElement =
 document.getElementById("messageText");
+
+const messageNumber =
+document.getElementById("messageNumber");
 
 const toast =
 document.getElementById("toast");
@@ -1690,17 +1271,7 @@ const copyLinkButton =
 document.getElementById("copyLinkButton");
 
 
-/* =====================================================
-   MESSAGE TEXT
-===================================================== */
-
-function getMessage(){
-
-    return messageElement
-        .innerText
-        .trim();
-
-}
+let currentMessage = "";
 
 
 /* =====================================================
@@ -1726,6 +1297,7 @@ function showToast(text){
             },
             1800
         );
+
 }
 
 
@@ -1745,7 +1317,9 @@ async function copyText(text){
             await navigator.clipboard.writeText(text);
 
             return true;
+
         }
+
 
         const textarea =
             document.createElement("textarea");
@@ -1772,6 +1346,126 @@ async function copyText(text){
         return false;
 
     }
+
+}
+
+
+/* =====================================================
+   LOAD RANDOM MESSAGE
+===================================================== */
+
+async function loadMessage(){
+
+    messageElement.textContent =
+        "Finding a message from another human...";
+
+    messageElement.className =
+        "message-text message-loading";
+
+    copyMessageButton.disabled = true;
+
+
+    try{
+
+        const response =
+            await fetch(
+                API_BASE + "/view-message",
+                {
+                    method:"GET",
+                    headers:{
+                        "Accept":
+                            "application/json"
+                    },
+                    cache:"no-store"
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if(
+            !response.ok ||
+            !data.ok ||
+            !data.message ||
+            typeof data.message.text !== "string"
+        ){
+
+            throw new Error(
+                data.error ||
+                "No message available"
+            );
+
+        }
+
+
+        currentMessage =
+            data.message.text.trim();
+
+
+        if(!currentMessage){
+
+            throw new Error(
+                "Empty message"
+            );
+
+        }
+
+
+        messageElement.className =
+            "message-text";
+
+        messageElement.textContent =
+            currentMessage;
+
+
+        const id =
+            Number(data.message.id);
+
+
+        if(
+            Number.isInteger(id) &&
+            id > 0
+        ){
+
+            messageNumber.textContent =
+                "Message #" +
+                String(id).padStart(5,"0");
+
+        }else{
+
+            messageNumber.textContent =
+                "Message discovered";
+
+        }
+
+
+        copyMessageButton.disabled =
+            false;
+
+
+    }catch(error){
+
+        currentMessage = "";
+
+        messageElement.className =
+            "message-text";
+
+        messageElement.innerHTML =
+            '<span class="message-error">' +
+            'No message is available right now.<br><br>' +
+            'Please try again in a moment.' +
+            '</span>';
+
+        messageNumber.textContent =
+            "No message found";
+
+        copyMessageButton.disabled =
+            true;
+
+    }
+
 }
 
 
@@ -1783,10 +1477,18 @@ copyMessageButton.addEventListener(
     "click",
     async function(){
 
+        if(!currentMessage){
+
+            return;
+
+        }
+
+
         const success =
             await copyText(
-                getMessage()
+                currentMessage
             );
+
 
         if(success){
 
@@ -1796,7 +1498,10 @@ copyMessageButton.addEventListener(
             copyMessageButton.innerHTML =
                 "<span>✓</span> Copied";
 
-            showToast("Message copied");
+            showToast(
+                "Message copied"
+            );
+
 
             setTimeout(
                 function(){
@@ -1813,7 +1518,9 @@ copyMessageButton.addEventListener(
 
         }else{
 
-            showToast("Copy failed");
+            showToast(
+                "Copy failed"
+            );
 
         }
 
@@ -1834,6 +1541,7 @@ copyLinkButton.addEventListener(
                 window.location.href
             );
 
+
         if(success){
 
             copyLinkButton
@@ -1842,7 +1550,10 @@ copyLinkButton.addEventListener(
             copyLinkButton.innerHTML =
                 "<span>✓</span> Copied";
 
-            showToast("Link copied");
+            showToast(
+                "Link copied"
+            );
+
 
             setTimeout(
                 function(){
@@ -1859,7 +1570,9 @@ copyLinkButton.addEventListener(
 
         }else{
 
-            showToast("Copy failed");
+            showToast(
+                "Copy failed"
+            );
 
         }
 
@@ -1907,12 +1620,9 @@ document
     function(){
 
         openShare(
-            "https://twitter.com/intent/tweet?text="
-            +
-            encodeURIComponent(shareText)
-            +
-            "&url="
-            +
+            "https://twitter.com/intent/tweet?text=" +
+            encodeURIComponent(shareText) +
+            "&url=" +
             encodeURIComponent(shareUrl)
         );
 
@@ -1931,8 +1641,7 @@ document
     function(){
 
         openShare(
-            "https://wa.me/?text="
-            +
+            "https://wa.me/?text=" +
             encodeURIComponent(
                 shareText +
                 "\n\n" +
@@ -1955,12 +1664,9 @@ document
     function(){
 
         openShare(
-            "https://t.me/share/url?url="
-            +
-            encodeURIComponent(shareUrl)
-            +
-            "&text="
-            +
+            "https://t.me/share/url?url=" +
+            encodeURIComponent(shareUrl) +
+            "&text=" +
             encodeURIComponent(shareText)
         );
 
@@ -1979,15 +1685,10 @@ document
     function(){
 
         openShare(
-            "https://www.reddit.com/submit?url="
-            +
-            encodeURIComponent(shareUrl)
-            +
-            "&title="
-            +
-            encodeURIComponent(
-                shareTitle
-            )
+            "https://www.reddit.com/submit?url=" +
+            encodeURIComponent(shareUrl) +
+            "&title=" +
+            encodeURIComponent(shareTitle)
         );
 
     }
@@ -2005,11 +1706,8 @@ document
     function(){
 
         openShare(
-            "https://www.facebook.com/sharer/sharer.php?u="
-            +
-            encodeURIComponent(
-                shareUrl
-            )
+            "https://www.facebook.com/sharer/sharer.php?u=" +
+            encodeURIComponent(shareUrl)
         );
 
     }
@@ -2027,11 +1725,8 @@ document
     function(){
 
         openShare(
-            "https://www.linkedin.com/sharing/share-offsite/?url="
-            +
-            encodeURIComponent(
-                shareUrl
-            )
+            "https://www.linkedin.com/sharing/share-offsite/?url=" +
+            encodeURIComponent(shareUrl)
         );
 
     }
@@ -2048,9 +1743,7 @@ document
     "click",
     async function(){
 
-        if(
-            navigator.share
-        ){
+        if(navigator.share){
 
             try{
 
@@ -2067,10 +1760,6 @@ document
 
                 });
 
-                showToast(
-                    "Shared successfully"
-                );
-
             }catch(error){
 
                 if(
@@ -2079,7 +1768,7 @@ document
                 ){
 
                     showToast(
-                        "Share cancelled"
+                        "Share failed"
                     );
 
                 }
@@ -2106,20 +1795,10 @@ document
 
 
 /* =====================================================
-   MESSAGE NUMBER
+   START
 ===================================================== */
 
-const messageNumber =
-document.getElementById(
-    "messageNumber"
-);
-
-if(messageNumber){
-
-    messageNumber.textContent =
-        "Message #08,431";
-
-}
+loadMessage();
 
 </script>
 
