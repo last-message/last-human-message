@@ -3,7 +3,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Write a Message for the Next Human — Last Human Message</title>
@@ -15,30 +14,26 @@ content="Leave a message for the next human. Write something meaningful, persona
 
 <meta
 name="robots"
-content="noindex,nofollow,noarchive,nosnippet"
+content="noindex,nofollow,noarchive,nosnippet,noimageindex"
 >
 
 <meta name="author" content="Last Human Message">
-
-<meta
-name="theme-color"
-content="#070707"
->
-
+<meta name="theme-color" content="#070707">
 <meta name="color-scheme" content="dark">
 
 <link
 rel="canonical"
-href="https://last-human-mesage.pages.dev/write-message.html"
+href="https://last-human-message.pages.dev/write-message.html"
 >
 
-<!-- OPEN GRAPH -->
-
-<meta property="og:type" content="website">
+<meta
+property="og:type"
+content="website"
+>
 
 <meta
 property="og:url"
-content="https://last-human-mesage.pages.dev/write-message.html"
+content="https://last-human-message.pages.dev/write-message.html"
 >
 
 <meta
@@ -56,11 +51,15 @@ property="og:site_name"
 content="Last Human Message"
 >
 
-<meta property="og:locale" content="en_US">
+<meta
+property="og:locale"
+content="en_US"
+>
 
-<!-- X -->
-
-<meta name="twitter:card" content="summary">
+<meta
+name="twitter:card"
+content="summary"
+>
 
 <meta
 name="twitter:title"
@@ -71,8 +70,6 @@ content="Leave a Message for the Next Human"
 name="twitter:description"
 content="Someone left a message for you. Now leave something behind for the stranger who comes next."
 >
-
-<!-- FONTS -->
 
 <link
 rel="preconnect"
@@ -90,31 +87,25 @@ href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter
 rel="stylesheet"
 >
 
-<!-- STRUCTURED DATA -->
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebPage",
-  "@id":"https://last-human-mesage.pages.dev/write-message.html#webpage",
-  "url":"https://last-human-mesage.pages.dev/write-message.html",
+  "@id":"https://last-human-message.pages.dev/write-message.html#webpage",
+  "url":"https://last-human-message.pages.dev/write-message.html",
   "name":"Write a Message for the Next Human",
   "description":"Leave a message for the next human in the Last Human Message chain.",
   "isPartOf":{
     "@type":"WebSite",
-    "@id":"https://last-human-mesage.pages.dev/#website",
+    "@id":"https://last-human-message.pages.dev/#website",
     "name":"Last Human Message",
-    "url":"https://last-human-mesage.pages.dev/"
+    "url":"https://last-human-message.pages.dev/"
   },
   "inLanguage":"en"
 }
 </script>
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -301,7 +292,7 @@ main{
 
 
 /* =====================================================
-   HERO INTRO
+   HERO
 ===================================================== */
 
 .eyebrow{
@@ -482,11 +473,18 @@ h1 em{
 
     font-size:10px;
 
-    color:#555;
+    color:#777;
 
     line-height:1.6;
 
     word-break:break-all;
+}
+
+.tx.verified{
+    color:#42d27e;
+
+    border-color:
+        rgba(66,210,126,.25);
 }
 
 
@@ -641,7 +639,7 @@ h1 em{
 
 
 /* =====================================================
-   MESSAGE SECTION
+   MESSAGE
 ===================================================== */
 
 .message-section{
@@ -698,7 +696,7 @@ h1 em{
 
 
 /* =====================================================
-   WRITING BOX
+   TEXTAREA
 ===================================================== */
 
 .editor{
@@ -772,7 +770,7 @@ textarea::selection{
 
 
 /* =====================================================
-   WRITING TIPS
+   TOOLS
 ===================================================== */
 
 .writing-tools{
@@ -936,7 +934,7 @@ textarea::selection{
 
 
 /* =====================================================
-   BACK TO MESSAGE
+   BACK
 ===================================================== */
 
 .back-message{
@@ -1183,13 +1181,7 @@ footer{
 
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
 
 <header>
 
@@ -1205,7 +1197,6 @@ aria-label="Last Human Message home"
 >
 Last<span>Human</span>Message
 </a>
-
 
 <div class="nav-right">
 
@@ -1226,10 +1217,6 @@ Step 02 / Write
 
 </header>
 
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
 
 <main>
 
@@ -1264,18 +1251,12 @@ Your words become part of the chain.
 </p>
 
 
-<!-- =====================================================
-     FORM
-===================================================== -->
-
 <form
 class="card"
 id="messageForm"
 novalidate
 >
 
-
-<!-- TRANSACTION -->
 
 <div class="transaction">
 
@@ -1288,15 +1269,11 @@ class="tx"
 id="transactionHash"
 aria-live="polite"
 >
-Transaction hash will appear here
+Loading transaction...
 </div>
 
 </div>
 
-
-<!-- =====================================================
-     PRIVATE INFORMATION
-===================================================== -->
 
 <section
 class="private-box"
@@ -1331,8 +1308,6 @@ your words.
 <div class="fields">
 
 
-<!-- NAME -->
-
 <div class="field">
 
 <label
@@ -1358,8 +1333,6 @@ PRIVATE
 </div>
 
 
-<!-- AGE -->
-
 <div class="field">
 
 <label
@@ -1374,7 +1347,7 @@ type="number"
 id="age"
 name="age"
 placeholder="Your age"
-min="1"
+min="13"
 max="120"
 inputmode="numeric"
 autocomplete="off"
@@ -1386,8 +1359,6 @@ PRIVATE
 
 </div>
 
-
-<!-- CITY -->
 
 <div class="field">
 
@@ -1414,8 +1385,6 @@ PRIVATE
 </div>
 
 
-<!-- COUNTRY -->
-
 <div class="field">
 
 <label
@@ -1440,8 +1409,6 @@ PRIVATE
 
 </div>
 
-
-<!-- EMAIL -->
 
 <div class="field full">
 
@@ -1473,10 +1440,6 @@ PRIVATE · NEVER DISPLAYED WITH YOUR MESSAGE
 
 </section>
 
-
-<!-- =====================================================
-     MESSAGE
-===================================================== -->
 
 <section
 class="message-section"
@@ -1539,11 +1502,8 @@ Clear
 
 </div>
 
-
 </section>
 
-
-<!-- SUBMIT -->
 
 <button
 type="submit"
@@ -1570,10 +1530,6 @@ Only your message becomes part of the chain.
 </form>
 
 
-<!-- =====================================================
-     VIEW MESSAGE LINK
-===================================================== -->
-
 <section
 class="back-message"
 aria-label="Return to message"
@@ -1596,18 +1552,12 @@ You can return to the message you discovered.
 </main>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
 
 © 2026 Last Human Message
 
 </footer>
 
-
-<!-- TOAST -->
 
 <div
 class="toast"
@@ -1622,37 +1572,148 @@ Message
 <script>
 
 /* =====================================================
+   CONFIG
+===================================================== */
+
+const WORKER_API =
+    "https://last-human-message-api.aaa6654292.workers.dev";
+
+
+/* =====================================================
    ELEMENTS
 ===================================================== */
 
 const message =
-document.getElementById("message");
+    document.getElementById("message");
 
 const counter =
-document.getElementById("counter");
+    document.getElementById("counter");
 
 const form =
-document.getElementById("messageForm");
+    document.getElementById("messageForm");
 
 const submitButton =
-document.getElementById("submitButton");
+    document.getElementById("submitButton");
 
 const clearButton =
-document.getElementById("clearButton");
+    document.getElementById("clearButton");
 
 const toast =
-document.getElementById("toast");
+    document.getElementById("toast");
+
+const transactionHashElement =
+    document.getElementById("transactionHash");
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+let toastTimer;
+
+function showToast(text){
+
+    toast.textContent = text;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer =
+        setTimeout(
+            function(){
+
+                toast.classList.remove("show");
+
+            },
+            2500
+        );
+
+}
+
+
+/* =====================================================
+   TRANSACTION HASH
+===================================================== */
+
+function getTransactionHash(){
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const fromUrl =
+        params.get("txHash");
+
+
+    if(fromUrl){
+
+        return fromUrl.trim();
+
+    }
+
+
+    const possibleKeys = [
+        "txHash",
+        "transactionHash",
+        "lastHumanMessageTxHash"
+    ];
+
+
+    for(const key of possibleKeys){
+
+        const value =
+            localStorage.getItem(key);
+
+        if(value){
+
+            return value.trim();
+
+        }
+
+    }
+
+
+    return "";
+
+}
+
+
+/* =====================================================
+   LOAD TRANSACTION
+===================================================== */
+
+const transactionHash =
+    getTransactionHash();
+
+
+if(transactionHash){
+
+    transactionHashElement.textContent =
+        transactionHash;
+
+    transactionHashElement.classList.add(
+        "verified"
+    );
+
+}else{
+
+    transactionHashElement.textContent =
+        "No transaction found";
+
+}
 
 
 /* =====================================================
    CHARACTER COUNTER
-   MAXIMUM = 5000
 ===================================================== */
 
 function updateCounter(){
 
     const length =
         message.value.length;
+
 
     counter.textContent =
         length + " / 5000";
@@ -1687,6 +1748,7 @@ function updateCounter(){
 
 }
 
+
 message.addEventListener(
     "input",
     updateCounter
@@ -1694,36 +1756,7 @@ message.addEventListener(
 
 
 /* =====================================================
-   TOAST
-===================================================== */
-
-let toastTimer;
-
-function showToast(text){
-
-    toast.textContent = text;
-
-    toast.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer =
-        setTimeout(
-            function(){
-
-                toast.classList.remove(
-                    "show"
-                );
-
-            },
-            2200
-        );
-
-}
-
-
-/* =====================================================
-   CLEAR MESSAGE
+   CLEAR
 ===================================================== */
 
 clearButton.addEventListener(
@@ -1763,12 +1796,32 @@ clearButton.addEventListener(
 
 
 /* =====================================================
-   FORM
+   EMAIL VALIDATION
+===================================================== */
+
+function validEmail(email){
+
+    if(!email){
+
+        return true;
+
+    }
+
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+        email
+    );
+
+}
+
+
+/* =====================================================
+   SAVE MESSAGE
 ===================================================== */
 
 form.addEventListener(
     "submit",
-    function(event){
+    async function(event){
 
         event.preventDefault();
 
@@ -1777,7 +1830,16 @@ form.addEventListener(
             message.value.trim();
 
 
-        /* EMPTY */
+        if(!transactionHash){
+
+            showToast(
+                "Payment transaction not found."
+            );
+
+            return;
+
+        }
+
 
         if(!text){
 
@@ -1792,23 +1854,6 @@ form.addEventListener(
         }
 
 
-        /* TOO SHORT */
-
-        if(text.length < 1){
-
-            showToast(
-                "Please write something first."
-            );
-
-            message.focus();
-
-            return;
-
-        }
-
-
-        /* MAXIMUM */
-
         if(text.length > 5000){
 
             showToast(
@@ -1820,39 +1865,232 @@ form.addEventListener(
         }
 
 
-        /*
-         Temporary navigation.
+        const fullName =
+            document
+            .getElementById("fullName")
+            .value
+            .trim()
+            .slice(0,100);
 
-         Real payment validation,
-         Worker verification,
-         database storage,
-         message assignment
-         will be connected later.
-        */
+
+        const ageValue =
+            document
+            .getElementById("age")
+            .value
+            .trim();
+
+
+        const city =
+            document
+            .getElementById("city")
+            .value
+            .trim()
+            .slice(0,80);
+
+
+        const country =
+            document
+            .getElementById("country")
+            .value
+            .trim()
+            .slice(0,80);
+
+
+        const email =
+            document
+            .getElementById("email")
+            .value
+            .trim()
+            .slice(0,150);
+
+
+        if(!validEmail(email)){
+
+            showToast(
+                "Please enter a valid email."
+            );
+
+            document
+            .getElementById("email")
+            .focus();
+
+            return;
+
+        }
+
+
+        let age = null;
+
+
+        if(ageValue !== ""){
+
+            age =
+                Number(ageValue);
+
+
+            if(
+                !Number.isInteger(age) ||
+                age < 13 ||
+                age > 120
+            ){
+
+                showToast(
+                    "Please enter a valid age."
+                );
+
+                document
+                .getElementById("age")
+                .focus();
+
+                return;
+
+            }
+
+        }
+
 
         submitButton.disabled =
             true;
 
         submitButton.textContent =
-            "Opening your message...";
+            "Saving your message...";
 
 
-        setTimeout(
-            function(){
+        try{
 
-                window.location.href =
-                    "/view-message.html";
+            const response =
+                await fetch(
+                    WORKER_API +
+                    "/save-message",
+                    {
+                        method:"POST",
 
-            },
-            450
-        );
+                        headers:{
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                txHash:
+                                    transactionHash,
+
+                                message:
+                                    text,
+
+                                fullName:
+                                    fullName || null,
+
+                                age:
+                                    age,
+
+                                city:
+                                    city || null,
+
+                                country:
+                                    country || null,
+
+                                email:
+                                    email || null
+
+                            })
+
+                        }
+                    );
+
+
+            const data =
+                await response
+                .json()
+                .catch(
+                    () => null
+                );
+
+
+            if(
+                !response.ok ||
+                !data ||
+                data.ok !== true ||
+                data.saved !== true
+            ){
+
+                throw new Error(
+                    data?.error ||
+                    "Unable to save your message."
+                );
+
+            }
+
+
+            if(data.messageId){
+
+                localStorage.setItem(
+                    "lastHumanMessageId",
+                    String(data.messageId)
+                );
+
+            }
+
+
+            localStorage.removeItem(
+                "txHash"
+            );
+
+            localStorage.removeItem(
+                "transactionHash"
+            );
+
+            localStorage.removeItem(
+                "lastHumanMessageTxHash"
+            );
+
+
+            submitButton.textContent =
+                "Message saved ✓";
+
+
+            showToast(
+                "Your message is now part of the chain."
+            );
+
+
+            setTimeout(
+                function(){
+
+                    window.location.href =
+                        "/view-message.html";
+
+                },
+                900
+            );
+
+
+        }catch(error){
+
+            console.error(error);
+
+
+            submitButton.disabled =
+                false;
+
+            submitButton.textContent =
+                "Leave My Message →";
+
+
+            showToast(
+                error.message ||
+                "Something went wrong."
+            );
+
+        }
 
     }
 );
 
 
 /* =====================================================
-   INITIAL COUNTER
+   INITIAL
 ===================================================== */
 
 updateCounter();
