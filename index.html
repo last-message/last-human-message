@@ -1,3 +1,16 @@
+AI Overview
+
+    Mustafa sent a link to "Last Human Message" website where users can leave anonymous messages for strangers.
+    Website highlights purpose: leaving meaningful words without pressure of social performance.
+    Next step is for you to visit link to leave or discover a message.
+
+By Gemini; there may be mistakes. Learn more
+Mustafa Hoseini
+	
+11:09 PM (0 minutes ago)
+	
+	
+to me
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +21,17 @@
 
 <meta name="description" content="Leave an anonymous message for a stranger, discover a message from another human, and become part of a chain of real words passed from one person to the next.">
 
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Last Human Message">
 <meta name="application-name" content="Last Human Message">
 <meta name="theme-color" content="#070707">
 <meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-<link rel="canonical" href="https://last-human-mesage.pages.dev/">
+<link rel="canonical" href="https://last-human-message.pages.dev/">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://last-human-mesage.pages.dev/">
+<meta property="og:url" content="https://last-human-message.pages.dev/">
 <meta property="og:title" content="Last Human Message — Leave Something Behind">
 <meta property="og:description" content="Leave a message for a stranger. Discover words left behind by another human. One message becomes part of an endless human chain.">
 <meta property="og:site_name" content="Last Human Message">
@@ -31,22 +45,63 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
 
+<!-- Primary website structured data -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebSite",
-  "@id":"https://last-human-mesage.pages.dev/#website",
+  "@id":"https://last-human-message.pages.dev/#website",
   "name":"Last Human Message",
-  "url":"https://last-human-mesage.pages.dev/",
+  "url":"https://last-human-message.pages.dev/",
   "description":"A human message chain where strangers leave anonymous words for the next person.",
   "inLanguage":"en"
 }
 </script>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+<!-- Homepage structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://last-human-message.pages.dev/#webpage",
+  "url":"https://last-human-message.pages.dev/",
+  "name":"Last Human Message — Leave a Message for a Stranger",
+  "description":"Leave an anonymous message for a stranger, discover a message from another human, and become part of a chain of real words passed from one person to the next.",
+  "isPartOf":{
+    "@type":"WebSite",
+    "@id":"https://last-human-message.pages.dev/#website"
+  },
+  "inLanguage":"en"
+}
+</script>
 
-html{scroll-behavior:smooth}
+<!-- Breadcrumb structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "@id":"https://last-human-message.pages.dev/#breadcrumb",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Last Human Message",
+      "item":"https://last-human-message.pages.dev/"
+    }
+  ]
+}
+</script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 min-height:100vh;
@@ -69,8 +124,15 @@ opacity:.025;
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;border:0}
+a{
+color:inherit;
+text-decoration:none;
+}
+
+button{
+font-family:inherit;
+border:0;
+}
 
 header{
 height:72px;
@@ -97,7 +159,9 @@ font-weight:900;
 letter-spacing:-.7px;
 }
 
-.logo span{color:#ef3038}
+.logo span{
+color:#ef3038;
+}
 
 .status{
 display:flex;
@@ -165,8 +229,16 @@ text-transform:uppercase;
 color:#666;
 }
 
-.line{width:38px;height:1px;background:#333}
-.eyebrow strong{color:#ef3038;font-weight:500}
+.line{
+width:38px;
+height:1px;
+background:#333;
+}
+
+.eyebrow strong{
+color:#ef3038;
+font-weight:500;
+}
 
 h1{
 text-align:center;
@@ -191,7 +263,10 @@ line-height:1.85;
 color:#858585;
 }
 
-.lead strong{color:#d8d4cc;font-weight:600}
+.lead strong{
+color:#d8d4cc;
+font-weight:600;
+}
 
 .cta{
 display:flex;
@@ -221,6 +296,14 @@ transform:translateY(-3px);
 box-shadow:0 25px 70px rgba(220,32,40,.3);
 }
 
+.cta a:focus-visible,
+.final a:focus-visible,
+.logo:focus-visible,
+.footer-link:focus-visible{
+outline:2px solid #ef3038;
+outline-offset:5px;
+}
+
 .counter{
 margin-top:25px;
 text-align:center;
@@ -230,7 +313,9 @@ text-transform:uppercase;
 color:#444;
 }
 
-.counter span{color:#777}
+.counter span{
+color:#777;
+}
 
 .section{
 padding:100px 16px;
@@ -269,6 +354,11 @@ margin-top:28px;
 font-size:15px;
 line-height:1.9;
 color:#777;
+}
+
+.section p strong{
+color:#c9c4bb;
+font-weight:600;
 }
 
 .cards{
@@ -417,6 +507,12 @@ font-size:10px;
 font-weight:900;
 letter-spacing:1.5px;
 text-transform:uppercase;
+transition:.25s;
+}
+
+.final a:hover{
+background:#ff3038;
+transform:translateY(-3px);
 }
 
 footer{
@@ -432,36 +528,84 @@ color:#3f3f3f;
 width:min(1120px,100%);
 margin:auto;
 display:flex;
+align-items:center;
 justify-content:space-between;
 gap:20px;
 }
 
+.footer-links{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.footer-link{
+color:#555;
+transition:.2s;
+}
+
+.footer-link:hover{
+color:#ef3038;
+}
+
+.footer-separator{
+color:#292929;
+}
+
 @media(max-width:700px){
 
-header{height:64px}
+header{
+height:64px;
+}
 
-.nav{width:calc(100% - 26px)}
+.nav{
+width:calc(100% - 26px);
+}
 
-.logo{font-size:13px}
-.status{font-size:7px}
+.logo{
+font-size:13px;
+}
 
-.hero{padding:75px 15px 90px}
+.status{
+font-size:7px;
+}
 
-h1{font-size:clamp(52px,15vw,76px)}
+.hero{
+padding:75px 15px 90px;
+}
 
-.lead{font-size:14px}
+h1{
+font-size:clamp(52px,15vw,76px);
+}
 
-.section,.story,.how{padding:75px 15px}
+.lead{
+font-size:14px;
+}
 
-.cards,.steps{
+.section,
+.story,
+.how{
+padding:75px 15px;
+}
+
+.cards,
+.steps{
 grid-template-columns:1fr;
 }
 
-.card{min-height:auto}
+.card{
+min-height:auto;
+}
 
-.quote{padding:28px 24px}
+.quote{
+padding:28px 24px;
+}
 
-.final{padding:85px 15px}
+.final{
+padding:85px 15px;
+}
 
 .footer-inner{
 flex-direction:column;
@@ -470,8 +614,14 @@ text-align:center;
 }
 
 @media(prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
-*,*:before,*:after{
+
+html{
+scroll-behavior:auto;
+}
+
+*,
+*:before,
+*:after{
 animation:none!important;
 transition:none!important;
 }
@@ -482,26 +632,39 @@ transition:none!important;
 <body>
 
 <header>
-<nav class="nav">
-<a href="/" class="logo">Last<span>Human</span>Message</a>
-<div class="status"><span class="dot"></span>Human messages online</div>
+<nav class="nav" aria-label="Main navigation">
+
+<a
+href="/"
+class="logo"
+aria-label="Last Human Message home"
+>
+Last<span>Human</span>Message
+</a>
+
+<div class="status" aria-label="Website status">
+<span class="dot" aria-hidden="true"></span>
+Human messages online
+</div>
+
 </nav>
 </header>
 
 <main>
 
-<section class="hero">
+<section class="hero" aria-labelledby="hero-title">
+
 <div class="grid" aria-hidden="true"></div>
 
 <div class="container">
 
 <div class="eyebrow">
-<span class="line"></span>
+<span class="line" aria-hidden="true"></span>
 <strong>One human to another</strong>
-<span class="line"></span>
+<span class="line" aria-hidden="true"></span>
 </div>
 
-<h1>
+<h1 id="hero-title">
 Leave something
 <br>
 <em>behind.</em>
@@ -512,7 +675,12 @@ In a world full of notifications, followers, algorithms and messages that disapp
 </p>
 
 <div class="cta">
-<a href="/payment.html">Leave a message →</a>
+<a
+href="/stranger-message.html"
+aria-label="Write a message for a stranger"
+>
+Leave a message →
+</a>
 </div>
 
 <div class="counter">
@@ -523,13 +691,15 @@ A message written today can be discovered by <span>another human tomorrow.</span
 </section>
 
 
-<section class="section">
+<section class="section" aria-labelledby="stranger-message-heading">
 
 <div class="section-inner">
 
-<div class="section-label">A message to a stranger</div>
+<div class="section-label">
+A message to a stranger
+</div>
 
-<h2>
+<h2 id="stranger-message-heading">
 What would you say if you knew
 <br>
 you'd <em>never meet them?</em>
@@ -550,13 +720,15 @@ It is a simple idea: <strong>one stranger leaves something behind for another st
 </section>
 
 
-<section class="section">
+<section class="section" aria-labelledby="why-exists-heading">
 
 <div class="section-inner">
 
-<div class="section-label">Why this exists</div>
+<div class="section-label">
+Why this exists
+</div>
 
-<h2>
+<h2 id="why-exists-heading">
 The internet connects billions of people.
 <br>
 But sometimes it still feels <em>lonely.</em>
@@ -583,11 +755,11 @@ Your words can travel beyond your name.
 </section>
 
 
-<section class="story">
+<section class="story" aria-labelledby="big-moment-heading">
 
 <div class="story-inner">
 
-<h2>
+<h2 id="big-moment-heading">
 A tiny message can become
 <br>
 a <em>big moment.</em>
@@ -618,13 +790,15 @@ There is only the message you decide is worth leaving.
 </section>
 
 
-<section class="how">
+<section class="how" aria-labelledby="how-it-works-heading">
 
 <div class="section-inner">
 
-<div class="section-label">How it works</div>
+<div class="section-label">
+How it works
+</div>
 
-<h2>
+<h2 id="how-it-works-heading">
 Three steps.
 <br>
 One human <em>chain.</em>
@@ -633,27 +807,39 @@ One human <em>chain.</em>
 <div class="steps">
 
 <div class="step">
+
 <b>01 — WRITE</b>
+
 <h3>Leave your words</h3>
+
 <p>
 Write an anonymous message for a stranger. It can be personal, thoughtful, funny, strange, hopeful or completely unexpected.
 </p>
+
 </div>
 
 <div class="step">
+
 <b>02 — PASS IT ON</b>
+
 <h3>Become part of the chain</h3>
+
 <p>
 Your message becomes part of a growing collection of words written by people from different places, backgrounds and moments in life.
 </p>
+
 </div>
 
 <div class="step">
+
 <b>03 — DISCOVER</b>
+
 <h3>Find another human message</h3>
+
 <p>
 Someone else has already left something behind. Follow the chain and discover words written by a person you may never know.
 </p>
+
 </div>
 
 </div>
@@ -663,13 +849,15 @@ Someone else has already left something behind. Follow the chain and discover wo
 </section>
 
 
-<section class="section">
+<section class="section" aria-labelledby="anonymous-messages-heading">
 
 <div class="section-inner">
 
-<div class="section-label">Anonymous messages</div>
+<div class="section-label">
+Anonymous messages
+</div>
 
-<h2>
+<h2 id="anonymous-messages-heading">
 No followers.
 <br>
 No profiles.
@@ -696,13 +884,15 @@ Write something that deserves to exist outside your own head.
 </section>
 
 
-<section class="section">
+<section class="section" aria-labelledby="next-human-heading">
 
 <div class="section-inner">
 
-<div class="section-label">For the next human</div>
+<div class="section-label">
+For the next human
+</div>
 
-<h2>
+<h2 id="next-human-heading">
 Imagine finding your message
 <br>
 on the exact day you <em>needed it.</em>
@@ -731,9 +921,9 @@ So we let the messages speak for themselves.
 </section>
 
 
-<section class="final">
+<section class="final" aria-labelledby="final-heading">
 
-<h2>
+<h2 id="final-heading">
 Your words are waiting
 <br>
 for <em>someone.</em>
@@ -745,7 +935,12 @@ You found this place for a reason—or maybe completely by accident. Either way,
 Leave something behind for the next human.
 </p>
 
-<a href="/payment.html">Leave a message for a stranger →</a>
+<a
+href="/stranger-message.html"
+aria-label="Leave an anonymous message for a stranger"
+>
+Leave a message for a stranger →
+</a>
 
 </section>
 
@@ -753,10 +948,67 @@ Leave something behind for the next human.
 
 
 <footer>
+
 <div class="footer-inner">
-<span>© 2026 Last Human Message</span>
-<span>One stranger. One message.</span>
+
+<span>
+© 2026 Last Human Message
+</span>
+
+<nav class="footer-links" aria-label="Footer navigation">
+
+<a
+href="/"
+class="footer-link"
+aria-label="Last Human Message home"
+>
+Home
+</a>
+
+<span class="footer-separator" aria-hidden="true">/</span>
+
+<a
+href="/stranger-message.html"
+class="footer-link"
+>
+Stranger Message
+</a>
+
+<span class="footer-separator" aria-hidden="true">/</span>
+
+<a
+href="/anonymous-message-to-a-stranger.html"
+class="footer-link"
+>
+Anonymous Message
+</a>
+
+<span class="footer-separator" aria-hidden="true">/</span>
+
+<a
+href="/random-human-message.html"
+class="footer-link"
+>
+Random Human Message
+</a>
+
+<span class="footer-separator" aria-hidden="true">/</span>
+
+<a
+href="/payment.html"
+class="footer-link"
+>
+Payment
+</a>
+
+</nav>
+
+<span>
+One stranger. One message.
+</span>
+
 </div>
+
 </footer>
 
 </body>
