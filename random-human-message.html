@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Random Human Message — Get a Message From a Stranger</title>
+<title>Random Human Message — Get a Message From a Stranger | Last Human Message</title>
 
 <meta name="description" content="Get a random human message from a stranger. Read a thought, joke, confession, reminder, or unexpected piece of advice left behind by another human.">
 
@@ -33,7 +33,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
 
 <script type="application/ld+json">
 {
@@ -41,7 +44,7 @@
   "@type":"WebPage",
   "@id":"https://last-human-message.pages.dev/random-human-message.html#webpage",
   "url":"https://last-human-message.pages.dev/random-human-message.html",
-  "name":"Random Human Message",
+  "name":"Random Human Message — Get a Message From a Stranger",
   "description":"Get a random human message from a stranger.",
   "inLanguage":"en",
   "isPartOf":{
@@ -50,10 +53,18 @@
     "name":"Last Human Message",
     "url":"https://last-human-message.pages.dev/"
   },
+  "about":{
+    "@type":"Thing",
+    "name":"Anonymous messages from strangers"
+  },
   "mainEntity":{
     "@type":"CreativeWork",
     "name":"Random Human Message",
     "description":"An anonymous message left behind by another human."
+  },
+  "potentialAction":{
+    "@type":"ReadAction",
+    "target":"https://last-human-message.pages.dev/random-human-message.html"
   }
 }
 </script>
@@ -86,6 +97,14 @@
         "@type":"Answer",
         "text":"Yes. You can leave your own message so another human can discover it later."
       }
+    },
+    {
+      "@type":"Question",
+      "name":"Is this a random message generator?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The experience is designed to display messages left by people rather than automatically generated quotes."
+      }
     }
   ]
 }
@@ -106,8 +125,16 @@ html{
 body{
     min-height:100vh;
     background:
-        radial-gradient(circle at 50% -10%,rgba(239,48,56,.18),transparent 38%),
-        radial-gradient(circle at 0% 55%,rgba(255,255,255,.025),transparent 30%),
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(239,48,56,.18),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 0% 55%,
+            rgba(255,255,255,.025),
+            transparent 30%
+        ),
         #070707;
     color:#f4f1ea;
     font-family:Inter,Arial,sans-serif;
@@ -121,7 +148,9 @@ body:before{
     pointer-events:none;
     z-index:999;
     opacity:.025;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image:url(
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+    );
 }
 
 a{
@@ -134,6 +163,20 @@ button{
     border:0;
 }
 
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+::selection{
+    background:#ef3038;
+    color:#fff;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header{
     height:72px;
     display:flex;
@@ -143,6 +186,7 @@ header{
     border-bottom:1px solid rgba(255,255,255,.07);
     background:rgba(7,7,7,.78);
     backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
 }
 
 .nav-inner{
@@ -157,6 +201,7 @@ header{
     font-size:15px;
     font-weight:900;
     letter-spacing:-.6px;
+    white-space:nowrap;
 }
 
 .logo span{
@@ -177,10 +222,15 @@ header{
 .dot{
     width:6px;
     height:6px;
+    flex:0 0 6px;
     border-radius:50%;
     background:#42d27e;
     box-shadow:0 0 12px rgba(66,210,126,.8);
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     position:relative;
@@ -198,7 +248,12 @@ header{
     left:50%;
     top:-300px;
     transform:translateX(-50%);
-    background:radial-gradient(circle,rgba(220,28,38,.14),transparent 67%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(220,28,38,.14),
+            transparent 67%
+        );
     pointer-events:none;
 }
 
@@ -207,10 +262,28 @@ header{
     inset:0;
     opacity:.06;
     background-image:
-        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+        linear-gradient(
+            rgba(255,255,255,.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.06) 1px,
+            transparent 1px
+        );
     background-size:90px 90px;
-    mask-image:linear-gradient(to bottom,#000,transparent 85%);
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 85%
+        );
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 85%
+        );
     pointer-events:none;
 }
 
@@ -221,6 +294,10 @@ header{
     margin:auto;
     text-align:center;
 }
+
+/* =========================
+   EYEBROW
+========================= */
 
 .eyebrow{
     display:flex;
@@ -246,6 +323,10 @@ header{
     background:#333;
 }
 
+/* =========================
+   TYPOGRAPHY
+========================= */
+
 h1{
     font-size:clamp(55px,9vw,96px);
     line-height:.88;
@@ -267,15 +348,26 @@ h1 em{
     line-height:1.85;
 }
 
+/* =========================
+   RANDOM MESSAGE CARD
+========================= */
+
 .random-card{
     position:relative;
     margin-top:65px;
     padding:clamp(32px,7vw,70px);
     text-align:left;
     overflow:hidden;
-    background:linear-gradient(145deg,rgba(26,26,26,.98),rgba(9,9,9,.99));
+    background:
+        linear-gradient(
+            145deg,
+            rgba(26,26,26,.98),
+            rgba(9,9,9,.99)
+        );
     border:1px solid rgba(255,255,255,.105);
-    box-shadow:0 45px 120px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.025);
+    box-shadow:
+        0 45px 120px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.025);
 }
 
 .random-card:before{
@@ -285,7 +377,14 @@ h1 em{
     left:0;
     width:3px;
     height:100%;
-    background:linear-gradient(to bottom,transparent,#ef3038 25%,#ef3038 75%,transparent);
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #ef3038 25%,
+            #ef3038 75%,
+            transparent
+        );
 }
 
 .random-card:after{
@@ -295,7 +394,13 @@ h1 em{
     height:450px;
     right:-270px;
     top:-270px;
-    background:radial-gradient(circle,rgba(239,48,56,.13),transparent 68%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(239,48,56,.13),
+            transparent 68%
+        );
+    pointer-events:none;
 }
 
 .card-header{
@@ -325,6 +430,7 @@ h1 em{
     content:"";
     width:5px;
     height:5px;
+    flex:0 0 5px;
     border-radius:50%;
     background:#42d27e;
     box-shadow:0 0 10px rgba(66,210,126,.7);
@@ -338,11 +444,8 @@ h1 em{
     font-size:clamp(31px,5vw,58px);
     line-height:1.18;
     letter-spacing:-.028em;
-}
-
-.message::selection{
-    background:#ef3038;
-    color:#fff;
+    white-space:pre-line;
+    overflow-wrap:anywhere;
 }
 
 .card-footer{
@@ -358,6 +461,10 @@ h1 em{
     letter-spacing:1.5px;
     text-transform:uppercase;
 }
+
+/* =========================
+   RANDOM BUTTON
+========================= */
 
 .random-btn{
     width:100%;
@@ -375,7 +482,10 @@ h1 em{
     letter-spacing:1.7px;
     text-transform:uppercase;
     box-shadow:0 20px 55px rgba(220,32,40,.2);
-    transition:transform .2s,background .2s,box-shadow .2s;
+    transition:
+        transform .2s,
+        background .2s,
+        box-shadow .2s;
 }
 
 .random-btn:hover{
@@ -397,6 +507,30 @@ h1 em{
     cursor:wait;
     opacity:.75;
 }
+
+.random-btn[aria-busy="true"]{
+    position:relative;
+}
+
+/* =========================
+   STATUS FOR SCREEN READERS
+========================= */
+
+.live-status{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+}
+
+/* =========================
+   SEO CONTENT
+========================= */
 
 .seo{
     margin-top:110px;
@@ -426,6 +560,10 @@ h1 em{
     line-height:1.9;
 }
 
+/* =========================
+   FAQ
+========================= */
+
 .faq{
     margin-top:65px;
     display:grid;
@@ -436,6 +574,14 @@ h1 em{
     padding:25px;
     border:1px solid rgba(255,255,255,.07);
     background:rgba(15,15,15,.65);
+    transition:
+        border-color .2s,
+        transform .2s;
+}
+
+.faq-item:hover{
+    border-color:rgba(255,255,255,.14);
+    transform:translateY(-2px);
 }
 
 .faq-item h3{
@@ -452,12 +598,23 @@ h1 em{
     line-height:1.8;
 }
 
+/* =========================
+   CTA
+========================= */
+
 .cta{
     margin-top:80px;
     padding:55px 30px;
     text-align:center;
     border:1px solid rgba(255,255,255,.07);
-    background:linear-gradient(145deg,rgba(18,18,18,.9),rgba(8,8,8,.9));
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.9),
+            rgba(8,8,8,.9)
+        );
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025);
 }
 
 .cta-label{
@@ -502,13 +659,27 @@ h1 em{
     font-weight:900;
     letter-spacing:1.5px;
     text-transform:uppercase;
-    transition:.2s;
+    transition:
+        transform .2s,
+        background .2s,
+        box-shadow .2s;
+    box-shadow:0 18px 50px rgba(220,32,40,.16);
 }
 
 .cta a:hover{
     background:#ff3038;
     transform:translateY(-3px);
+    box-shadow:0 24px 65px rgba(220,32,40,.28);
 }
+
+.cta a:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:4px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     margin-top:100px;
@@ -528,6 +699,10 @@ footer{
     justify-content:space-between;
     gap:20px;
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:650px){
 
@@ -558,6 +733,7 @@ footer{
 
     .intro{
         font-size:13px;
+        line-height:1.8;
     }
 
     .random-card{
@@ -571,6 +747,17 @@ footer{
 
     .message{
         font-size:33px;
+        line-height:1.2;
+    }
+
+    .card-footer{
+        margin-top:35px;
+    }
+
+    .random-btn{
+        min-height:58px;
+        font-size:9px;
+        letter-spacing:1.3px;
     }
 
     .seo{
@@ -582,8 +769,20 @@ footer{
         font-size:13px;
     }
 
+    .faq{
+        margin-top:50px;
+    }
+
+    .faq-item{
+        padding:21px;
+    }
+
     .cta{
         padding:45px 20px;
+    }
+
+    .cta a{
+        width:100%;
     }
 
     .footer-inner{
@@ -591,6 +790,10 @@ footer{
         text-align:center;
     }
 }
+
+/* =========================
+   REDUCED MOTION
+========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -616,13 +819,17 @@ footer{
 
 <nav class="nav-inner" aria-label="Main navigation">
 
-<a href="/" class="logo" aria-label="Last Human Message home">
-Last<span>Human</span>Message
+<a
+    href="/"
+    class="logo"
+    aria-label="Last Human Message home"
+>
+    Last<span>Human</span>Message
 </a>
 
-<div class="nav-status">
+<div class="nav-status" aria-label="Message pool status">
 
-<span class="dot"></span>
+<span class="dot" aria-hidden="true"></span>
 
 <span>Human message pool</span>
 
@@ -634,28 +841,45 @@ Last<span>Human</span>Message
 
 <main>
 
-<section class="hero" aria-labelledby="page-title">
+<section
+    class="hero"
+    aria-labelledby="page-title"
+>
 
-<div class="hero-glow" aria-hidden="true"></div>
+<div
+    class="hero-glow"
+    aria-hidden="true"
+></div>
 
-<div class="grid" aria-hidden="true"></div>
+<div
+    class="grid"
+    aria-hidden="true"
+></div>
 
 <div class="container">
 
 <div class="eyebrow">
 
-<span class="eyebrow-line" aria-hidden="true"></span>
+<span
+    class="eyebrow-line"
+    aria-hidden="true"
+></span>
 
 <strong>Random human message</strong>
 
-<span class="eyebrow-line" aria-hidden="true"></span>
+<span
+    class="eyebrow-line"
+    aria-hidden="true"
+></span>
 
 </div>
 
 <h1 id="page-title">
 
 You don't know
+
 <br>
+
 <em>who wrote this.</em>
 
 </h1>
@@ -676,7 +900,10 @@ a human being wrote it.
 
 </p>
 
-<article class="random-card" aria-labelledby="message-title">
+<article
+    class="random-card"
+    aria-labelledby="message-title"
+>
 
 <div class="card-header">
 
@@ -690,7 +917,11 @@ ANONYMOUS
 
 </div>
 
-<blockquote class="message" id="randomMessage">
+<blockquote
+    class="message"
+    id="randomMessage"
+    aria-live="polite"
+>
 
 You are probably waiting for the
 perfect moment.
@@ -709,19 +940,36 @@ behind for another human.
 
 </div>
 
-<button type="button" class="random-btn" id="randomButton">
+<button
+    type="button"
+    class="random-btn"
+    id="randomButton"
+    aria-label="Show another random human message"
+    aria-controls="randomMessage"
+>
 
 Show me another random message →
 
 </button>
 
+<div
+    class="live-status"
+    id="liveStatus"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
+
 </article>
 
-<section class="seo" aria-labelledby="seo-title">
+<section
+    class="seo"
+    aria-labelledby="seo-title"
+>
 
 <h2 id="seo-title">
 
 What is a
+
 <em>random human message?</em>
 
 </h2>
@@ -797,9 +1045,13 @@ Your turn
 </div>
 
 <h2>
+
 Someone will find
+
 <br>
+
 <em>your words.</em>
+
 </h2>
 
 <p>
@@ -810,8 +1062,13 @@ Now leave one behind for someone you may never meet.
 
 </p>
 
-<a href="/payment.html">
+<a
+    href="/payment.html"
+    aria-label="Leave an anonymous message for a stranger"
+>
+
 Leave a message for a stranger →
+
 </a>
 
 </div>
@@ -843,10 +1100,34 @@ One stranger. One message.
 <script>
 
 const randomButton =
-document.getElementById("randomButton");
+    document.getElementById("randomButton");
 
 const randomMessage =
-document.getElementById("randomMessage");
+    document.getElementById("randomMessage");
+
+const liveStatus =
+    document.getElementById("liveStatus");
+
+const API_URL =
+    "https://last-human-message-api.aaa6654292.workers.dev/view-message";
+
+const DEFAULT_MESSAGE =
+`You are probably waiting for the
+perfect moment.
+
+Plot twist:
+
+the perfect moment is usually
+just the moment you finally start.`;
+
+const FALLBACK_MESSAGE =
+`Somewhere out there, another human
+is still writing something worth finding.`;
+
+const ERROR_MESSAGE =
+`The next message is hiding for a moment.
+
+Try again.`;
 
 async function loadRandomMessage(){
 
@@ -856,23 +1137,36 @@ async function loadRandomMessage(){
     randomButton.textContent =
         "Finding another human message...";
 
-    randomButton.disabled = true;
+    randomButton.disabled =
+        true;
+
+    randomButton.setAttribute(
+        "aria-busy",
+        "true"
+    );
+
+    liveStatus.textContent =
+        "Finding another human message.";
 
     try{
 
         const response =
             await fetch(
-                "https://last-human-message-api.aaa6654292.workers.dev/view-message",
+                API_URL,
                 {
                     method:"GET",
                     headers:{
                         "Accept":"application/json"
-                    }
+                    },
+                    cache:"no-store"
                 }
             );
 
         if(!response.ok){
-            throw new Error("Request failed");
+            throw new Error(
+                "Request failed: " +
+                response.status
+            );
         }
 
         const data =
@@ -886,20 +1180,39 @@ async function loadRandomMessage(){
             data.message.text.trim()
         ){
 
+            const message =
+                data.message.text
+                    .trim()
+                    .slice(0,4000);
+
             randomMessage.textContent =
-                data.message.text.trim();
+                message;
+
+            liveStatus.textContent =
+                "A new anonymous human message has been loaded.";
 
         }else{
 
             randomMessage.textContent =
-                "Somewhere out there, another human is still writing something worth finding.";
+                FALLBACK_MESSAGE;
+
+            liveStatus.textContent =
+                "No new message was available.";
 
         }
 
     }catch(error){
 
+        console.error(
+            "Random message error:",
+            error
+        );
+
         randomMessage.textContent =
-            "The next message is hiding for a moment. Try again.";
+            ERROR_MESSAGE;
+
+        liveStatus.textContent =
+            "The message could not be loaded. Please try again.";
 
     }finally{
 
@@ -908,6 +1221,11 @@ async function loadRandomMessage(){
 
         randomButton.disabled =
             false;
+
+        randomButton.setAttribute(
+            "aria-busy",
+            "false"
+        );
 
     }
 
@@ -922,4 +1240,3 @@ randomButton.addEventListener(
 
 </body>
 </html>
-
