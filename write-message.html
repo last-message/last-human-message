@@ -8,13 +8,13 @@
 <title>Write a Human Message — Last Human Message</title>
 
 <meta
-name="description"
-content="Write something meaningful for a stranger who will discover your message later. Leave a human message behind with Last Human Message."
+    name="description"
+    content="Write something meaningful for a stranger who will discover your message later. Leave a human message behind with Last Human Message."
 >
 
 <meta
-name="robots"
-content="noindex,nofollow,noarchive,nosnippet,noimageindex"
+    name="robots"
+    content="noindex,nofollow,noarchive,nosnippet,noimageindex"
 >
 
 <meta name="author" content="Last Human Message">
@@ -24,27 +24,23 @@ content="noindex,nofollow,noarchive,nosnippet,noimageindex"
 <meta name="color-scheme" content="dark">
 
 <link
-rel="canonical"
-href="https://last-human-mesage.pages.dev/write-message.html"
+    rel="canonical"
+    href="https://last-human-mesage.pages.dev/write-message.html"
 >
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
 >
 
 <link
-href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap"
-rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap"
+    rel="stylesheet"
 >
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -688,6 +684,8 @@ input::selection{
 
     transition:
         color .2s;
+
+    white-space:nowrap;
 }
 
 #charCount.warning{
@@ -785,6 +783,7 @@ input::selection{
 
     width:17px;
     min-width:17px;
+
     height:17px;
 
     min-height:17px;
@@ -802,7 +801,10 @@ input::selection{
 
     color:#666;
 
-    font-family:Inter,Arial,sans-serif;
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
 
     font-size:11px;
 
@@ -1217,6 +1219,15 @@ footer{
         font-size:25px;
     }
 
+    .message-meta{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:7px;
+    }
+
     .details-grid{
 
         grid-template-columns:1fr;
@@ -1274,23 +1285,23 @@ footer{
 <header>
 
 <nav
-class="nav"
-aria-label="Main navigation"
+    class="nav"
+    aria-label="Main navigation"
 >
 
 <a
-href="/"
-class="logo"
-aria-label="Last Human Message home"
+    href="/"
+    class="logo"
+    aria-label="Last Human Message home"
 >
-Last<span>Human</span>Message
+    Last<span>Human</span>Message
 </a>
 
 <div class="status">
 
-<span class="status-dot"></span>
+    <span class="status-dot"></span>
 
-Payment verified
+    Payment verified
 
 </div>
 
@@ -1302,13 +1313,13 @@ Payment verified
 <main>
 
 <div
-class="hero-glow"
-aria-hidden="true"
+    class="hero-glow"
+    aria-hidden="true"
 ></div>
 
 <div
-class="grid"
-aria-hidden="true"
+    class="grid"
+    aria-hidden="true"
 ></div>
 
 
@@ -1317,66 +1328,66 @@ aria-hidden="true"
 
 <div class="eyebrow">
 
-<span
-class="eyebrow-line"
-aria-hidden="true"
-></span>
+    <span
+        class="eyebrow-line"
+        aria-hidden="true"
+    ></span>
 
-<strong>One message. One stranger.</strong>
+    <strong>One message. One stranger.</strong>
 
-<span
-class="eyebrow-line"
-aria-hidden="true"
-></span>
+    <span
+        class="eyebrow-line"
+        aria-hidden="true"
+    ></span>
 
 </div>
 
 
 <h1>
 
-Say something
-<br>
+    Say something
+    <br>
 
-<em>that stays.</em>
+    <em>that stays.</em>
 
 </h1>
 
 
 <p class="intro">
 
-A stranger will eventually find these words.
+    A stranger will eventually find these words.
 
-You don't know who they are.
+    You don't know who they are.
 
-You don't know when they'll arrive.
+    You don't know when they'll arrive.
 
-You only get one chance to leave something behind.
+    You only get one chance to leave something behind.
 
 </p>
 
 
 <section
-class="message-card"
-aria-labelledby="message-form-title"
+    class="message-card"
+    aria-labelledby="message-form-title"
 >
 
 
 <div class="card-header">
 
-<span id="message-form-title">
-WRITE YOUR MESSAGE
-</span>
+    <span id="message-form-title">
+        WRITE YOUR MESSAGE
+    </span>
 
-<span class="card-status">
-READY
-</span>
+    <span class="card-status">
+        READY
+    </span>
 
 </div>
 
 
 <form
-id="messageForm"
-novalidate
+    id="messageForm"
+    novalidate
 >
 
 
@@ -1384,33 +1395,35 @@ novalidate
 
 <label for="message">
 
-Your message
+    Your message
 
-<span class="optional">
-required
-</span>
+    <span class="optional">
+        required
+    </span>
 
 </label>
 
 
 <textarea
-id="message"
-name="message"
-maxlength="5000"
-placeholder="If someone finds this years from now, I hope they know..."
-required
+    id="message"
+    name="message"
+    maxlength="5000"
+    placeholder="If someone finds this years from now, I hope they know..."
+    autocomplete="off"
+    spellcheck="true"
+    required
 ></textarea>
 
 
 <div class="message-meta">
 
-<span>
-Write honestly. There is no perfect message.
-</span>
+    <span>
+        Write honestly. There is no perfect message.
+    </span>
 
-<span id="charCount">
-0 / 5000
-</span>
+    <span id="charCount">
+        0 / 5000
+    </span>
 
 </div>
 
@@ -1419,15 +1432,15 @@ Write honestly. There is no perfect message.
 
 <div class="details-title">
 
-A little about you
+    A little about you
 
 </div>
 
 
 <p class="details-description">
 
-These details are optional and are kept separate from the public message.
-They help preserve the context of the person who left it.
+    These details are optional and are kept separate from the public message.
+    They help preserve the context of the person who left it.
 
 </p>
 
@@ -1439,21 +1452,21 @@ They help preserve the context of the person who left it.
 
 <label for="fullName">
 
-Name
+    Name
 
-<span class="optional">
-optional
-</span>
+    <span class="optional">
+        optional
+    </span>
 
 </label>
 
 <input
-type="text"
-id="fullName"
-name="fullName"
-maxlength="100"
-placeholder="Your name"
-autocomplete="name"
+    type="text"
+    id="fullName"
+    name="fullName"
+    maxlength="100"
+    placeholder="Your name"
+    autocomplete="name"
 >
 
 </div>
@@ -1463,21 +1476,21 @@ autocomplete="name"
 
 <label for="email">
 
-Email
+    Email
 
-<span class="optional">
-optional
-</span>
+    <span class="optional">
+        optional
+    </span>
 
 </label>
 
 <input
-type="email"
-id="email"
-name="email"
-maxlength="150"
-placeholder="you@example.com"
-autocomplete="email"
+    type="email"
+    id="email"
+    name="email"
+    maxlength="150"
+    placeholder="you@example.com"
+    autocomplete="email"
 >
 
 </div>
@@ -1487,21 +1500,21 @@ autocomplete="email"
 
 <label for="city">
 
-City
+    City
 
-<span class="optional">
-optional
-</span>
+    <span class="optional">
+        optional
+    </span>
 
 </label>
 
 <input
-type="text"
-id="city"
-name="city"
-maxlength="80"
-placeholder="Your city"
-autocomplete="address-level2"
+    type="text"
+    id="city"
+    name="city"
+    maxlength="80"
+    placeholder="Your city"
+    autocomplete="address-level2"
 >
 
 </div>
@@ -1511,21 +1524,21 @@ autocomplete="address-level2"
 
 <label for="country">
 
-Country
+    Country
 
-<span class="optional">
-optional
-</span>
+    <span class="optional">
+        optional
+    </span>
 
 </label>
 
 <input
-type="text"
-id="country"
-name="country"
-maxlength="80"
-placeholder="Your country"
-autocomplete="country-name"
+    type="text"
+    id="country"
+    name="country"
+    maxlength="80"
+    placeholder="Your country"
+    autocomplete="country-name"
 >
 
 </div>
@@ -1535,22 +1548,24 @@ autocomplete="country-name"
 
 <label for="age">
 
-Age
+    Age
 
-<span class="optional">
-optional
-</span>
+    <span class="optional">
+        optional
+    </span>
 
 </label>
 
 <input
-type="number"
-id="age"
-name="age"
-min="13"
-max="120"
-placeholder="Your age"
-inputmode="numeric"
+    type="number"
+    id="age"
+    name="age"
+    min="13"
+    max="120"
+    step="1"
+    placeholder="Your age"
+    inputmode="numeric"
+    autocomplete="off"
 >
 
 </div>
@@ -1562,19 +1577,19 @@ inputmode="numeric"
 <div class="consent">
 
 <input
-type="checkbox"
-id="consent"
-name="consent"
-required
+    type="checkbox"
+    id="consent"
+    name="consent"
+    required
 >
 
 <label for="consent">
 
-I understand that my message is intended to be discovered by another human.
-I will not include passwords, private keys, financial information, or sensitive
-personal information that I would not want a stranger to read.
+    I understand that my message is intended to be discovered by another human.
+    I will not include passwords, private keys, financial information, or sensitive
+    personal information that I would not want a stranger to read.
 
-<strong>This message cannot be edited after submission.</strong>
+    <strong>This message cannot be edited after submission.</strong>
 
 </label>
 
@@ -1582,31 +1597,31 @@ personal information that I would not want a stranger to read.
 
 
 <div
-class="error-box"
-id="errorBox"
-role="alert"
-aria-live="assertive"
+    class="error-box"
+    id="errorBox"
+    role="alert"
+    aria-live="assertive"
 ></div>
 
 
 <div class="submit-area">
 
 <button
-type="submit"
-class="submit-button"
-id="submitButton"
+    type="submit"
+    class="submit-button"
+    id="submitButton"
 >
 
-Leave this message behind →
+    Leave this message behind →
 
 </button>
 
 
 <div class="submit-note">
 
-Your verified payment is linked to this message.
+    Your verified payment is linked to this message.
 
-One payment = one message.
+    One payment = one message.
 
 </div>
 
@@ -1621,30 +1636,29 @@ One payment = one message.
 
 <div class="privacy-item">
 
-<strong>01 — Anonymous</strong>
+    <strong>01 — Anonymous</strong>
 
-Your public message does not display your identity.
-
-</div>
-
-
-<div class="privacy-item">
-
-<strong>02 — One chance</strong>
-
-Each verified payment can create one message.
+    Your public message does not display your identity.
 
 </div>
 
 
 <div class="privacy-item">
 
-<strong>03 — Human chain</strong>
+    <strong>02 — One chance</strong>
 
-Your words become part of the next stranger's discovery.
+    Each verified payment can create one message.
 
 </div>
 
+
+<div class="privacy-item">
+
+    <strong>03 — Human chain</strong>
+
+    Your words become part of the next stranger's discovery.
+
+</div>
 
 </div>
 
@@ -1655,29 +1669,29 @@ Your words become part of the next stranger's discovery.
 <section class="bottom-message">
 
 <div class="bottom-label">
-Think before you send
+    Think before you send
 </div>
 
 
 <h2>
 
-Leave words
-<br>
+    Leave words
+    <br>
 
-<em>worth finding.</em>
+    <em>worth finding.</em>
 
 </h2>
 
 
 <p>
 
-Maybe someone discovers your message tomorrow.
+    Maybe someone discovers your message tomorrow.
 
-Maybe years from now.
+    Maybe years from now.
 
-Maybe on a night when they desperately needed to hear exactly what you wrote.
+    Maybe on a night when they desperately needed to hear exactly what you wrote.
 
-Make it count.
+    Make it count.
 
 </p>
 
@@ -1694,11 +1708,11 @@ Make it count.
 <div class="footer-inner">
 
 <span>
-© 2026 Last Human Message
+    © 2026 Last Human Message
 </span>
 
 <span>
-One stranger. One message.
+    One stranger. One message.
 </span>
 
 </div>
@@ -1707,12 +1721,12 @@ One stranger. One message.
 
 
 <div
-class="toast"
-id="toast"
-role="status"
-aria-live="polite"
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
 >
-Saved
+    Saved
 </div>
 
 
@@ -1723,7 +1737,17 @@ Saved
 ===================================================== */
 
 const API_BASE =
-"https://last-human-message-api.aaa6654292.workers.dev";
+    "https://last-human-message-api.aaa6654292.workers.dev";
+
+
+/* =====================================================
+   CONSTANTS
+===================================================== */
+
+const MAX_MESSAGE_LENGTH = 5000;
+
+const TX_HASH_PATTERN =
+    /^[a-fA-F0-9]{64}$/;
 
 
 /* =====================================================
@@ -1731,86 +1755,120 @@ const API_BASE =
 ===================================================== */
 
 const messageForm =
-document.getElementById(
-    "messageForm"
-);
+    document.getElementById(
+        "messageForm"
+    );
 
 const messageInput =
-document.getElementById(
-    "message"
-);
+    document.getElementById(
+        "message"
+    );
 
 const fullNameInput =
-document.getElementById(
-    "fullName"
-);
+    document.getElementById(
+        "fullName"
+    );
 
 const emailInput =
-document.getElementById(
-    "email"
-);
+    document.getElementById(
+        "email"
+    );
 
 const cityInput =
-document.getElementById(
-    "city"
-);
+    document.getElementById(
+        "city"
+    );
 
 const countryInput =
-document.getElementById(
-    "country"
-);
+    document.getElementById(
+        "country"
+    );
 
 const ageInput =
-document.getElementById(
-    "age"
-);
+    document.getElementById(
+        "age"
+    );
 
 const consentInput =
-document.getElementById(
-    "consent"
-);
+    document.getElementById(
+        "consent"
+    );
 
 const charCount =
-document.getElementById(
-    "charCount"
-);
+    document.getElementById(
+        "charCount"
+    );
 
 const submitButton =
-document.getElementById(
-    "submitButton"
-);
+    document.getElementById(
+        "submitButton"
+    );
 
 const errorBox =
-document.getElementById(
-    "errorBox"
-);
+    document.getElementById(
+        "errorBox"
+    );
 
 const toast =
-document.getElementById(
-    "toast"
-);
+    document.getElementById(
+        "toast"
+    );
 
 
 /* =====================================================
-   SESSION PAYMENT
+   VERIFIED PAYMENT SESSION
 ===================================================== */
 
 const savedTxHash =
-sessionStorage.getItem(
-    "lastHumanMessageTxHash"
-);
+    (
+        sessionStorage.getItem(
+            "lastHumanMessageTxHash"
+        ) || ""
+    ).trim();
 
 const savedPaymentId =
-sessionStorage.getItem(
-    "lastHumanMessagePaymentId"
-);
+    (
+        sessionStorage.getItem(
+            "lastHumanMessagePaymentId"
+        ) || ""
+    ).trim();
+
+
+/* =====================================================
+   PAYMENT SESSION VALIDATION
+===================================================== */
+
+function hasVerifiedPaymentSession(){
+
+    if(
+        !savedTxHash ||
+        !TX_HASH_PATTERN.test(
+            savedTxHash
+        )
+    ){
+
+        return false;
+    }
+
+    if(
+        !savedPaymentId ||
+        !/^\d+$/.test(
+            savedPaymentId
+        )
+    ){
+
+        return false;
+    }
+
+    return true;
+}
 
 
 /* =====================================================
    TOAST
 ===================================================== */
 
-let toastTimer;
+let toastTimer = null;
 
 function showToast(text){
 
@@ -1880,22 +1938,28 @@ function updateCharacterCount(){
         messageInput.value.length;
 
     charCount.textContent =
-        length + " / 5000";
+        length +
+        " / " +
+        MAX_MESSAGE_LENGTH;
 
     charCount.classList.remove(
         "warning",
         "danger"
     );
 
-    if(length >= 4500){
+    if(
+        length >= 4500 &&
+        length < 4900
+    ){
 
         charCount.classList.add(
             "warning"
         );
-
     }
 
-    if(length >= 4900){
+    if(
+        length >= 4900
+    ){
 
         charCount.classList.remove(
             "warning"
@@ -1927,7 +1991,27 @@ function cleanValue(
 
     return input.value
         .trim()
-        .slice(0,maxLength);
+        .slice(
+            0,
+            maxLength
+        );
+}
+
+
+/* =====================================================
+   INITIAL PAYMENT GUARD
+===================================================== */
+
+if(
+    !hasVerifiedPaymentSession()
+){
+
+    submitButton.disabled =
+        true;
+
+    showError(
+        "No verified payment was found. Please return to the payment page and verify your 2 USDT transaction first."
+    );
 }
 
 
@@ -1944,9 +2028,60 @@ messageForm.addEventListener(
         clearError();
 
 
+        /* ---------------------------------------------
+           PAYMENT SESSION
+        --------------------------------------------- */
+
+        if(
+            !hasVerifiedPaymentSession()
+        ){
+
+            showError(
+                "Your verified payment session is missing or invalid. Please return to the payment page and verify your transaction again."
+            );
+
+            return;
+        }
+
+
+        /* ---------------------------------------------
+           MESSAGE
+        --------------------------------------------- */
+
         const message =
             messageInput.value.trim();
 
+
+        if(!message){
+
+            showError(
+                "Your message cannot be empty."
+            );
+
+            messageInput.focus();
+
+            return;
+        }
+
+
+        if(
+            message.length >
+            MAX_MESSAGE_LENGTH
+        ){
+
+            showError(
+                "Your message cannot exceed 5000 characters."
+            );
+
+            messageInput.focus();
+
+            return;
+        }
+
+
+        /* ---------------------------------------------
+           PRIVATE FIELDS
+        --------------------------------------------- */
 
         const fullName =
             cleanValue(
@@ -1981,59 +2116,20 @@ messageForm.addEventListener(
 
 
         /* ---------------------------------------------
-           PAYMENT CHECK
-        --------------------------------------------- */
-
-        if(!savedTxHash){
-
-            showError(
-                "No verified payment was found. Please return to the payment page and verify your transaction first."
-            );
-
-            return;
-        }
-
-
-        /* ---------------------------------------------
-           MESSAGE CHECK
-        --------------------------------------------- */
-
-        if(!message){
-
-            showError(
-                "Your message cannot be empty."
-            );
-
-            messageInput.focus();
-
-            return;
-        }
-
-
-        if(message.length > 5000){
-
-            showError(
-                "Your message cannot exceed 5000 characters."
-            );
-
-            messageInput.focus();
-
-            return;
-        }
-
-
-        /* ---------------------------------------------
            AGE
         --------------------------------------------- */
 
-        let age =
-            null;
+        let age = null;
 
 
-        if(ageValue !== ""){
+        if(
+            ageValue !== ""
+        ){
 
             age =
-                Number(ageValue);
+                Number(
+                    ageValue
+                );
 
 
             if(
@@ -2057,7 +2153,9 @@ messageForm.addEventListener(
            CONSENT
         --------------------------------------------- */
 
-        if(!consentInput.checked){
+        if(
+            !consentInput.checked
+        ){
 
             showError(
                 "Please confirm that you understand how your message will be used."
@@ -2097,7 +2195,7 @@ messageForm.addEventListener(
 
 
         /* ---------------------------------------------
-           BUTTON
+           DISABLE BUTTON
         --------------------------------------------- */
 
         submitButton.disabled =
@@ -2118,33 +2216,41 @@ messageForm.addEventListener(
 
                         headers:{
                             "Content-Type":
+                                "application/json",
+
+                            "Accept":
                                 "application/json"
                         },
 
-                        body:JSON.stringify({
+                        body:
+                            JSON.stringify({
 
-                            txHash:
-                                savedTxHash,
+                                txHash:
+                                    savedTxHash,
 
-                            message:
-                                message,
+                                message:
+                                    message,
 
-                            fullName:
-                                fullName || null,
+                                fullName:
+                                    fullName ||
+                                    null,
 
-                            email:
-                                email || null,
+                                email:
+                                    email ||
+                                    null,
 
-                            city:
-                                city || null,
+                                city:
+                                    city ||
+                                    null,
 
-                            country:
-                                country || null,
+                                country:
+                                    country ||
+                                    null,
 
-                            age:
-                                age
+                                age:
+                                    age
 
-                        })
+                            })
                     }
                 );
 
@@ -2171,11 +2277,15 @@ messageForm.addEventListener(
                 data.messageId
             ){
 
-                sessionStorage.setItem(
-                    "lastHumanMessageId",
+                const messageId =
                     String(
                         data.messageId
-                    )
+                    );
+
+
+                sessionStorage.setItem(
+                    "lastHumanMessageId",
+                    messageId
                 );
 
 
@@ -2185,6 +2295,15 @@ messageForm.addEventListener(
                 );
 
 
+                /*
+                 * Keep the payment information for
+                 * the current session.
+                 *
+                 * It is not sent to the public
+                 * view-message page.
+                 */
+
+
                 showToast(
                     "Message saved"
                 );
@@ -2192,6 +2311,33 @@ messageForm.addEventListener(
 
                 submitButton.textContent =
                     "MESSAGE SAVED ✓";
+
+
+                /*
+                 * Prevent a second submission
+                 * from this page.
+                 */
+
+                messageInput.disabled =
+                    true;
+
+                fullNameInput.disabled =
+                    true;
+
+                emailInput.disabled =
+                    true;
+
+                cityInput.disabled =
+                    true;
+
+                countryInput.disabled =
+                    true;
+
+                ageInput.disabled =
+                    true;
+
+                consentInput.disabled =
+                    true;
 
 
                 setTimeout(
@@ -2210,14 +2356,22 @@ messageForm.addEventListener(
 
 
             /* -----------------------------------------
-               ERROR FROM WORKER
+               WORKER ERROR
             ----------------------------------------- */
 
-            const serverError =
+            let serverError =
+                "Your message could not be saved. Please try again.";
+
+
+            if(
                 data &&
-                data.error
-                    ? data.error
-                    : "Your message could not be saved. Please try again.";
+                typeof data.error === "string" &&
+                data.error.trim()
+            ){
+
+                serverError =
+                    data.error.trim();
+            }
 
 
             showError(
@@ -2234,7 +2388,10 @@ messageForm.addEventListener(
 
         }catch(error){
 
-            console.error(error);
+            console.error(
+                "Save message error:",
+                error
+            );
 
 
             showError(
@@ -2255,26 +2412,43 @@ messageForm.addEventListener(
 
 
 /* =====================================================
-   PREVENT ACCIDENTAL DOUBLE SUBMIT
-===================================================== */
+   PREVENT ENTER-KEY ACCIDENTS
+   ===================================================== */
 
-window.addEventListener(
-    "beforeunload",
-    function(){
-        /* intentionally empty */
+messageInput.addEventListener(
+    "keydown",
+    function(event){
+
+        /*
+         * Keep Enter inside the textarea.
+         * Submission is handled only by the
+         * actual submit button/form action.
+         */
+
+        if(
+            event.key === "Enter" &&
+            event.ctrlKey
+        ){
+
+            event.preventDefault();
+
+            messageForm.requestSubmit();
+        }
     }
 );
 
 
 /* =====================================================
-   FOCUS MESSAGE
+   PAGE LOAD
 ===================================================== */
 
 window.addEventListener(
     "load",
     function(){
 
-        if(savedTxHash){
+        if(
+            hasVerifiedPaymentSession()
+        ){
 
             setTimeout(
                 function(){
