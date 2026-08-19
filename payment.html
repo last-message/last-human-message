@@ -6,19 +6,30 @@
 
 <title>Secure Payment — Last Human Message</title>
 
-<meta name="description" content="Securely pay 2 USDT to unlock your place in the Last Human Message chain, verify your TRON transaction, and leave a message for the next human.">
+<meta name="description" content="Securely pay exactly 2 USDT on TRON TRC20, verify your transaction, and leave a message for another human.">
+
 <meta name="robots" content="noindex,nofollow,noarchive">
+
 <meta name="author" content="Last Human Message">
+<meta name="application-name" content="Last Human Message">
 <meta name="theme-color" content="#070707">
 <meta name="color-scheme" content="dark">
 
-<link rel="canonical" href="https://last-human-mesage.pages.dev/payment.html">
+<link
+    rel="canonical"
+    href="https://last-human-message.pages.dev/payment.html"
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -55,6 +66,7 @@ body:before{
     pointer-events:none;
     z-index:999;
     opacity:.025;
+
     background-image:url(
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
     );
@@ -76,18 +88,25 @@ button{
 
 header{
     height:72px;
+
     display:flex;
     align-items:center;
+
     border-bottom:1px solid rgba(255,255,255,.07);
+
     background:rgba(7,7,7,.78);
+
     backdrop-filter:blur(20px);
+
     position:relative;
     z-index:20;
 }
 
 .nav{
     width:min(1120px,calc(100% - 32px));
+
     margin:auto;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -107,44 +126,59 @@ header{
     display:flex;
     align-items:center;
     gap:8px;
+
     font:8px "DM Mono",monospace;
+
     letter-spacing:1.5px;
     text-transform:uppercase;
+
     color:#555;
 }
 
 .dot{
     width:6px;
     height:6px;
+
     border-radius:50%;
+
     background:#42d27e;
-    box-shadow:0 0 12px rgba(66,210,126,.8);
+
+    box-shadow:
+        0 0 12px rgba(66,210,126,.8);
 }
 
 main{
     position:relative;
+
     padding:85px 16px 110px;
 }
 
 .hero-glow{
     position:absolute;
+
     width:850px;
     height:850px;
+
     left:50%;
     top:-350px;
+
     transform:translateX(-50%);
+
     background:
         radial-gradient(
             circle,
             rgba(220,28,38,.14),
             transparent 68%
         );
+
     pointer-events:none;
 }
 
 .container{
     width:min(900px,100%);
+
     margin:auto;
+
     position:relative;
     z-index:2;
 }
@@ -153,17 +187,23 @@ main{
     display:flex;
     align-items:center;
     justify-content:center;
+
     gap:14px;
+
     margin-bottom:27px;
+
     font:9px "DM Mono",monospace;
+
     letter-spacing:2.4px;
     text-transform:uppercase;
+
     color:#666;
 }
 
 .eyebrow-line{
     width:38px;
     height:1px;
+
     background:#333;
 }
 
@@ -174,39 +214,56 @@ main{
 
 h1{
     text-align:center;
+
     font-size:clamp(52px,8vw,88px);
+
     line-height:.88;
+
     letter-spacing:-.08em;
+
     font-weight:900;
 }
 
 h1 em{
     font-family:"Playfair Display",serif;
+
     font-weight:500;
+
     letter-spacing:-.045em;
 }
 
 .subtitle{
     max-width:650px;
+
     margin:30px auto 0;
+
     text-align:center;
+
     color:#777;
+
     font-size:15px;
+
     line-height:1.85;
 }
 
 .payment-card{
     position:relative;
+
     overflow:hidden;
+
     margin-top:60px;
+
     padding:clamp(28px,6vw,58px);
+
     background:
         linear-gradient(
             145deg,
             rgba(24,24,24,.98),
             rgba(8,8,8,.99)
         );
+
     border:1px solid rgba(255,255,255,.1);
+
     box-shadow:
         0 45px 120px rgba(0,0,0,.55),
         inset 0 1px 0 rgba(255,255,255,.025);
@@ -214,11 +271,15 @@ h1 em{
 
 .payment-card:before{
     content:"";
+
     position:absolute;
+
     left:0;
     top:0;
+
     width:3px;
     height:100%;
+
     background:
         linear-gradient(
             to bottom,
@@ -231,118 +292,182 @@ h1 em{
 
 .payment-card:after{
     content:"";
+
     position:absolute;
+
     right:-230px;
     top:-230px;
+
     width:430px;
     height:430px;
+
     background:
         radial-gradient(
             circle,
             rgba(239,48,56,.12),
             transparent 68%
         );
+
     pointer-events:none;
 }
 
 .section-label{
     position:relative;
     z-index:2;
+
     font:9px "DM Mono",monospace;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
+
     color:#ef3038;
 }
 
 .amount{
     position:relative;
     z-index:2;
+
     margin-top:15px;
+
     font-size:clamp(60px,10vw,105px);
+
     line-height:.9;
+
     letter-spacing:-.09em;
+
     font-weight:900;
 }
 
 .amount span{
     font-family:"Playfair Display",serif;
+
     font-weight:500;
+
     font-size:.45em;
+
     letter-spacing:-.03em;
+
     color:#777;
 }
 
 .explain{
     position:relative;
     z-index:2;
+
     max-width:700px;
+
     margin-top:24px;
+
     color:#777;
+
     font-size:14px;
+
     line-height:1.85;
+}
+
+.explain strong{
+    color:#ddd;
 }
 
 .details{
     position:relative;
     z-index:2;
+
     margin-top:42px;
+
     display:grid;
+
     gap:12px;
 }
 
 .detail{
     padding:20px;
+
     background:#0b0b0b;
+
     border:1px solid rgba(255,255,255,.07);
 }
 
 .detail-label{
     font:8px "DM Mono",monospace;
+
     letter-spacing:1.8px;
+
     text-transform:uppercase;
+
     color:#555;
 }
 
 .detail-value{
     margin-top:10px;
+
     color:#ddd;
+
     font:14px "DM Mono",monospace;
+
     word-break:break-all;
 }
 
 .detail-value.amount-value{
     color:#ef3038;
+
     font-size:18px;
+
     font-weight:500;
 }
 
 .copy-address{
     margin-top:12px;
+
     min-height:42px;
+
     padding:0 15px;
+
     background:#111;
+
     border:1px solid rgba(255,255,255,.09);
+
     color:#777;
+
     font:8px "DM Mono",monospace;
+
     letter-spacing:1px;
+
     text-transform:uppercase;
+
     cursor:pointer;
+
+    transition:.2s;
 }
 
 .copy-address:hover{
     color:#fff;
+
     border-color:#444;
+}
+
+.copy-address:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:3px;
 }
 
 .warning{
     position:relative;
     z-index:2;
+
     margin-top:22px;
+
     padding:18px 20px;
+
     border:1px solid rgba(239,48,56,.22);
+
     background:rgba(239,48,56,.045);
+
     color:#888;
+
     font-size:12px;
+
     line-height:1.8;
 }
 
@@ -353,21 +478,29 @@ h1 em{
 .verify-area{
     position:relative;
     z-index:2;
+
     margin-top:50px;
+
     padding-top:40px;
+
     border-top:1px solid rgba(255,255,255,.08);
 }
 
 .verify-title{
     font-size:clamp(27px,4vw,40px);
+
     letter-spacing:-.05em;
+
     font-weight:800;
 }
 
 .verify-subtitle{
     margin-top:12px;
+
     color:#666;
+
     font-size:13px;
+
     line-height:1.7;
 }
 
@@ -377,13 +510,22 @@ h1 em{
 
 .hash-input{
     width:100%;
+
     min-height:58px;
+
     padding:0 18px;
+
     background:#080808;
+
     border:1px solid rgba(255,255,255,.12);
+
     outline:none;
+
     color:#eee;
+
     font:13px "DM Mono",monospace;
+
+    border-radius:0;
 }
 
 .hash-input::placeholder{
@@ -392,42 +534,71 @@ h1 em{
 
 .hash-input:focus{
     border-color:#ef3038;
-    box-shadow:0 0 0 3px rgba(239,48,56,.08);
+
+    box-shadow:
+        0 0 0 3px rgba(239,48,56,.08);
 }
 
 .verify-button{
     width:100%;
+
     min-height:60px;
+
     margin-top:12px;
+
     background:#dc2028;
+
     color:#fff;
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:1.6px;
+
     text-transform:uppercase;
+
     cursor:pointer;
+
     transition:.25s;
-    box-shadow:0 18px 55px rgba(220,32,40,.18);
+
+    box-shadow:
+        0 18px 55px rgba(220,32,40,.18);
 }
 
 .verify-button:hover{
     background:#ff3038;
+
     transform:translateY(-2px);
-    box-shadow:0 24px 65px rgba(220,32,40,.3);
+
+    box-shadow:
+        0 24px 65px rgba(220,32,40,.3);
+}
+
+.verify-button:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:4px;
 }
 
 .verify-button:disabled{
     opacity:.55;
+
     cursor:not-allowed;
+
     transform:none;
 }
 
 .result{
     display:none;
+
     margin-top:18px;
+
     padding:18px;
+
     border:1px solid rgba(255,255,255,.08);
+
     background:#0b0b0b;
+
     font:10px/1.7 "DM Mono",monospace;
 }
 
@@ -437,112 +608,167 @@ h1 em{
 
 .result.success{
     color:#42d27e;
-    border-color:rgba(66,210,126,.25);
+
+    border-color:
+        rgba(66,210,126,.25);
 }
 
 .result.error{
     color:#ef777d;
-    border-color:rgba(239,48,56,.25);
+
+    border-color:
+        rgba(239,48,56,.25);
 }
 
 .security{
     position:relative;
     z-index:2;
+
     margin-top:35px;
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:10px;
 }
 
 .security-item{
     flex:1;
+
     min-width:180px;
+
     padding:16px;
+
     border:1px solid rgba(255,255,255,.06);
+
     background:#0a0a0a;
+
     color:#555;
+
     font:8px/1.6 "DM Mono",monospace;
+
     letter-spacing:1px;
+
     text-transform:uppercase;
 }
 
 .security-item strong{
     display:block;
+
     color:#777;
+
     margin-bottom:5px;
 }
 
 .next{
     margin-top:80px;
+
     text-align:center;
 }
 
 .next-label{
     font:8px "DM Mono",monospace;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
+
     color:#ef3038;
 }
 
 .next h2{
     margin-top:18px;
+
     font-size:clamp(40px,7vw,72px);
+
     line-height:.9;
+
     letter-spacing:-.075em;
+
     font-weight:900;
 }
 
 .next h2 em{
     font-family:"Playfair Display",serif;
+
     font-weight:500;
 }
 
 .next p{
     max-width:550px;
+
     margin:24px auto 0;
+
     color:#666;
+
     font-size:14px;
+
     line-height:1.8;
 }
 
 footer{
     padding:35px 16px;
+
     border-top:1px solid rgba(255,255,255,.06);
+
     font:8px "DM Mono",monospace;
+
     letter-spacing:1px;
+
     text-transform:uppercase;
+
     color:#3f3f3f;
 }
 
 .footer-inner{
     width:min(1120px,100%);
+
     margin:auto;
+
     display:flex;
+
     justify-content:space-between;
+
     gap:20px;
 }
 
 .toast{
     position:fixed;
+
     left:50%;
     bottom:25px;
+
     z-index:1000;
+
     min-width:190px;
+
     padding:13px 18px;
+
     text-align:center;
+
     background:#f4f1ea;
+
     color:#080808;
+
     font:8px "DM Mono",monospace;
+
     letter-spacing:1.2px;
+
     text-transform:uppercase;
+
     opacity:0;
+
     pointer-events:none;
+
     transform:translate(-50%,18px);
+
     transition:.3s;
 }
 
 .toast.show{
     opacity:1;
+
     transform:translate(-50%,0);
 }
 
@@ -570,6 +796,7 @@ footer{
 
     .payment-card{
         margin-top:48px;
+
         padding:28px 21px;
     }
 
@@ -591,6 +818,7 @@ footer{
 
     .footer-inner{
         flex-direction:column;
+
         text-align:center;
     }
 }
@@ -605,83 +833,133 @@ footer{
     *:before,
     *:after{
         animation:none!important;
+
         transition:none!important;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <nav class="nav" aria-label="Main navigation">
 
-<a href="/" class="logo" aria-label="Last Human Message home">
-Last<span>Human</span>Message
+<a
+    href="/"
+    class="logo"
+    aria-label="Last Human Message home"
+>
+    Last<span>Human</span>Message
 </a>
 
 <div class="status">
-<span class="dot"></span>
-Secure payment
+    <span class="dot"></span>
+    Secure payment
 </div>
 
 </nav>
+
 </header>
 
 
 <main>
 
-<div class="hero-glow" aria-hidden="true"></div>
+<div
+    class="hero-glow"
+    aria-hidden="true"
+></div>
 
 <div class="container">
 
 <div class="eyebrow">
-<span class="eyebrow-line"></span>
-<strong>Continue the human chain</strong>
-<span class="eyebrow-line"></span>
+
+<span
+    class="eyebrow-line"
+    aria-hidden="true"
+></span>
+
+<strong>
+    Continue the human chain
+</strong>
+
+<span
+    class="eyebrow-line"
+    aria-hidden="true"
+></span>
+
 </div>
 
 
 <h1>
+
 Leave your message
+
 <br>
+
 <em>behind.</em>
+
 </h1>
 
 
 <p class="subtitle">
-One payment gives you access to the next step: writing a message that can eventually be discovered by another human.
+
+One payment gives you access to the next step:
+writing a message that can eventually be discovered
+by another human.
+
 </p>
 
 
-<section class="payment-card" aria-labelledby="payment-title">
+<section
+    class="payment-card"
+    aria-labelledby="payment-title"
+>
 
 <div class="section-label">
-Secure access
+    Secure access
 </div>
 
 
-<div class="amount" id="payment-title">
-$2 <span>USDT</span>
+<div
+    class="amount"
+    id="payment-title"
+>
+    $2 <span>USDT</span>
 </div>
 
 
 <p class="explain">
-Send exactly <strong>2 USDT</strong> on the TRON network to the address below.
-After the transaction is confirmed, enter your transaction hash and press <strong>Verify payment</strong>. If everything matches, you will be sent directly to the message-writing page.
+
+Send exactly
+<strong>2 USDT</strong>
+on the
+<strong>TRON TRC20</strong>
+network to the address below.
+
+After the transaction is confirmed,
+enter your transaction hash and press
+<strong>Verify payment</strong>.
+
+If everything matches,
+you will continue directly to the message-writing page.
+
 </p>
 
 
 <div class="details">
 
+
 <div class="detail">
 
 <div class="detail-label">
-Network
+    Network
 </div>
 
 <div class="detail-value">
-TRON — TRC20
+    TRON — TRC20
 </div>
 
 </div>
@@ -690,11 +968,11 @@ TRON — TRC20
 <div class="detail">
 
 <div class="detail-label">
-Token
+    Token
 </div>
 
 <div class="detail-value">
-USDT
+    Tether USD (USDT)
 </div>
 
 </div>
@@ -703,11 +981,11 @@ USDT
 <div class="detail">
 
 <div class="detail-label">
-Exact amount
+    Exact amount
 </div>
 
 <div class="detail-value amount-value">
-2 USDT
+    2 USDT
 </div>
 
 </div>
@@ -716,74 +994,123 @@ Exact amount
 <div class="detail">
 
 <div class="detail-label">
-Receiver address
+    Receiver address
 </div>
 
-<div class="detail-value" id="receiverAddress">
-TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx
+<div
+    class="detail-value"
+    id="receiverAddress"
+>
+    TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx
 </div>
 
 <button
-type="button"
-class="copy-address"
-id="copyAddress"
+    type="button"
+    class="copy-address"
+    id="copyAddress"
 >
-Copy receiver address
+    Copy receiver address
 </button>
 
 </div>
+
 
 </div>
 
 
 <div class="warning">
+
 <strong>Important:</strong>
-Send exactly 2 USDT using the TRC20/TRON network. Do not send USDT through Ethereum, BNB Chain, Solana, or another network. A wrong network or wrong amount may not be recoverable.
+
+Send exactly
+<strong>2 USDT</strong>
+using the
+<strong>TRON / TRC20</strong>
+network.
+
+Do not send through Ethereum,
+BNB Chain,
+Solana,
+or another network.
+
+A wrong network or wrong amount
+may not be recoverable.
+
 </div>
 
 
 <div class="verify-area">
 
 <h2 class="verify-title">
-Verify your transaction
+    Verify your transaction
 </h2>
 
 <p class="verify-subtitle">
-After sending the payment, paste the 64-character TRON transaction hash below. Your transaction will be checked against the required token, receiver address, amount, and confirmation status.
+
+After sending the payment,
+paste the 64-character TRON transaction hash below.
+
+The server will verify:
+
+the transaction,
+the TRON USDT contract,
+the receiver address,
+the exact 2 USDT amount,
+and confirmation status.
+
 </p>
 
 
-<form class="hash-form" id="verifyForm">
+<form
+    class="hash-form"
+    id="verifyForm"
+    novalidate
+>
 
 <input
-type="text"
-id="txHash"
-class="hash-input"
-placeholder="Paste your TRON transaction hash here"
-autocomplete="off"
-autocapitalize="none"
-spellcheck="false"
-maxlength="64"
-required
+    type="text"
+    id="txHash"
+    class="hash-input"
+
+    placeholder="Paste your TRON transaction hash here"
+
+    autocomplete="off"
+
+    autocapitalize="none"
+
+    spellcheck="false"
+
+    inputmode="text"
+
+    maxlength="64"
+
+    minlength="64"
+
+    pattern="[a-fA-F0-9]{64}"
+
+    aria-label="TRON transaction hash"
+
+    required
 >
 
 
 <button
-type="submit"
-class="verify-button"
-id="verifyButton"
+    type="submit"
+    class="verify-button"
+    id="verifyButton"
 >
-Verify payment →
+    Verify payment →
 </button>
 
 </form>
 
 
 <div
-class="result"
-id="verifyResult"
-role="status"
-aria-live="polite"
+    class="result"
+    id="verifyResult"
+
+    role="status"
+    aria-live="polite"
 ></div>
 
 </div>
@@ -792,18 +1119,35 @@ aria-live="polite"
 <div class="security">
 
 <div class="security-item">
-<strong>01 — Exact amount</strong>
+
+<strong>
+    01 — Exact amount
+</strong>
+
 2 USDT required
+
 </div>
 
+
 <div class="security-item">
-<strong>02 — TRC20 network</strong>
+
+<strong>
+    02 — TRC20 network
+</strong>
+
 TRON USDT only
+
 </div>
 
+
 <div class="security-item">
-<strong>03 — Verified</strong>
+
+<strong>
+    03 — Server verified
+</strong>
+
 Transaction checked
+
 </div>
 
 </div>
@@ -814,17 +1158,27 @@ Transaction checked
 <section class="next">
 
 <div class="next-label">
-After verification
+    After verification
 </div>
 
 <h2>
+
 Write something
+
 <br>
+
 <em>worth leaving.</em>
+
 </h2>
 
 <p>
-Once your payment is verified, you will continue directly to the message page. Your payment is tied to one message.
+
+Once your payment is verified,
+you will continue directly to the message page.
+
+Each verified payment can be used
+for one message.
+
 </p>
 
 </section>
@@ -837,51 +1191,81 @@ Once your payment is verified, you will continue directly to the message page. Y
 <footer>
 
 <div class="footer-inner">
-<span>© 2026 Last Human Message</span>
-<span>One stranger. One message.</span>
+
+<span>
+    © 2026 Last Human Message
+</span>
+
+<span>
+    One stranger. One message.
+</span>
+
 </div>
 
 </footer>
 
 
-<div class="toast" id="toast" role="status" aria-live="polite">
-Copied
+<div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+>
+    Copied
 </div>
 
 
 <script>
 
+/* =========================================================
+   CONFIGURATION
+========================================================= */
+
 const API_BASE =
-"https://last-human-message-api.aaa6654292.workers.dev";
+    "https://last-human-message-api.aaa6654292.workers.dev";
 
 const RECEIVER =
-"TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx";
+    "TDq9HhTWvAB1Pft7pum4Ty5k9Kyb2adHdx";
 
+const REQUIRED_AMOUNT =
+    "2 USDT";
+
+const TX_HASH_REGEX =
+    /^[a-fA-F0-9]{64}$/;
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
 
 const verifyForm =
-document.getElementById("verifyForm");
+    document.getElementById("verifyForm");
 
 const txHashInput =
-document.getElementById("txHash");
+    document.getElementById("txHash");
 
 const verifyButton =
-document.getElementById("verifyButton");
+    document.getElementById("verifyButton");
 
 const verifyResult =
-document.getElementById("verifyResult");
+    document.getElementById("verifyResult");
 
 const copyAddressButton =
-document.getElementById("copyAddress");
+    document.getElementById("copyAddress");
 
 const receiverAddress =
-document.getElementById("receiverAddress");
+    document.getElementById("receiverAddress");
 
 const toast =
-document.getElementById("toast");
+    document.getElementById("toast");
 
 
-let toastTimer;
+let toastTimer = null;
 
+
+/* =========================================================
+   TOAST
+========================================================= */
 
 function showToast(text){
 
@@ -894,12 +1278,19 @@ function showToast(text){
     toastTimer =
         setTimeout(
             function(){
+
                 toast.classList.remove("show");
+
             },
             1800
         );
+
 }
 
+
+/* =========================================================
+   COPY
+========================================================= */
 
 async function copyText(text){
 
@@ -913,6 +1304,7 @@ async function copyText(text){
             await navigator.clipboard.writeText(text);
 
             return true;
+
         }
 
 
@@ -922,7 +1314,8 @@ async function copyText(text){
         textarea.value = text;
 
         textarea.style.position = "fixed";
-        textarea.style.opacity = "0";
+        textarea.style.left = "-9999px";
+        textarea.style.top = "0";
 
         document.body.appendChild(textarea);
 
@@ -941,24 +1334,34 @@ async function copyText(text){
         return false;
 
     }
+
 }
 
+
+/* =========================================================
+   COPY RECEIVER
+========================================================= */
 
 copyAddressButton.addEventListener(
     "click",
     async function(){
 
+        const address =
+            receiverAddress.textContent.trim();
+
         const success =
-            await copyText(
-                receiverAddress.textContent.trim()
-            );
+            await copyText(address);
+
 
         if(success){
 
             copyAddressButton.textContent =
                 "Copied ✓";
 
-            showToast("Address copied");
+            showToast(
+                "Receiver address copied"
+            );
+
 
             setTimeout(
                 function(){
@@ -972,7 +1375,9 @@ copyAddressButton.addEventListener(
 
         }else{
 
-            showToast("Copy failed");
+            showToast(
+                "Copy failed"
+            );
 
         }
 
@@ -980,19 +1385,33 @@ copyAddressButton.addEventListener(
 );
 
 
+/* =========================================================
+   RESULT
+========================================================= */
+
 function showResult(
     message,
-    type
+    type = ""
 ){
 
     verifyResult.textContent =
         message;
 
     verifyResult.className =
-        "result show " + type;
+        "result show";
+
+    if(type){
+
+        verifyResult.classList.add(type);
+
+    }
 
 }
 
+
+/* =========================================================
+   VERIFY PAYMENT
+========================================================= */
 
 verifyForm.addEventListener(
     "submit",
@@ -1005,19 +1424,29 @@ verifyForm.addEventListener(
             txHashInput.value.trim();
 
 
+        /* ---------------------------------------------
+           LOCAL VALIDATION
+        --------------------------------------------- */
+
         if(
-            !/^[a-fA-F0-9]{64}$/.test(txHash)
+            !TX_HASH_REGEX.test(txHash)
         ){
 
             showResult(
-                "Invalid TRON transaction hash. Please enter the complete 64-character transaction hash.",
+                "Invalid TRON transaction hash. The hash must contain exactly 64 hexadecimal characters.",
                 "error"
             );
+
+            txHashInput.focus();
 
             return;
 
         }
 
+
+        /* ---------------------------------------------
+           LOCK BUTTON
+        --------------------------------------------- */
 
         verifyButton.disabled =
             true;
@@ -1027,8 +1456,7 @@ verifyForm.addEventListener(
 
 
         showResult(
-            "Checking the TRON network. Please wait...",
-            ""
+            "Checking the TRON network. Please wait..."
         );
 
 
@@ -1043,41 +1471,72 @@ verifyForm.addEventListener(
 
                         headers:{
                             "Content-Type":
+                                "application/json",
+
+                            "Accept":
                                 "application/json"
                         },
 
-                        body:JSON.stringify({
-                            txHash:txHash
-                        })
+                        body:
+                            JSON.stringify({
+                                txHash:txHash
+                            })
                     }
                 );
 
 
-            const data =
-                await response.json()
-                    .catch(
-                        function(){
-                            return null;
-                        }
-                    );
+            let data = null;
 
+
+            try{
+
+                data =
+                    await response.json();
+
+            }catch(parseError){
+
+                data = null;
+
+            }
+
+
+            /* -----------------------------------------
+               VERIFIED
+            ----------------------------------------- */
 
             if(
                 response.ok &&
                 data &&
+                data.ok === true &&
                 data.verified === true &&
-                data.paymentId
+                data.paymentId !== undefined &&
+                data.paymentId !== null
             ){
 
-                sessionStorage.setItem(
-                    "lastHumanMessageTxHash",
-                    txHash
-                );
+                /* -------------------------------------
+                   STORE VERIFIED PAYMENT
+                ------------------------------------- */
 
-                sessionStorage.setItem(
-                    "lastHumanMessagePaymentId",
-                    String(data.paymentId)
-                );
+                try{
+
+                    sessionStorage.setItem(
+                        "lastHumanMessageTxHash",
+                        txHash
+                    );
+
+                    sessionStorage.setItem(
+                        "lastHumanMessagePaymentId",
+                        String(data.paymentId)
+                    );
+
+                }catch(storageError){
+
+                    console.warn(
+                        "Session storage unavailable:",
+                        storageError
+                    );
+
+                }
 
 
                 showResult(
@@ -1089,6 +1548,14 @@ verifyForm.addEventListener(
                 verifyButton.textContent =
                     "VERIFIED ✓";
 
+
+                txHashInput.readOnly =
+                    true;
+
+
+                /* -------------------------------------
+                   REDIRECT
+                ------------------------------------- */
 
                 setTimeout(
                     function(){
@@ -1106,11 +1573,24 @@ verifyForm.addEventListener(
             }
 
 
-            const errorMessage =
+            /* -----------------------------------------
+               SERVER ERROR
+            ----------------------------------------- */
+
+            let errorMessage =
+                "Payment could not be verified. Please check the transaction hash and try again.";
+
+
+            if(
                 data &&
-                data.error
-                    ? data.error
-                    : "Payment could not be verified. Please check the transaction hash and try again.";
+                typeof data.error === "string" &&
+                data.error.trim()
+            ){
+
+                errorMessage =
+                    data.error.trim();
+
+            }
 
 
             showResult(
@@ -1128,8 +1608,14 @@ verifyForm.addEventListener(
 
         }catch(error){
 
+            console.error(
+                "Payment verification error:",
+                error
+            );
+
+
             showResult(
-                "Could not connect to the payment verification service. Please try again.",
+                "Could not connect to the payment verification service. Please check your internet connection and try again.",
                 "error"
             );
 
@@ -1145,8 +1631,100 @@ verifyForm.addEventListener(
     }
 );
 
+
+/* =========================================================
+   HASH INPUT CLEANUP
+========================================================= */
+
+txHashInput.addEventListener(
+    "input",
+    function(){
+
+        const cleaned =
+            txHashInput.value
+                .replace(/[^a-fA-F0-9]/g,"")
+                .slice(0,64);
+
+        if(
+            txHashInput.value !== cleaned
+        ){
+
+            txHashInput.value =
+                cleaned;
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PASTE CLEANUP
+========================================================= */
+
+txHashInput.addEventListener(
+    "paste",
+    function(){
+
+        setTimeout(
+            function(){
+
+                txHashInput.value =
+                    txHashInput.value
+                        .replace(/[^a-fA-F0-9]/g,"")
+                        .slice(0,64);
+
+            },
+            0
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PREVENT DOUBLE SUBMIT
+========================================================= */
+
+let verificationInProgress =
+    false;
+
+verifyForm.addEventListener(
+    "submit",
+    function(event){
+
+        if(verificationInProgress){
+
+            event.preventDefault();
+
+            return;
+
+        }
+
+        verificationInProgress =
+            true;
+
+        setTimeout(
+            function(){
+
+                if(
+                    !verifyButton.disabled
+                ){
+
+                    verificationInProgress =
+                        false;
+
+                }
+
+            },
+            1500
+        );
+
+    },
+    true
+);
+
 </script>
 
 </body>
 </html>
-
