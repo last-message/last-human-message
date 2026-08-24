@@ -1,3 +1,15 @@
+AI Overview
+
+    Mustafa sent a random message from a stranger via a web service.
+    Message content is not visible, only HTML/metadata related to the "Last Human Message" service.
+
+By Gemini; there may be mistakes. Learn more
+Mustafa Hoseini
+	
+1:53 AM (3 minutes ago)
+	
+	
+to me
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +31,8 @@
 
 <link rel="canonical" href="https://last-human-message.pages.dev/random-human-message.html">
 
+<!-- Open Graph -->
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://last-human-message.pages.dev/random-human-message.html">
 <meta property="og:title" content="Random Human Message — Get a Message From a Stranger">
@@ -26,9 +40,13 @@
 <meta property="og:site_name" content="Last Human Message">
 <meta property="og:locale" content="en_US">
 
+<!-- Twitter -->
+
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Random Human Message — Get a Message From a Stranger">
 <meta name="twitter:description" content="A random message. A real human thought. One stranger you may never meet.">
+
+<!-- Performance -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +56,22 @@
     rel="stylesheet"
 >
 
+<!-- WebSite Schema -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://last-human-message.pages.dev/#website",
+  "name":"Last Human Message",
+  "url":"https://last-human-message.pages.dev/",
+  "description":"A human message chain where strangers leave anonymous words for other people to discover.",
+  "inLanguage":"en"
+}
+</script>
+
+<!-- WebPage Schema -->
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -45,6 +79,7 @@
   "@id":"https://last-human-message.pages.dev/random-human-message.html#webpage",
   "url":"https://last-human-message.pages.dev/random-human-message.html",
   "name":"Random Human Message — Get a Message From a Stranger",
+  "headline":"Random Human Message — Get a Message From a Stranger",
   "description":"Get a random human message from a stranger.",
   "inLanguage":"en",
   "isPartOf":{
@@ -68,6 +103,8 @@
   }
 }
 </script>
+
+<!-- FAQ Schema -->
 
 <script type="application/ld+json">
 {
@@ -120,6 +157,7 @@
 
 html{
     scroll-behavior:smooth;
+    background:#070707;
 }
 
 body{
@@ -139,6 +177,8 @@ body{
     color:#f4f1ea;
     font-family:Inter,Arial,sans-serif;
     overflow-x:hidden;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
 }
 
 body:before{
@@ -166,6 +206,12 @@ button{
 button,
 a{
     -webkit-tap-highlight-color:transparent;
+}
+
+a:focus-visible,
+button:focus-visible{
+    outline:2px solid #ef3038;
+    outline-offset:5px;
 }
 
 ::selection{
@@ -498,11 +544,6 @@ h1 em{
     transform:translateY(0);
 }
 
-.random-btn:focus-visible{
-    outline:2px solid #fff;
-    outline-offset:4px;
-}
-
 .random-btn:disabled{
     cursor:wait;
     opacity:.75;
@@ -558,6 +599,47 @@ h1 em{
     color:#777;
     font-size:14px;
     line-height:1.9;
+}
+
+/* =========================
+   RELATED PAGE
+========================= */
+
+.related-page{
+    margin-top:38px;
+    padding:24px 26px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    border:1px solid rgba(239,48,56,.16);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(239,48,56,.055),
+            rgba(12,12,12,.8)
+        );
+}
+
+.related-page span{
+    color:#666;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.related-page a{
+    color:#ddd;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:-.01em;
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.related-page a:hover{
+    color:#ef3038;
+    transform:translateX(3px);
 }
 
 /* =========================
@@ -672,11 +754,6 @@ h1 em{
     box-shadow:0 24px 65px rgba(220,32,40,.28);
 }
 
-.cta a:focus-visible{
-    outline:2px solid #fff;
-    outline-offset:4px;
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -767,6 +844,17 @@ footer{
 
     .seo p{
         font-size:13px;
+    }
+
+    .related-page{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+        padding:21px;
+    }
+
+    .related-page a{
+        font-size:11px;
     }
 
     .faq{
@@ -997,6 +1085,25 @@ Think of it as opening a tiny digital bottle washed up on the internet. Except i
 Last Human Message is built around one simple idea: humans still have things worth saying to other humans. You can read a message from a stranger, share the moment, and eventually leave your own words behind for somebody you will probably never meet.
 
 </p>
+
+<!-- INTERNAL LINK: FUNNY ANONYMOUS MESSAGES -->
+
+<div class="related-page">
+
+<span>
+Want something more playful?
+</span>
+
+<a
+    href="/funny-anonymous-messages.html"
+    aria-label="Read about funny anonymous messages to strangers"
+>
+
+Discover Funny Anonymous Messages to Strangers →
+
+</a>
+
+</div>
 
 <div class="faq">
 
