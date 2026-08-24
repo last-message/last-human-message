@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://last-human-message.pages.dev/</loc>
+  </url>
 
-    <url>
+  <url>
+    <loc>https://last-human-message.pages.dev/anonymous-confessions.html</loc>
+  </url>
 
-        <loc>
-            https://last-human-mesage.pages.dev/
-        </loc>
+  <url>
+    <loc>https://last-human-message.pages.dev/anonymous-message-to-a-stranger.html</loc>
+  </url>
 
-        <lastmod>
-            2026-08-17
-        </lastmod>
+  <url>
+    <loc>https://last-human-message.pages.dev/funny-anonymous-messages.html</loc>
+  </url>
 
-        <changefreq>
-            weekly
-        </changefreq>
+  <url>
+    <loc>https://last-human-message.pages.dev/helping-a-stranger.html</loc>
+  </url>
 
-        <priority>
-            1.0
-        </priority>
+  <url>
+    <loc>https://last-human-message.pages.dev/random-human-message.html</loc>
+  </url>
 
-    </url>
+  <url>
+    <loc>https://last-human-message.pages.dev/stranger-message.html</loc>
+  </url>
+
+  <url>
+    <loc>https://last-human-message.pages.dev/things-people-regret.html</loc>
+  </url>
+
+  <url>
+    <loc>https://last-human-message.pages.dev/why-people-feel-lonely.html</loc>
+  </url>
 
 </urlset>
