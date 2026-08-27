@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +10,13 @@
 <meta name="description" content="Get a random human message from a stranger. Read a thought, joke, confession, reminder, or unexpected piece of advice left behind by another human.">
 
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-
 <meta name="author" content="Last Human Message">
 <meta name="application-name" content="Last Human Message">
-
 <meta name="theme-color" content="#070707">
 <meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
 <link rel="canonical" href="https://last-human-message.pages.dev/random-human-message.html">
-
-<!-- Open Graph -->
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://last-human-message.pages.dev/random-human-message.html">
@@ -29,23 +25,14 @@
 <meta property="og:site_name" content="Last Human Message">
 <meta property="og:locale" content="en_US">
 
-<!-- Twitter -->
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Random Human Message — Get a Message From a Stranger">
 <meta name="twitter:description" content="A random message. A real human thought. One stranger you may never meet.">
 
-<!-- Performance -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap"
-    rel="stylesheet"
->
-
-<!-- WebSite Schema -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -58,8 +45,6 @@
   "inLanguage":"en"
 }
 </script>
-
-<!-- WebPage Schema -->
 
 <script type="application/ld+json">
 {
@@ -92,8 +77,6 @@
   }
 }
 </script>
-
-<!-- FAQ Schema -->
 
 <script type="application/ld+json">
 {
@@ -152,16 +135,8 @@ html{
 body{
     min-height:100vh;
     background:
-        radial-gradient(
-            circle at 50% -10%,
-            rgba(239,48,56,.18),
-            transparent 38%
-        ),
-        radial-gradient(
-            circle at 0% 55%,
-            rgba(255,255,255,.025),
-            transparent 30%
-        ),
+        radial-gradient(circle at 50% -10%,rgba(239,48,56,.18),transparent 38%),
+        radial-gradient(circle at 0% 55%,rgba(255,255,255,.025),transparent 30%),
         #070707;
     color:#f4f1ea;
     font-family:Inter,Arial,sans-serif;
@@ -208,9 +183,7 @@ button:focus-visible{
     color:#fff;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     height:72px;
@@ -263,9 +236,7 @@ header{
     box-shadow:0 0 12px rgba(66,210,126,.8);
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     position:relative;
@@ -284,11 +255,7 @@ header{
     top:-300px;
     transform:translateX(-50%);
     background:
-        radial-gradient(
-            circle,
-            rgba(220,28,38,.14),
-            transparent 67%
-        );
+        radial-gradient(circle,rgba(220,28,38,.14),transparent 67%);
     pointer-events:none;
 }
 
@@ -297,28 +264,11 @@ header{
     inset:0;
     opacity:.06;
     background-image:
-        linear-gradient(
-            rgba(255,255,255,.06) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.06) 1px,
-            transparent 1px
-        );
+        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
     background-size:90px 90px;
-    -webkit-mask-image:
-        linear-gradient(
-            to bottom,
-            #000,
-            transparent 85%
-        );
-    mask-image:
-        linear-gradient(
-            to bottom,
-            #000,
-            transparent 85%
-        );
+    -webkit-mask-image:linear-gradient(to bottom,#000,transparent 85%);
+    mask-image:linear-gradient(to bottom,#000,transparent 85%);
     pointer-events:none;
 }
 
@@ -330,9 +280,7 @@ header{
     text-align:center;
 }
 
-/* =========================
-   EYEBROW
-========================= */
+/* EYEBROW */
 
 .eyebrow{
     display:flex;
@@ -358,9 +306,7 @@ header{
     background:#333;
 }
 
-/* =========================
-   TYPOGRAPHY
-========================= */
+/* TYPOGRAPHY */
 
 h1{
     font-size:clamp(55px,9vw,96px);
@@ -383,9 +329,7 @@ h1 em{
     line-height:1.85;
 }
 
-/* =========================
-   RANDOM MESSAGE CARD
-========================= */
+/* RANDOM MESSAGE */
 
 .random-card{
     position:relative;
@@ -394,11 +338,7 @@ h1 em{
     text-align:left;
     overflow:hidden;
     background:
-        linear-gradient(
-            145deg,
-            rgba(26,26,26,.98),
-            rgba(9,9,9,.99)
-        );
+        linear-gradient(145deg,rgba(26,26,26,.98),rgba(9,9,9,.99));
     border:1px solid rgba(255,255,255,.105);
     box-shadow:
         0 45px 120px rgba(0,0,0,.55),
@@ -430,11 +370,7 @@ h1 em{
     right:-270px;
     top:-270px;
     background:
-        radial-gradient(
-            circle,
-            rgba(239,48,56,.13),
-            transparent 68%
-        );
+        radial-gradient(circle,rgba(239,48,56,.13),transparent 68%);
     pointer-events:none;
 }
 
@@ -497,9 +433,7 @@ h1 em{
     text-transform:uppercase;
 }
 
-/* =========================
-   RANDOM BUTTON
-========================= */
+/* BUTTON */
 
 .random-btn{
     width:100%;
@@ -538,13 +472,7 @@ h1 em{
     opacity:.75;
 }
 
-.random-btn[aria-busy="true"]{
-    position:relative;
-}
-
-/* =========================
-   STATUS FOR SCREEN READERS
-========================= */
+/* SCREEN READER STATUS */
 
 .live-status{
     position:absolute;
@@ -558,9 +486,7 @@ h1 em{
     border:0;
 }
 
-/* =========================
-   SEO CONTENT
-========================= */
+/* SEO */
 
 .seo{
     margin-top:110px;
@@ -590,12 +516,15 @@ h1 em{
     line-height:1.9;
 }
 
-/* =========================
-   RELATED PAGE
-========================= */
+/* RELATED PAGES */
+
+.related-pages{
+    margin-top:38px;
+    display:grid;
+    gap:12px;
+}
 
 .related-page{
-    margin-top:38px;
     padding:24px 26px;
     display:flex;
     align-items:center;
@@ -631,9 +560,7 @@ h1 em{
     transform:translateX(3px);
 }
 
-/* =========================
-   FAQ
-========================= */
+/* FAQ */
 
 .faq{
     margin-top:65px;
@@ -669,9 +596,7 @@ h1 em{
     line-height:1.8;
 }
 
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta{
     margin-top:80px;
@@ -743,9 +668,7 @@ h1 em{
     box-shadow:0 24px 65px rgba(220,32,40,.28);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     margin-top:100px;
@@ -766,9 +689,7 @@ footer{
     gap:20px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:650px){
 
@@ -868,9 +789,7 @@ footer{
     }
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
+/* REDUCED MOTION */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -1075,7 +994,9 @@ Last Human Message is built around one simple idea: humans still have things wor
 
 </p>
 
-<!-- INTERNAL LINK: FUNNY ANONYMOUS MESSAGES -->
+<!-- INTERNAL LINKS -->
+
+<div class="related-pages">
 
 <div class="related-page">
 
@@ -1091,6 +1012,25 @@ Want something more playful?
 Discover Funny Anonymous Messages to Strangers →
 
 </a>
+
+</div>
+
+<div class="related-page">
+
+<span>
+Some messages were never meant for you.
+</span>
+
+<a
+    href="/message-you-were-never-meant-to-read.html"
+    aria-label="Read a message you were never meant to read"
+>
+
+Read the Message You Were Never Meant to Read →
+
+</a>
+
+</div>
 
 </div>
 
